@@ -23,7 +23,7 @@ class ExportedConfiguration(BaseModel):
     version: str = "1.0"
     exported_at: str
     device_address: str
-    device_type: str
+    model: str
     channel_address: str
     channel_type: str
     paramset_key: str
@@ -36,7 +36,7 @@ _EXPORT_VERSION: Final = "1.0"
 def export_configuration(
     *,
     device_address: str,
-    device_type: str,
+    model: str,
     channel_address: str,
     channel_type: str,
     paramset_key: str,
@@ -52,7 +52,7 @@ def export_configuration(
         version=_EXPORT_VERSION,
         exported_at=datetime.now(tz=UTC).isoformat(),
         device_address=device_address,
-        device_type=device_type,
+        model=model,
         channel_address=channel_address,
         channel_type=channel_type,
         paramset_key=paramset_key,
