@@ -1,3 +1,9 @@
+# Version 2026.2.2 (2026-02-11)
+
+- Rename `device_type` to `model` in ExportedConfiguration to align with aiohomematic
+- Fix linter and type checker compliance (ruff, mypy, pylint, bandit, yamllint)
+- Use public API imports in tests
+
 # Version 2026.2.1 (2026-02-11)
 
 - Initial release

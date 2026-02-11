@@ -15,7 +15,7 @@ class TestExportConfiguration:
     def test_export_contains_timestamp(self) -> None:
         result = export_configuration(
             device_address="0001D3C99C36D0",
-            device_type="HmIP-eTRV-2",
+            model="HmIP-eTRV-2",
             channel_address="0001D3C99C36D0:1",
             channel_type="HEATING_CLIMATECONTROL_TRANSCEIVER",
             paramset_key="MASTER",
@@ -28,7 +28,7 @@ class TestExportConfiguration:
     def test_export_returns_valid_json(self) -> None:
         result = export_configuration(
             device_address="0001D3C99C36D0",
-            device_type="HmIP-eTRV-2",
+            model="HmIP-eTRV-2",
             channel_address="0001D3C99C36D0:1",
             channel_type="HEATING_CLIMATECONTROL_TRANSCEIVER",
             paramset_key="MASTER",
@@ -36,7 +36,7 @@ class TestExportConfiguration:
         )
         data = json.loads(result)
         assert data["version"] == "1.0"
-        assert data["device_type"] == "HmIP-eTRV-2"
+        assert data["model"] == "HmIP-eTRV-2"
         assert data["values"]["TEMPERATURE_OFFSET"] == 1.5
 
 
@@ -52,7 +52,7 @@ class TestImportConfiguration:
             {
                 "exported_at": "2026-01-01T00:00:00",
                 "device_address": "X",
-                "device_type": "X",
+                "model": "X",
                 "channel_address": "X:1",
                 "channel_type": "X",
                 "paramset_key": "MASTER",
@@ -72,7 +72,7 @@ class TestImportConfiguration:
                 "version": "99.0",
                 "exported_at": "2026-01-01T00:00:00",
                 "device_address": "X",
-                "device_type": "X",
+                "model": "X",
                 "channel_address": "X:1",
                 "channel_type": "X",
                 "paramset_key": "MASTER",
@@ -85,7 +85,7 @@ class TestImportConfiguration:
     def test_roundtrip(self) -> None:
         exported = export_configuration(
             device_address="0001D3C99C36D0",
-            device_type="HmIP-eTRV-2",
+            model="HmIP-eTRV-2",
             channel_address="0001D3C99C36D0:1",
             channel_type="HEATING_CLIMATECONTROL_TRANSCEIVER",
             paramset_key="MASTER",
@@ -93,7 +93,7 @@ class TestImportConfiguration:
         )
         imported = import_configuration(json_data=exported)
         assert isinstance(imported, ExportedConfiguration)
-        assert imported.device_type == "HmIP-eTRV-2"
+        assert imported.model == "HmIP-eTRV-2"
         assert imported.values["TEMPERATURE_OFFSET"] == 1.5
         assert imported.values["BOOST_TIME_PERIOD"] == 10
 
@@ -105,7 +105,7 @@ class TestExportedConfiguration:
         config = ExportedConfiguration(
             exported_at="2026-01-01T00:00:00",
             device_address="X",
-            device_type="Y",
+            model="Y",
             channel_address="X:1",
             channel_type="Z",
             paramset_key="MASTER",
