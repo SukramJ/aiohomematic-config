@@ -1,0 +1,45 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - "**"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'SukramJ'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract version
+        id: version
+        run: echo "version=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+      - name: Extract release notes
+        id: notes
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          NOTES=$(awk "/^# Version ${VERSION}/{flag=1; next} /^# Version /{flag=0} flag" changelog.md)
+          PREV=$(awk "/^# Version /{if(seen) {print \$3; exit} if(\$3==\"${VERSION}\") seen=1}" changelog.md)
+          if [ -n "$PREV" ]; then
+            NOTES="${NOTES}
+
+          **Full Changelog**: https://github.com/${{ github.repository }}/compare/${PREV}...${VERSION}"
+          fi
+          {
+            echo "notes<<NOTES_EOF"
+            echo "$NOTES"
+            echo "NOTES_EOF"
+          } >> "$GITHUB_OUTPUT"
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.version }}
+          name: ${{ steps.version.outputs.version }}
+          body: ${{ steps.notes.outputs.notes }}
+      - name: Trigger publish
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: publish
+          client-payload: '{"tag": "${{ steps.version.outputs.version }}"}'

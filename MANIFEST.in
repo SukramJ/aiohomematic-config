@@ -1,0 +1,6 @@
+graft aiohomematic_config
+include README.md
+include LICENSE
+prune tests
+prune build
+prune dist

@@ -1,0 +1,28 @@
+name: Pre-commit
+
+on:
+  pull_request:
+    branches:
+      - devel
+  push:
+    branches-ignore:
+      - master
+      - devel
+    tags-ignore:
+      - "**"
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'SukramJ'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+      - name: Install dependencies
+        run: pip install -r requirements_test.txt
+      - name: Run pre-commit
+        run: prek run --all-files
