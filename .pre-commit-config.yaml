@@ -1,0 +1,112 @@
+repos:
+  - repo: local
+    hooks:
+      - id: sort-class-members
+        name: sort-class-members
+        entry: script/run-in-env.sh python script/sort_class_members.py
+        language: script
+        types_or: [python]
+        files: ^(aiohomematic_config|tests)/.+\.py$
+      - id: check-i18n
+        name: check-i18n
+        entry: script/run-in-env.sh python script/check_i18n.py
+        language: script
+        types_or: [python]
+        files: ^(aiohomematic_config)/.+\.py$
+      - id: check-i18n-catalogs
+        name: check-i18n-catalogs
+        entry: script/run-in-env.sh python script/check_i18n_catalogs.py --fix
+        language: script
+        always_run: true
+        pass_filenames: false
+      - id: lint-package-imports
+        name: lint-package-imports
+        entry: script/run-in-env.sh python script/lint_package_imports.py
+        language: script
+        types_or: [python]
+        files: ^(tests)/.+\.py$
+        pass_filenames: false
+      - id: lint-all-exports
+        name: lint-all-exports
+        entry: script/run-in-env.sh python script/lint_all_exports.py
+        language: script
+        files: ^aiohomematic_config/.+/__init__\.py$
+        pass_filenames: false
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.15.0
+    hooks:
+      - id: ruff
+        args:
+          - --fix
+      - id: ruff-format
+        files: ^((aiohomematic_config|script|tests)/.+)?[^/]+\.py$
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.0
+    hooks:
+      - id: codespell
+        args:
+          - --ignore-words-list=ans,hass
+          - --skip="./.*,*.csv,*.json"
+          - --quiet-level=2
+        exclude_types: [csv, json]
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.9.2
+    hooks:
+      - id: bandit
+        args:
+          - --quiet
+          - --format=custom
+          - --configfile=tests/bandit.yaml
+        files: ^(aiohomematic_config|script|tests)/.+\.py$
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-executables-have-shebangs
+        stages: [manual]
+      - id: check-json
+        exclude: (.vscode|.devcontainer)
+      - id: no-commit-to-branch
+        args:
+          - --branch=devel
+          - --branch=master
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.37.1
+    hooks:
+      - id: yamllint
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.1.0
+    hooks:
+      - id: prettier
+        files: ^.+\.(md|json|ya?ml)$
+        exclude: ^(tests/fixtures/)
+  - repo: https://github.com/cdce8p/python-typing-update
+    rev: v0.7.3
+    hooks:
+      - id: python-typing-update
+        stages: [manual]
+        args:
+          - --py313-plus
+          - --force
+          - --keep-updates
+        files: ^(aiohomematic_config|tests|script)/.+\.py$
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: script/run-in-env.sh mypy
+        language: script
+        types_or: [python, pyi]
+        require_serial: true
+        files: ^(aiohomematic_config)/.+\.py$
+      - id: pylint
+        name: pylint
+        entry: script/run-in-env.sh pylint -j 0
+        language: script
+        types_or: [python, pyi]
+        files: ^(aiohomematic_config)/.+\.py$
+      - id: kwonly-lint
+        name: kwonly-lint
+        entry: script/run-in-env.sh python script/lint_kwonly.py aiohomematic_config
+        language: script
+        types_or: [python, pyi]
+        files: ^(aiohomematic_config)/.+\.py$

@@ -1,0 +1,48 @@
+codecov:
+  branch: devel
+coverage:
+  precision: 2
+  round: nearest
+  range: "70...100"
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 9%
+    patch:
+      default:
+        target: auto
+        threshold: 5%
+comment:
+  layout: "reach, diff, flags, tree"
+  behavior: default
+  require_changes: false
+ignore:
+  - "tests/**"
+  - "script/**"
+  - "docs/**"
+  - "**/__pycache__/**"
+flags:
+  full-suite:
+    paths:
+      - aiohomematic_config/
+    carryforward: true
+component_management:
+  individual_components:
+    - component_id: form-schema
+      name: "Form Schema Module"
+      paths:
+        - aiohomematic_config/form_schema.py
+        - aiohomematic_config/widgets.py
+    - component_id: grouping
+      name: "Grouping Module"
+      paths:
+        - aiohomematic_config/grouping.py
+    - component_id: session
+      name: "Session Module"
+      paths:
+        - aiohomematic_config/session.py
+    - component_id: labels
+      name: "Labels Module"
+      paths:
+        - aiohomematic_config/labels.py
