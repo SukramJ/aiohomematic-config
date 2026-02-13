@@ -13,12 +13,6 @@ repos:
         language: script
         types_or: [python]
         files: ^(aiohomematic_config)/.+\.py$
-      - id: check-i18n-catalogs
-        name: check-i18n-catalogs
-        entry: script/run-in-env.sh python script/check_i18n_catalogs.py --fix
-        language: script
-        always_run: true
-        pass_filenames: false
       - id: lint-package-imports
         name: lint-package-imports
         entry: script/run-in-env.sh python script/lint_package_imports.py
@@ -33,7 +27,7 @@ repos:
         files: ^aiohomematic_config/.+/__init__\.py$
         pass_filenames: false
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.15.0
+    rev: v0.15.1
     hooks:
       - id: ruff
         args:

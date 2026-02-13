@@ -13,6 +13,11 @@ from collections.abc import Mapping
 import inspect
 from typing import Any
 
+from aiohomematic.ccu_translations import (
+    get_channel_type_translation,
+    get_device_model_description,
+    get_parameter_value_translation,
+)
 from aiohomematic.const import ParameterData, ParameterType
 from aiohomematic.parameter_tools import get_parameter_step, is_parameter_visible, is_parameter_writable
 from pydantic import BaseModel
@@ -39,6 +44,7 @@ class FormParameter(BaseModel):
     writable: bool = True
     modified: bool = False
     options: list[str] | None = None
+    option_labels: dict[str, str] | None = None
 
 
 class FormSection(BaseModel):
@@ -54,6 +60,8 @@ class FormSchema(BaseModel):
 
     channel_address: str
     channel_type: str
+    model_description: str = ""
+    channel_type_label: str = ""
     sections: list[FormSection]
     total_parameters: int
     writable_parameters: int
@@ -87,6 +95,8 @@ class FormSchemaGenerator:
         current_values: dict[str, Any],
         channel_address: str = "",
         channel_type: str = "",
+        model: str = "",
+        sub_model: str | None = None,
     ) -> FormSchema:
         """
         Generate a complete form schema for the given paramset.
@@ -96,6 +106,8 @@ class FormSchemaGenerator:
             current_values: Current parameter values (from get_paramset).
             channel_address: Channel address for context.
             channel_type: Channel type for grouping hints.
+            model: Device model ID for description lookup.
+            sub_model: Optional sub-model for description fallback.
 
         Returns:
             A FormSchema ready for JSON serialization.
@@ -138,9 +150,31 @@ class FormSchemaGenerator:
                 p_max = pd.get("MAX")
                 has_numeric_range = isinstance(p_min, (int, float)) and isinstance(p_max, (int, float))
 
+                # Build option_labels for VALUE_LIST parameters
+                options: list[str] | None = None
+                option_labels: dict[str, str] | None = None
+                if "VALUE_LIST" in pd:
+                    options = list(pd["VALUE_LIST"])
+                    resolved_labels: dict[str, str] = {}
+                    for value in options:
+                        if (
+                            translated := get_parameter_value_translation(
+                                parameter=param_id,
+                                value=value,
+                                channel_type=channel_type or None,
+                                locale=self._label_resolver.locale,
+                            )
+                        ) is not None:
+                            resolved_labels[value] = translated
+                    if resolved_labels:
+                        option_labels = resolved_labels
+
                 form_param = FormParameter(
                     id=param_id,
-                    label=self._label_resolver.resolve(parameter_id=param_id),
+                    label=self._label_resolver.resolve(
+                        parameter_id=param_id,
+                        channel_type=channel_type,
+                    ),
                     type=str(param_type),
                     widget=widget,
                     min=p_min if has_numeric_range else None,
@@ -151,7 +185,8 @@ class FormSchemaGenerator:
                     current_value=current,
                     writable=writable,
                     modified=modified,
-                    options=list(pd["VALUE_LIST"]) if "VALUE_LIST" in pd else None,
+                    options=options,
+                    option_labels=option_labels,
                 )
                 form_params.append(form_param)
                 total_params += 1
@@ -167,9 +202,34 @@ class FormSchemaGenerator:
                     )
                 )
 
+        # Resolve channel type label
+        channel_type_label = ""
+        if channel_type:
+            channel_type_label = (
+                get_channel_type_translation(
+                    channel_type=channel_type,
+                    locale=self._label_resolver.locale,
+                )
+                or channel_type
+            )
+
+        # Resolve model description
+        model_description = ""
+        if model:
+            model_description = (
+                get_device_model_description(
+                    model=model,
+                    sub_model=sub_model,
+                    locale=self._label_resolver.locale,
+                )
+                or ""
+            )
+
         return FormSchema(
             channel_address=channel_address,
             channel_type=channel_type,
+            model_description=model_description,
+            channel_type_label=channel_type_label,
             sections=sections,
             total_parameters=total_params,
             writable_parameters=writable_params,

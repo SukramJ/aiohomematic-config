@@ -8,6 +8,20 @@ from aiohomematic_config import LabelResolver
 class TestLabelResolver:
     """Test LabelResolver."""
 
+    def test_channel_type_empty_string(self) -> None:
+        resolver = LabelResolver(locale="en")
+        # Empty string should behave like no channel_type
+        result = resolver.resolve(parameter_id="TEMPERATURE_OFFSET", channel_type="")
+        assert result == "Temperature Offset"
+
+    def test_channel_type_parameter(self) -> None:
+        resolver = LabelResolver(locale="en")
+        result = resolver.resolve(
+            parameter_id="TEMPERATURE_OFFSET",
+            channel_type="HEATING_CLIMATECONTROL_TRANSCEIVER",
+        )
+        assert result == "Temperature Offset"
+
     def test_default_locale_is_en(self) -> None:
         resolver = LabelResolver()
         assert resolver.locale == "en"
@@ -19,12 +33,13 @@ class TestLabelResolver:
 
     def test_fallback_single_word(self) -> None:
         resolver = LabelResolver(locale="en")
+        # BRIGHTNESS has an upstream translation
         result = resolver.resolve(parameter_id="BRIGHTNESS")
         assert result == "Brightness"
 
     def test_known_translation_de(self) -> None:
         resolver = LabelResolver(locale="de")
-        assert resolver.resolve(parameter_id="TEMPERATURE_OFFSET") == "Temperatur-Offset"
+        assert resolver.resolve(parameter_id="TEMPERATURE_OFFSET") == "Temperaturverschiebung"
 
     def test_known_translation_en(self) -> None:
         resolver = LabelResolver(locale="en")
@@ -34,20 +49,21 @@ class TestLabelResolver:
         resolver = LabelResolver(locale="de")
         assert resolver.locale == "de"
 
-    def test_missing_locale_falls_back(self) -> None:
+    def test_missing_locale_falls_back_to_en(self) -> None:
+        # Upstream normalizes unsupported locales to "en"
         resolver = LabelResolver(locale="fr")
-        # No French translation file, should fall back to humanization
         result = resolver.resolve(parameter_id="TEMPERATURE_OFFSET")
         assert result == "Temperature Offset"
 
-    def test_multiple_known_translations_de(self) -> None:
+    def test_unknown_parameter_humanized(self) -> None:
         resolver = LabelResolver(locale="de")
-        assert resolver.resolve(parameter_id="BOOST_TIME_PERIOD") == "Boost-Dauer"
-        assert resolver.resolve(parameter_id="FROST_PROTECTION") == "Frostschutz"
-        assert resolver.resolve(parameter_id="SHOW_WEEKDAY") == "Wochentag anzeigen"
+        # No upstream translation -> falls back to humanization
+        assert resolver.resolve(parameter_id="BOOST_TIME_PERIOD") == "Boost Time Period"
 
-    def test_multiple_known_translations_en(self) -> None:
+    def test_upstream_translation_de(self) -> None:
+        resolver = LabelResolver(locale="de")
+        assert resolver.resolve(parameter_id="FROST_PROTECTION") == "Frostschutz"
+
+    def test_upstream_translation_en(self) -> None:
         resolver = LabelResolver(locale="en")
-        assert resolver.resolve(parameter_id="BOOST_TIME_PERIOD") == "Boost Duration"
         assert resolver.resolve(parameter_id="FROST_PROTECTION") == "Frost Protection"
-        assert resolver.resolve(parameter_id="SHOW_WEEKDAY") == "Display Weekday"
