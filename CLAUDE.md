@@ -26,10 +26,6 @@ aiohomematic_config/        # Main package
     exporter.py             # ConfigExporter
     widgets.py              # WidgetType enum + determine_widget()
     py.typed                # PEP 561 marker
-    strings.json            # Primary translation source (en)
-    translations/           # i18n translation files
-        en.json             # English (synced from strings.json)
-        de.json             # German
 
 tests/                      # Test suite
     conftest.py             # Shared fixtures
@@ -41,7 +37,6 @@ script/                     # Development scripts
     run-in-env.sh           # Virtualenv wrapper
     sort_class_members.py   # Class member ordering
     check_i18n.py           # Translation validation
-    check_i18n_catalogs.py  # Translation sync
     lint_kwonly.py           # Keyword-only args linting
     lint_package_imports.py  # Import conventions
     lint_all_exports.py      # __all__ validation
