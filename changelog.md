@@ -1,3 +1,9 @@
+# Version 2026.2.4 (2026-02-13)
+
+- Add locale-aware section titles to `ParameterGrouper` (German translations)
+- Pass locale from `FormSchemaGenerator` to `ParameterGrouper`
+- Bump aiohomematic dependency to >=2026.2.12
+
 # Version 2026.2.3 (2026-02-13)
 
 - Replace local translation files with upstream CCU translations from aiohomematic
