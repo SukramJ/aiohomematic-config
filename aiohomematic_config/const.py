@@ -9,7 +9,7 @@ from __future__ import annotations
 import inspect
 from typing import Final
 
-VERSION: Final = "2026.2.3"
+VERSION: Final = "2026.2.4"
 
 # Widget slider threshold: if an integer range is <= this value, use a slider
 SLIDER_RANGE_THRESHOLD: Final = 20

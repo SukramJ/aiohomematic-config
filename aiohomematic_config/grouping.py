@@ -17,6 +17,8 @@ from typing import Final
 
 from aiohomematic.const import ParameterData
 
+from aiohomematic_config.const import DEFAULT_LOCALE
+
 
 @dataclass(frozen=True)
 class ParameterGroup:
@@ -27,7 +29,7 @@ class ParameterGroup:
     parameters: tuple[str, ...]
 
 
-# Curated group definitions: (group_id, title, regex patterns)
+# Curated group definitions: (group_id, title_en, regex patterns)
 _GROUP_DEFINITIONS: Final[tuple[tuple[str, str, tuple[str, ...]], ...]] = (
     (
         "temperature",
@@ -76,6 +78,22 @@ _GROUP_DEFINITIONS: Final[tuple[tuple[str, str, tuple[str, ...]], ...]] = (
     ),
 )
 
+# Section title translations keyed by locale then group_id.
+_SECTION_TITLES: Final[dict[str, dict[str, str]]] = {
+    "de": {
+        "temperature": "Temperatur-Einstellungen",
+        "timing": "Zeit & Dauer",
+        "display": "Anzeige-Einstellungen",
+        "transmission": "Übertragung & Kommunikation",
+        "powerup": "Einschaltverhalten",
+        "boost": "Boost-Einstellungen",
+        "button": "Tastenverhalten",
+        "threshold": "Schwellwerte & Bedingungen",
+        "status": "Status & Meldungen",
+        "other": "Sonstige Einstellungen",
+    },
+}
+
 
 @dataclass
 class _GroupCollector:
@@ -94,14 +112,15 @@ class ParameterGrouper:
     Applies pattern-based heuristics to organize flat parameter lists.
     """
 
-    __slots__ = ("_collectors",)
+    __slots__ = ("_collectors", "_locale")
 
-    def __init__(self) -> None:
+    def __init__(self, *, locale: str = DEFAULT_LOCALE) -> None:
         """Initialize the parameter grouper."""
+        self._locale = locale
         self._collectors: tuple[_GroupCollector, ...] = tuple(
             _GroupCollector(
                 id=gid,
-                title=title,
+                title=self._translate(group_id=gid, fallback=title),
                 patterns=tuple(re.compile(p) for p in patterns),
             )
             for gid, title, patterns in _GROUP_DEFINITIONS
@@ -154,12 +173,16 @@ class ParameterGrouper:
             groups.append(
                 ParameterGroup(
                     id="other",
-                    title="Other Settings",
+                    title=self._translate(group_id="other", fallback="Other Settings"),
                     parameters=tuple(ungrouped),
                 )
             )
 
         return tuple(groups)
+
+    def _translate(self, *, group_id: str, fallback: str) -> str:
+        """Return translated section title or fallback."""
+        return _SECTION_TITLES.get(self._locale, {}).get(group_id, fallback)
 
 
 __all__ = tuple(

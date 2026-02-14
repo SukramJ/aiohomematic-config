@@ -79,6 +79,18 @@ class TestParameterGrouper:
         result = grouper.group(descriptions={})
         assert result == ()
 
+    def test_locale_de_translates_titles(self) -> None:
+        """Test that German locale produces translated section titles."""
+        grouper = ParameterGrouper(locale="de")
+        descriptions = {
+            "TEMPERATURE_OFFSET": _simple_param(),
+            "SOME_RANDOM_PARAM": _simple_param(),
+        }
+        result = grouper.group(descriptions=descriptions)
+        titles = {g.id: g.title for g in result}
+        assert titles["temperature"] == "Temperatur-Einstellungen"
+        assert titles["other"] == "Sonstige Einstellungen"
+
     def test_mixed_grouped_and_ungrouped(self) -> None:
         grouper = ParameterGrouper()
         descriptions = {
@@ -175,3 +187,10 @@ class TestParameterGrouper:
         assert len(result) == 1
         assert result[0].id == "other"
         assert result[0].title == "Other Settings"
+
+    def test_unknown_locale_falls_back_to_english(self) -> None:
+        """Test that unknown locale falls back to English titles."""
+        grouper = ParameterGrouper(locale="fr")
+        descriptions = {"TEMPERATURE_OFFSET": _simple_param()}
+        result = grouper.group(descriptions=descriptions)
+        assert result[0].title == "Temperature Settings"

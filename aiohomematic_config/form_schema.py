@@ -19,7 +19,13 @@ from aiohomematic.ccu_translations import (
     get_parameter_value_translation,
 )
 from aiohomematic.const import ParameterData, ParameterType
-from aiohomematic.parameter_tools import get_parameter_step, is_parameter_visible, is_parameter_writable
+from aiohomematic.parameter_tools import (
+    get_parameter_step,
+    is_parameter_internal,
+    is_parameter_readable,
+    is_parameter_visible,
+    is_parameter_writable,
+)
 from pydantic import BaseModel
 
 from aiohomematic_config.const import DEFAULT_LOCALE
@@ -86,7 +92,7 @@ class FormSchemaGenerator:
     ) -> None:
         """Initialize the form schema generator."""
         self._label_resolver = label_resolver or LabelResolver(locale=locale)
-        self._grouper = grouper or ParameterGrouper()
+        self._grouper = grouper or ParameterGrouper(locale=locale)
 
     def generate(
         self,
@@ -113,9 +119,16 @@ class FormSchemaGenerator:
             A FormSchema ready for JSON serialization.
 
         """
-        # Filter to visible parameters
+        # Filter parameters using CCU-compatible rules:
+        # 1. FLAGS & VISIBLE must be set
+        # 2. FLAGS & INTERNAL must NOT be set
+        # 3. OPERATIONS must include READ or WRITE
         visible_params: dict[str, ParameterData] = {
-            param_id: pd for param_id, pd in descriptions.items() if is_parameter_visible(parameter_data=pd)
+            param_id: pd
+            for param_id, pd in descriptions.items()
+            if is_parameter_visible(parameter_data=pd)
+            and not is_parameter_internal(parameter_data=pd)
+            and (is_parameter_readable(parameter_data=pd) or is_parameter_writable(parameter_data=pd))
         }
 
         # Group parameters
