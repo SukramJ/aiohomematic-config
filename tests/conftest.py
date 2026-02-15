@@ -13,14 +13,14 @@ def thermostat_descriptions() -> dict[str, ParameterData]:
     """Return MASTER paramset descriptions for a thermostat (HmIP-eTRV-2)."""
     return {
         "TEMPERATURE_OFFSET": _make_float_param(min_val=-3.5, max_val=3.5, default=0.0, unit="°C"),
-        "BOOST_TIME_PERIOD": _make_integer_param(min_val=0, max_val=30, default=5, unit="min"),
-        "SHOW_WEEKDAY": _make_enum_param(
-            values=["SATURDAY", "SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"],
-            default="SATURDAY",
+        "TRANSMIT_TRY_MAX": _make_integer_param(min_val=1, max_val=10, default=6, unit=""),
+        "CHANNEL_OPERATION_MODE": _make_enum_param(
+            values=["NORMAL_MODE", "PASSIVE_MODE"],
+            default="NORMAL_MODE",
         ),
         "BUTTON_RESPONSE_WITHOUT_BACKLIGHT": _make_bool_param(default=False),
         "LOCAL_RESET_DISABLED": _make_bool_param(default=False),
-        "TEMPERATURE_WINDOW_OPEN": _make_float_param(min_val=4.5, max_val=30.0, default=12.0, unit="°C"),
+        "BRIGHTNESS_FILTER": _make_float_param(min_val=0.0, max_val=7.0, default=2.0, unit=""),
     }
 
 
@@ -29,11 +29,11 @@ def thermostat_values() -> dict[str, Any]:
     """Return current values for a thermostat."""
     return {
         "TEMPERATURE_OFFSET": 1.5,
-        "BOOST_TIME_PERIOD": 5,
-        "SHOW_WEEKDAY": "SATURDAY",
+        "TRANSMIT_TRY_MAX": 6,
+        "CHANNEL_OPERATION_MODE": "NORMAL_MODE",
         "BUTTON_RESPONSE_WITHOUT_BACKLIGHT": False,
         "LOCAL_RESET_DISABLED": False,
-        "TEMPERATURE_WINDOW_OPEN": 12.0,
+        "BRIGHTNESS_FILTER": 2.0,
     }
 
 
@@ -41,8 +41,8 @@ def thermostat_values() -> dict[str, Any]:
 def switch_descriptions() -> dict[str, ParameterData]:
     """Return MASTER paramset descriptions for a switch (HmIP-PS)."""
     return {
-        "POWERUP_ONTIME": _make_float_param(min_val=0.0, max_val=327680.0, default=0.0, unit="s"),
-        "POWERUP_OFFTIME": _make_float_param(min_val=0.0, max_val=327680.0, default=0.0, unit="s"),
+        "ON_TIME": _make_float_param(min_val=0.0, max_val=327680.0, default=0.0, unit="s"),
+        "RAMP_TIME": _make_float_param(min_val=0.0, max_val=327680.0, default=0.0, unit="s"),
         "STATUSINFO_MINDELAY": _make_float_param(min_val=2.0, max_val=10.0, default=2.0, unit="s"),
     }
 
@@ -51,8 +51,8 @@ def switch_descriptions() -> dict[str, ParameterData]:
 def switch_values() -> dict[str, Any]:
     """Return current values for a switch."""
     return {
-        "POWERUP_ONTIME": 0.0,
-        "POWERUP_OFFTIME": 0.0,
+        "ON_TIME": 0.0,
+        "RAMP_TIME": 0.0,
         "STATUSINFO_MINDELAY": 2.0,
     }
 

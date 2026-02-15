@@ -63,7 +63,7 @@ class TestFormSchemaGenerator:
 
     def test_enum_options_included(self) -> None:
         descriptions: dict[str, ParameterData] = {
-            "MODE": ParameterData(
+            "CHANNEL_OPERATION_MODE": ParameterData(
                 TYPE=ParameterType.ENUM,
                 MIN=0,
                 MAX=2,
@@ -76,7 +76,7 @@ class TestFormSchemaGenerator:
         generator = FormSchemaGenerator(locale="en")
         schema = generator.generate(
             descriptions=descriptions,
-            current_values={"MODE": "OFF"},
+            current_values={"CHANNEL_OPERATION_MODE": "OFF"},
         )
         param = schema.sections[0].parameters[0]
         assert param.options == ["OFF", "MANUAL", "AUTO"]
@@ -101,7 +101,7 @@ class TestFormSchemaGenerator:
     def test_invisible_parameters_excluded(self) -> None:
         """Parameters without VISIBLE flag should be excluded."""
         descriptions: dict[str, ParameterData] = {
-            "VISIBLE_PARAM": ParameterData(
+            "TEMPERATURE_OFFSET": ParameterData(
                 TYPE=ParameterType.FLOAT,
                 MIN=0.0,
                 MAX=10.0,
@@ -121,10 +121,10 @@ class TestFormSchemaGenerator:
         generator = FormSchemaGenerator(locale="en")
         schema = generator.generate(
             descriptions=descriptions,
-            current_values={"VISIBLE_PARAM": 5.0, "INVISIBLE_PARAM": 5.0},
+            current_values={"TEMPERATURE_OFFSET": 5.0, "INVISIBLE_PARAM": 5.0},
         )
         all_param_ids = [p.id for s in schema.sections for p in s.parameters]
-        assert "VISIBLE_PARAM" in all_param_ids
+        assert "TEMPERATURE_OFFSET" in all_param_ids
         assert "INVISIBLE_PARAM" not in all_param_ids
 
     def test_model_description(self) -> None:
@@ -174,11 +174,11 @@ class TestFormSchemaGenerator:
         generator = FormSchemaGenerator(locale="en")
         values = {
             "TEMPERATURE_OFFSET": 2.0,  # default is 0.0
-            "BOOST_TIME_PERIOD": 5,  # default is 5 (not modified)
-            "SHOW_WEEKDAY": "SATURDAY",
+            "TRANSMIT_TRY_MAX": 6,  # default is 6 (not modified)
+            "CHANNEL_OPERATION_MODE": "NORMAL_MODE",
             "BUTTON_RESPONSE_WITHOUT_BACKLIGHT": False,
             "LOCAL_RESET_DISABLED": False,
-            "TEMPERATURE_WINDOW_OPEN": 12.0,
+            "BRIGHTNESS_FILTER": 2.0,
         }
         schema = generator.generate(
             descriptions=thermostat_descriptions,
@@ -186,9 +186,9 @@ class TestFormSchemaGenerator:
         )
         all_params = [p for s in schema.sections for p in s.parameters]
         temp_offset = next(p for p in all_params if p.id == "TEMPERATURE_OFFSET")
-        boost_time = next(p for p in all_params if p.id == "BOOST_TIME_PERIOD")
+        transmit_try = next(p for p in all_params if p.id == "TRANSMIT_TRY_MAX")
         assert temp_offset.modified is True
-        assert boost_time.modified is False
+        assert transmit_try.modified is False
 
     def test_option_labels_de(self) -> None:
         """option_labels should use the correct locale."""
@@ -214,14 +214,14 @@ class TestFormSchemaGenerator:
         assert param.option_labels["RED"] == "Rot"
 
     def test_option_labels_none_when_no_translations(self) -> None:
-        """option_labels should be None when no translations are available."""
+        """option_labels should be None when no value translations are available."""
         descriptions: dict[str, ParameterData] = {
-            "MODE": ParameterData(
+            "CHANNEL_OPERATION_MODE": ParameterData(
                 TYPE=ParameterType.ENUM,
                 MIN=0,
                 MAX=2,
-                DEFAULT="OFF",
-                VALUE_LIST=["OFF", "MANUAL", "AUTO"],
+                DEFAULT="XFOO",
+                VALUE_LIST=["XFOO", "XBAR", "XBAZ"],
                 OPERATIONS=Operations.READ | Operations.WRITE,
                 FLAGS=Flag.VISIBLE,
             ),
@@ -229,7 +229,7 @@ class TestFormSchemaGenerator:
         generator = FormSchemaGenerator(locale="en")
         schema = generator.generate(
             descriptions=descriptions,
-            current_values={"MODE": "OFF"},
+            current_values={"CHANNEL_OPERATION_MODE": "XFOO"},
         )
         param = schema.sections[0].parameters[0]
         assert param.option_labels is None
@@ -278,7 +278,7 @@ class TestFormSchemaGenerator:
     def test_read_only_parameter(self) -> None:
         """Non-writable parameters should get READ_ONLY widget."""
         descriptions: dict[str, ParameterData] = {
-            "READONLY_PARAM": ParameterData(
+            "ACTUAL_TEMPERATURE": ParameterData(
                 TYPE=ParameterType.FLOAT,
                 MIN=0.0,
                 MAX=100.0,
@@ -290,7 +290,7 @@ class TestFormSchemaGenerator:
         generator = FormSchemaGenerator(locale="en")
         schema = generator.generate(
             descriptions=descriptions,
-            current_values={"READONLY_PARAM": 50.0},
+            current_values={"ACTUAL_TEMPERATURE": 50.0},
         )
         param = schema.sections[0].parameters[0]
         assert param.widget == WidgetType.READ_ONLY
