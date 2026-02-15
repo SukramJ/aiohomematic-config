@@ -123,12 +123,14 @@ class FormSchemaGenerator:
         # 1. FLAGS & VISIBLE must be set
         # 2. FLAGS & INTERNAL must NOT be set
         # 3. OPERATIONS must include READ or WRITE
+        # 4. A CCU translation must exist (matches CCU WebUI easymode behavior)
         visible_params: dict[str, ParameterData] = {
             param_id: pd
             for param_id, pd in descriptions.items()
             if is_parameter_visible(parameter_data=pd)
             and not is_parameter_internal(parameter_data=pd)
             and (is_parameter_readable(parameter_data=pd) or is_parameter_writable(parameter_data=pd))
+            and self._label_resolver.has_translation(parameter_id=param_id, channel_type=channel_type)
         }
 
         # Group parameters

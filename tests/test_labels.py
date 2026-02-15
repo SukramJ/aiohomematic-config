@@ -58,7 +58,7 @@ class TestLabelResolver:
     def test_unknown_parameter_humanized(self) -> None:
         resolver = LabelResolver(locale="de")
         # No upstream translation -> falls back to humanization
-        assert resolver.resolve(parameter_id="BOOST_TIME_PERIOD") == "Boost Time Period"
+        assert resolver.resolve(parameter_id="XYZZY_UNKNOWN_PARAM") == "Xyzzy Unknown Param"
 
     def test_upstream_translation_de(self) -> None:
         resolver = LabelResolver(locale="de")

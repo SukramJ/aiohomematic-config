@@ -38,6 +38,17 @@ class LabelResolver:
         """Return the current locale."""
         return self._locale
 
+    def has_translation(self, *, parameter_id: str, channel_type: str = "") -> bool:
+        """Return whether a CCU translation exists for the parameter."""
+        return (
+            get_parameter_translation(
+                parameter=parameter_id,
+                channel_type=channel_type or None,
+                locale=self._locale,
+            )
+            is not None
+        )
+
     def resolve(self, *, parameter_id: str, channel_type: str = "") -> str:
         """
         Resolve a parameter ID to a human-readable label.

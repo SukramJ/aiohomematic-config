@@ -41,8 +41,8 @@ def thermostat_values() -> dict[str, Any]:
 def switch_descriptions() -> dict[str, ParameterData]:
     """Return MASTER paramset descriptions for a switch (HmIP-PS)."""
     return {
-        "POWERUP_ONTIME": _make_float_param(min_val=0.0, max_val=327680.0, default=0.0, unit="s"),
-        "POWERUP_OFFTIME": _make_float_param(min_val=0.0, max_val=327680.0, default=0.0, unit="s"),
+        "ON_TIME": _make_float_param(min_val=0.0, max_val=327680.0, default=0.0, unit="s"),
+        "OFF_TIME": _make_float_param(min_val=0.0, max_val=327680.0, default=0.0, unit="s"),
         "STATUSINFO_MINDELAY": _make_float_param(min_val=2.0, max_val=10.0, default=2.0, unit="s"),
     }
 
@@ -51,8 +51,8 @@ def switch_descriptions() -> dict[str, ParameterData]:
 def switch_values() -> dict[str, Any]:
     """Return current values for a switch."""
     return {
-        "POWERUP_ONTIME": 0.0,
-        "POWERUP_OFFTIME": 0.0,
+        "ON_TIME": 0.0,
+        "OFF_TIME": 0.0,
         "STATUSINFO_MINDELAY": 2.0,
     }
 
