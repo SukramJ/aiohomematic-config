@@ -61,7 +61,10 @@ class TestFormSchemaGenerator:
         assert schema.writable_parameters == 0
         assert schema.sections == []
 
-    def test_enum_options_included(self) -> None:
+    def test_enum_options_included(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
         descriptions: dict[str, ParameterData] = {
             "CHANNEL_OPERATION_MODE": ParameterData(
                 TYPE=ParameterType.ENUM,
@@ -73,8 +76,7 @@ class TestFormSchemaGenerator:
                 FLAGS=Flag.VISIBLE,
             ),
         }
-        generator = FormSchemaGenerator(locale="en")
-        schema = generator.generate(
+        schema = permissive_generator_en.generate(
             descriptions=descriptions,
             current_values={"CHANNEL_OPERATION_MODE": "OFF"},
         )
@@ -98,7 +100,10 @@ class TestFormSchemaGenerator:
         assert schema.total_parameters > 0
         assert schema.writable_parameters > 0
 
-    def test_invisible_parameters_excluded(self) -> None:
+    def test_invisible_parameters_excluded(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
         """Parameters without VISIBLE flag should be excluded."""
         descriptions: dict[str, ParameterData] = {
             "TEMPERATURE_OFFSET": ParameterData(
@@ -118,8 +123,7 @@ class TestFormSchemaGenerator:
                 FLAGS=0,
             ),
         }
-        generator = FormSchemaGenerator(locale="en")
-        schema = generator.generate(
+        schema = permissive_generator_en.generate(
             descriptions=descriptions,
             current_values={"TEMPERATURE_OFFSET": 5.0, "INVISIBLE_PARAM": 5.0},
         )
@@ -190,7 +194,10 @@ class TestFormSchemaGenerator:
         assert temp_offset.modified is True
         assert transmit_try.modified is False
 
-    def test_option_labels_de(self) -> None:
+    def test_option_labels_de(
+        self,
+        permissive_generator_de: FormSchemaGenerator,
+    ) -> None:
         """option_labels should use the correct locale."""
         descriptions: dict[str, ParameterData] = {
             "COLOR": ParameterData(
@@ -203,8 +210,7 @@ class TestFormSchemaGenerator:
                 FLAGS=Flag.VISIBLE,
             ),
         }
-        generator = FormSchemaGenerator(locale="de")
-        schema = generator.generate(
+        schema = permissive_generator_de.generate(
             descriptions=descriptions,
             current_values={"COLOR": "BLUE"},
         )
@@ -213,28 +219,36 @@ class TestFormSchemaGenerator:
         assert param.option_labels["BLUE"] == "Blau"
         assert param.option_labels["RED"] == "Rot"
 
-    def test_option_labels_none_when_no_translations(self) -> None:
-        """option_labels should be None when no value translations are available."""
+    def test_option_labels_humanized_when_no_translations(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
+        """option_labels should fall back to humanized values when no translations exist."""
         descriptions: dict[str, ParameterData] = {
             "CHANNEL_OPERATION_MODE": ParameterData(
                 TYPE=ParameterType.ENUM,
                 MIN=0,
                 MAX=2,
-                DEFAULT="XFOO",
-                VALUE_LIST=["XFOO", "XBAR", "XBAZ"],
+                DEFAULT="XYZZY_OPTION",
+                VALUE_LIST=["XYZZY_OPTION", "QWERTY_OPTION", "ASDFG_OPTION"],
                 OPERATIONS=Operations.READ | Operations.WRITE,
                 FLAGS=Flag.VISIBLE,
             ),
         }
-        generator = FormSchemaGenerator(locale="en")
-        schema = generator.generate(
+        schema = permissive_generator_en.generate(
             descriptions=descriptions,
-            current_values={"CHANNEL_OPERATION_MODE": "XFOO"},
+            current_values={"CHANNEL_OPERATION_MODE": "XYZZY_OPTION"},
         )
         param = schema.sections[0].parameters[0]
-        assert param.option_labels is None
+        assert param.option_labels is not None
+        assert param.option_labels["XYZZY_OPTION"] == "Xyzzy Option"
+        assert param.option_labels["QWERTY_OPTION"] == "Qwerty Option"
+        assert param.option_labels["ASDFG_OPTION"] == "Asdfg Option"
 
-    def test_option_labels_populated(self) -> None:
+    def test_option_labels_populated(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
         """option_labels should map VALUE_LIST entries to upstream translations."""
         descriptions: dict[str, ParameterData] = {
             "COLOR": ParameterData(
@@ -247,8 +261,7 @@ class TestFormSchemaGenerator:
                 FLAGS=Flag.VISIBLE,
             ),
         }
-        generator = FormSchemaGenerator(locale="en")
-        schema = generator.generate(
+        schema = permissive_generator_en.generate(
             descriptions=descriptions,
             current_values={"COLOR": "BLUE"},
         )
@@ -275,7 +288,10 @@ class TestFormSchemaGenerator:
                 assert len(param.label) > 0
                 assert param.id
 
-    def test_read_only_parameter(self) -> None:
+    def test_read_only_parameter(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
         """Non-writable parameters should get READ_ONLY widget."""
         descriptions: dict[str, ParameterData] = {
             "ACTUAL_TEMPERATURE": ParameterData(
@@ -287,14 +303,53 @@ class TestFormSchemaGenerator:
                 FLAGS=Flag.VISIBLE,
             ),
         }
-        generator = FormSchemaGenerator(locale="en")
-        schema = generator.generate(
+        schema = permissive_generator_en.generate(
             descriptions=descriptions,
             current_values={"ACTUAL_TEMPERATURE": 50.0},
         )
         param = schema.sections[0].parameters[0]
         assert param.widget == WidgetType.READ_ONLY
         assert param.writable is False
+
+    def test_schedule_parameters_excluded(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
+        """Schedule parameters (XX_WP_* and WEEK_PROGRAM_*) should be excluded."""
+        descriptions: dict[str, ParameterData] = {
+            "TEMPERATURE_OFFSET": ParameterData(
+                TYPE=ParameterType.FLOAT,
+                MIN=-3.5,
+                MAX=3.5,
+                DEFAULT=0.0,
+                OPERATIONS=Operations.READ | Operations.WRITE,
+                FLAGS=Flag.VISIBLE,
+            ),
+            "1_WP_ENDTIME_1": ParameterData(
+                TYPE=ParameterType.INTEGER,
+                MIN=0,
+                MAX=1440,
+                DEFAULT=360,
+                OPERATIONS=Operations.READ | Operations.WRITE,
+                FLAGS=Flag.VISIBLE,
+            ),
+            "WEEK_PROGRAM_POINTER": ParameterData(
+                TYPE=ParameterType.INTEGER,
+                MIN=0,
+                MAX=5,
+                DEFAULT=0,
+                OPERATIONS=Operations.READ | Operations.WRITE,
+                FLAGS=Flag.VISIBLE,
+            ),
+        }
+        schema = permissive_generator_en.generate(
+            descriptions=descriptions,
+            current_values={"TEMPERATURE_OFFSET": 0.0, "1_WP_ENDTIME_1": 360, "WEEK_PROGRAM_POINTER": 0},
+        )
+        all_param_ids = [p.id for s in schema.sections for p in s.parameters]
+        assert "TEMPERATURE_OFFSET" in all_param_ids
+        assert "1_WP_ENDTIME_1" not in all_param_ids
+        assert "WEEK_PROGRAM_POINTER" not in all_param_ids
 
     def test_sections_are_populated(
         self,
@@ -315,9 +370,9 @@ class TestFormSchemaGenerator:
         self,
         switch_descriptions: dict[str, ParameterData],
         switch_values: dict[str, Any],
+        permissive_generator_en: FormSchemaGenerator,
     ) -> None:
-        generator = FormSchemaGenerator(locale="en")
-        schema = generator.generate(
+        schema = permissive_generator_en.generate(
             descriptions=switch_descriptions,
             current_values=switch_values,
         )

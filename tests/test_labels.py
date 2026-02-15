@@ -37,6 +37,14 @@ class TestLabelResolver:
         result = resolver.resolve(parameter_id="BRIGHTNESS")
         assert result == "Brightness"
 
+    def test_has_translation_false(self) -> None:
+        resolver = LabelResolver(locale="en")
+        assert resolver.has_translation(parameter_id="XYZZY_UNKNOWN_PARAM") is False
+
+    def test_has_translation_true(self) -> None:
+        resolver = LabelResolver(locale="en")
+        assert resolver.has_translation(parameter_id="TEMPERATURE_OFFSET") is True
+
     def test_known_translation_de(self) -> None:
         resolver = LabelResolver(locale="de")
         assert resolver.resolve(parameter_id="TEMPERATURE_OFFSET") == "Temperaturverschiebung"

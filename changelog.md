@@ -3,6 +3,7 @@
 - Add locale-aware section titles to `ParameterGrouper` (German translations)
 - Add `LabelResolver.has_translation()` to check for upstream translation availability
 - Filter parameters without CCU translation in `FormSchemaGenerator` (matches CCU WebUI easymode behavior)
+- Always populate `option_labels` on VALUE_LIST parameters with humanized fallback
 - Pass locale from `FormSchemaGenerator` to `ParameterGrouper`
 - Bump aiohomematic dependency to >=2026.2.12
 

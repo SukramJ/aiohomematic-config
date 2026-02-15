@@ -39,7 +39,7 @@ class LabelResolver:
         return self._locale
 
     def has_translation(self, *, parameter_id: str, channel_type: str = "") -> bool:
-        """Return whether a CCU translation exists for the parameter."""
+        """Return True if a CCU translation exists for the parameter."""
         return (
             get_parameter_translation(
                 parameter=parameter_id,
