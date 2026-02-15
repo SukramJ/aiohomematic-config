@@ -7,6 +7,28 @@ from typing import Any
 from aiohomematic.const import Flag, Operations, ParameterData, ParameterType
 import pytest
 
+from aiohomematic_config import FormSchemaGenerator, LabelResolver
+
+
+class _PermissiveLabelResolver(LabelResolver):
+    """LabelResolver that accepts all parameter IDs as having translations."""
+
+    def has_translation(self, *, parameter_id: str, channel_type: str = "") -> bool:
+        """Return True for any parameter."""
+        return True
+
+
+@pytest.fixture
+def permissive_generator_en() -> FormSchemaGenerator:
+    """Return a FormSchemaGenerator that does not filter by translation availability."""
+    return FormSchemaGenerator(label_resolver=_PermissiveLabelResolver(locale="en"))
+
+
+@pytest.fixture
+def permissive_generator_de() -> FormSchemaGenerator:
+    """Return a FormSchemaGenerator that does not filter by translation availability."""
+    return FormSchemaGenerator(label_resolver=_PermissiveLabelResolver(locale="de"))
+
 
 @pytest.fixture
 def thermostat_descriptions() -> dict[str, ParameterData]:

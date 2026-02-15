@@ -18,7 +18,7 @@ from aiohomematic.ccu_translations import (
     get_device_model_description,
     get_parameter_value_translation,
 )
-from aiohomematic.const import ParameterData, ParameterType
+from aiohomematic.const import SCHEDULE_PATTERN, ParameterData, ParameterType
 from aiohomematic.parameter_tools import (
     get_parameter_step,
     is_parameter_internal,
@@ -123,13 +123,16 @@ class FormSchemaGenerator:
         # 1. FLAGS & VISIBLE must be set
         # 2. FLAGS & INTERNAL must NOT be set
         # 3. OPERATIONS must include READ or WRITE
-        # 4. A CCU translation must exist (matches CCU WebUI easymode behavior)
+        # 4. Schedule parameters (XX_WP_*, WEEK_PROGRAM_*) are excluded
+        # 5. Only parameters with CCU translations are included (matches CCU WebUI easymode behavior)
         visible_params: dict[str, ParameterData] = {
             param_id: pd
             for param_id, pd in descriptions.items()
             if is_parameter_visible(parameter_data=pd)
             and not is_parameter_internal(parameter_data=pd)
             and (is_parameter_readable(parameter_data=pd) or is_parameter_writable(parameter_data=pd))
+            and not SCHEDULE_PATTERN.match(param_id)
+            and not param_id.startswith("WEEK_PROGRAM")
             and self._label_resolver.has_translation(parameter_id=param_id, channel_type=channel_type)
         }
 
@@ -172,17 +175,14 @@ class FormSchemaGenerator:
                     options = list(pd["VALUE_LIST"])
                     resolved_labels: dict[str, str] = {}
                     for value in options:
-                        if (
-                            translated := get_parameter_value_translation(
-                                parameter=param_id,
-                                value=value,
-                                channel_type=channel_type or None,
-                                locale=self._label_resolver.locale,
-                            )
-                        ) is not None:
-                            resolved_labels[value] = translated
-                    if resolved_labels:
-                        option_labels = resolved_labels
+                        translated = get_parameter_value_translation(
+                            parameter=param_id,
+                            value=value,
+                            channel_type=channel_type or None,
+                            locale=self._label_resolver.locale,
+                        )
+                        resolved_labels[value] = translated or _humanize_value(value=value)
+                    option_labels = resolved_labels
 
                 form_param = FormParameter(
                     id=param_id,
@@ -249,6 +249,11 @@ class FormSchemaGenerator:
             total_parameters=total_params,
             writable_parameters=writable_params,
         )
+
+
+def _humanize_value(*, value: str) -> str:
+    """Convert a VALUE_LIST entry to a human-readable label."""
+    return value.replace("_", " ").title()
 
 
 __all__ = tuple(
