@@ -174,11 +174,11 @@ class TestFormSchemaGenerator:
         generator = FormSchemaGenerator(locale="en")
         values = {
             "TEMPERATURE_OFFSET": 2.0,  # default is 0.0
-            "BOOST_TIME_PERIOD": 5,  # default is 5 (not modified)
-            "SHOW_WEEKDAY": "SATURDAY",
+            "TRANSMIT_TRY_MAX": 6,  # default is 6 (not modified)
+            "CHANNEL_OPERATION_MODE": "NORMAL_MODE",
             "BUTTON_RESPONSE_WITHOUT_BACKLIGHT": False,
             "LOCAL_RESET_DISABLED": False,
-            "TEMPERATURE_WINDOW_OPEN": 12.0,
+            "BRIGHTNESS_FILTER": 2.0,
         }
         schema = generator.generate(
             descriptions=thermostat_descriptions,
@@ -186,9 +186,9 @@ class TestFormSchemaGenerator:
         )
         all_params = [p for s in schema.sections for p in s.parameters]
         temp_offset = next(p for p in all_params if p.id == "TEMPERATURE_OFFSET")
-        boost_time = next(p for p in all_params if p.id == "BOOST_TIME_PERIOD")
+        transmit_try = next(p for p in all_params if p.id == "TRANSMIT_TRY_MAX")
         assert temp_offset.modified is True
-        assert boost_time.modified is False
+        assert transmit_try.modified is False
 
     def test_option_labels_de(self) -> None:
         """option_labels should use the correct locale."""
