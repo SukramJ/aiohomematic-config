@@ -1,0 +1,120 @@
+{
+  "CLIMATECONTROL_FLOOR_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Profile setting",
+          "de": "Profileinstellung"
+        },
+        "description": {
+          "en": "Standard profile for heating control<br /><br />",
+          "de": "Standardprofil zur Heizungssteuerung<br /><br />"
+        },
+        "params": {
+          "SHORT_COOLING_DISABLE": {
+            "constraint_type": "list",
+            "values": [1.0, 0.0]
+          },
+          "SHORT_ECO_COOLING_TEMPERATURE": {
+            "constraint_type": "range",
+            "default": 23.0,
+            "min_value": 0.0,
+            "max_value": 30.0
+          },
+          "SHORT_ECO_HEATING_TEMPERATURE": {
+            "constraint_type": "range",
+            "default": 19.0,
+            "min_value": 0.0,
+            "max_value": 30.0
+          },
+          "SHORT_HEATING_CLOCK_FUNCTION": {
+            "constraint_type": "list",
+            "values": [1.0, 0.0]
+          },
+          "SHORT_HEATING_DISABLE": {
+            "constraint_type": "list",
+            "values": [1.0, 0.0]
+          },
+          "SHORT_FLOOR_HEATING_MODE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 4.0
+          },
+          "SHORT_HUMIDITY_LIMIT_VALUE": {
+            "constraint_type": "range",
+            "default": 40.0,
+            "min_value": 40.0,
+            "max_value": 80.0
+          },
+          "SHORT_MINIMAL_FLOOR_TEMPERATURE": {
+            "constraint_type": "range",
+            "default": 19.0,
+            "min_value": 0.0,
+            "max_value": 30.0
+          },
+          "SHORT_OFFDELAY_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_OFFDELAY_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_ONDELAY_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ONDELAY_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 7.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 31.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_SWITCHING_INTERVAL_BASE": {
+            "constraint_type": "range",
+            "default": 7.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_SWITCHING_INTERVAL_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          }
+        }
+      }
+    ]
+  }
+}

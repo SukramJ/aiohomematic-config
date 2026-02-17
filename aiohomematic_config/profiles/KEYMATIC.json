@@ -1,0 +1,1284 @@
+{
+  "KEY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "unlock door",
+          "de": "T&uuml;r entriegeln"
+        },
+        "description": {
+          "en": "With a short or long button press the door will be unlocked. The door will be locked again automatically after the time set.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Tür entriegelt. Nach der festgelegten Zeit wird die Tür automatisch wieder verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "lock door",
+          "de": "T&uuml;r verriegeln"
+        },
+        "description": {
+          "en": "With a short or long button press the door will be locked.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Tür verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "open door",
+          "de": "T&uuml;r &ouml;ffnen"
+        },
+        "description": {
+          "en": "With a short or long button press the door will be opened. The door will be locked again automatically after the time set.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Tür geöffnet. Nach der festgelegten Zeit wird die Tür automatisch wieder verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "lock / unlock",
+          "de": "verriegeln / entriegeln"
+        },
+        "description": {
+          "en": "With a short button press the door will be locked. With a long button press the door will be unlocked. The door will be locked again automatically after the time set.",
+          "de": "Mit einem kurzen Tastendruck wird die Tür verriegelt. Mit einem langen Tastendruck wird die Tür entriegelt. Nach der festgelegten Zeit wird die Tür automatisch wieder verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "lock / open",
+          "de": "verriegeln / &ouml;ffnen"
+        },
+        "description": {
+          "en": "With a short button press the door will be locked. With a long button press the door will be opened. The door will be locked again automatically after the time set.",
+          "de": "Mit einem kurzen Tastendruck wird die Tür verriegelt. Mit einem langen Tastendruck wird die Tür geöffnet. Nach der festgelegten Zeit wird die Tür automatisch wieder verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "unlock / open",
+          "de": "entriegeln / &ouml;ffnen"
+        },
+        "description": {
+          "en": "With a short button press the door will be unlocked. With a long button press the door will be opened. The door will be locked again automatically after the time set.",
+          "de": "Mit einem kurzen Tastendruck wird die Tür entriegelt. Mit einem langen Tastendruck wird die Tür geöffnet. Nach der festgelegten Zeit wird die Tür automatisch wieder verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 7,
+        "name": {
+          "en": "toggle locking",
+          "de": "Verriegelung toggeln"
+        },
+        "description": {
+          "en": "With a short or long button press the door will be locked or unlocked, depending on the current status.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Tür, je nach aktuellem Zustand, entweder ent- oder verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      }
+    ]
+  },
+  "SHUTTER_CONTACT": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "lock door",
+          "de": "T&uuml;r verriegeln"
+        },
+        "description": {
+          "en": "After the door is closed it will be locked immediately. The door can be opened by removing the contact (not sabotage-proof).",
+          "de": "Nach dem Schließen der Tür wird sie unverzüglich verriegelt. Die Tür kann durch Entfernen des Kontakts geöffnet werden (nicht sabotagesicher)."
+        },
+        "params": {
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "lock door (sabotage-proof)",
+          "de": "T&uuml;r verriegeln (sabotagesicher)"
+        },
+        "description": {
+          "en": "After the door is closed it will be locked immediately. The door can not be opened by removing the contact (sabotage-proof).",
+          "de": "Nach dem Schließen der Tür wird sie unverzüglich verriegelt. Die Tür kann durch Entfernen des Kontakts nicht geöffnet werden (sabotagesicher)."
+        },
+        "params": {
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "no action",
+          "de": "keine Aktion"
+        },
+        "description": {
+          "en": "The contact is out of operation.",
+          "de": "Der Kontakt ist außer Betrieb."
+        },
+        "params": {
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SWITCH_INTERFACE": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "open door",
+          "de": "T&uuml;r &ouml;ffnen"
+        },
+        "description": {
+          "en": "By operating the switch the door will be opened. It will be locked again after the time set.",
+          "de": "Beim Betätigen des Schalters wird die  Tür  geöffnet. Nach der festgelegten Zeit wird sie wieder verriegelt."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "unlock door",
+          "de": "T&uuml;r entriegeln"
+        },
+        "description": {
+          "en": "By operating the switch the door will be unlocked. It will be locked again after the time set.",
+          "de": "Beim Betätigen des Schalters wird die  Tür  entriegelt. Nach der festgelegten Zeit wird sie wieder verriegelt."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "lock door",
+          "de": "T&uuml;r verriegeln"
+        },
+        "description": {
+          "en": "By operating the switch the door will be locked.",
+          "de": "Beim Betätigen des Schalters wird die  Tür  verriegelt."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "toggle locking",
+          "de": "Verriegelung toggeln"
+        },
+        "description": {
+          "en": "By operating the switch the door will be locked or unlocked, depending on the current status.",
+          "de": "Beim Betätigen des Schalters wird die Tür, je nach aktuellem Zustand, entweder ent- oder verriegelt."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      }
+    ]
+  },
+  "TEMPLATE": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "xxxx",
+          "de": "xxxx"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "yyyy",
+          "de": "yyyy"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      }
+    ]
+  },
+  "VIRTUAL_KEY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "unlock door",
+          "de": "T&uuml;r entriegeln"
+        },
+        "description": {
+          "en": "With a short or long button press the door will be unlocked. The door will be locked again automatically after the time set.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Tür entriegelt. Nach der festgelegten Zeit wird die Tür automatisch wieder verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "lock door",
+          "de": "T&uuml;r verriegeln"
+        },
+        "description": {
+          "en": "With a short or long button press the door will be locked.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Tür verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "open door",
+          "de": "T&uuml;r &ouml;ffnen"
+        },
+        "description": {
+          "en": "With a short or long button press the door will be opened. The door will be locked again automatically after the time set.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Tür geöffnet. Nach der festgelegten Zeit wird die Tür automatisch wieder verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "lock / unlock",
+          "de": "verriegeln / entriegeln"
+        },
+        "description": {
+          "en": "With a short button press the door will be locked. With a long button press the door will be unlocked. The door will be locked again automatically after the time set.",
+          "de": "Mit einem kurzen Tastendruck wird die Tür verriegelt. Mit einem langen Tastendruck wird die Tür entriegelt. Nach der festgelegten Zeit wird die Tür automatisch wieder verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "lock / open",
+          "de": "verriegeln / &ouml;ffnen"
+        },
+        "description": {
+          "en": "With a short button press the door will be locked. With a long button press the door will be opened. The door will be locked again automatically after the time set.",
+          "de": "Mit einem kurzen Tastendruck wird die Tür verriegelt. Mit einem langen Tastendruck wird die Tür geöffnet. Nach der festgelegten Zeit wird die Tür automatisch wieder verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "unlock / open",
+          "de": "entriegeln / &ouml;ffnen"
+        },
+        "description": {
+          "en": "With a short button press the door will be unlocked. With a long button press the door will be opened. The door will be locked again automatically after the time set.",
+          "de": "Mit einem kurzen Tastendruck wird die Tür entriegelt. Mit einem langen Tastendruck wird die Tür geöffnet. Nach der festgelegten Zeit wird die Tür automatisch wieder verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 7,
+        "name": {
+          "en": "toggle locking",
+          "de": "Verriegelung toggeln"
+        },
+        "description": {
+          "en": "With a short or long button press the door will be locked or unlocked, depending on the current status.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Tür, je nach aktuellem Zustand, entweder ent- oder verriegelt."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1105 @@
+{
+  "DISPLAY_INPUT_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Brightness (V) - on/brighter",
+          "de": "Helligkeit (V) - ein/heller"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is switched on at the preset brightness value/colour value. A long press of the button brightens the light.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den festgelegten Helligkeitswert/Farbwert eingeschaltet. Ein langer Tastendruck dimmt das Licht hoch."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Brightness (V) - off/darker",
+          "de": "Helligkeit (V) - aus/dunkler"
+        },
+        "description": {
+          "en": "The light is switched off with a brief press of the button. A long press of the button dims the light.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht ausgeschaltet. Ein langer Tastendruck dimmt das Licht herunter."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Helligkeit (V) - on/off &amp; brighter/darker",
+          "de": "Helligkeit (V) - ein/aus &amp; heller/dunkler"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the preset brightness value/colour value and \"off\". A long press of the button brightens/dims the light alternately.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen dem festgelegten Helligkeitswert/Farbwert und \"aus\". Ein langer Tastendruck dimmt das Licht abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Colour value (H) - up",
+          "de": "Farbwert (H) - hoch"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour value. A long press of the button moves the colour value up the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den eingestellten Farbwert gesetzt. Ein langer Tastedruck fährt den Farbwert auf der Farbskala hoch."
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Colour value (H) - down",
+          "de": "Farbwert (H) - runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour value. A long press of the button moves the colour value down the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den eingestellten Farbwert gesetzt. Ein langer Tastedruck fährt den Farbwert auf der Farbskala herunter."
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "Colour value (H) - up/down",
+          "de": "Farbwert (H) - hoch / runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the two preset colour values. A long press of the button moves the colour value alternately up and down the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen den beiden festgelegten Farbwerten. Ein langer Tastedruck fährt den Farbwert auf der Farbskala abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 7,
+        "name": {
+          "en": "Saturation (S) - up",
+          "de": "S&auml;ttigung (S) - hoch"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour saturation. A long press of the button increases the colour saturation.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf die eingestellte Farbsättigung gesetzt. Ein langer Tastendruck erhöht die Farbsättigung."
+        }
+      },
+      {
+        "id": 8,
+        "name": {
+          "en": "Saturation (S) - down",
+          "de": "S&auml;ttigung (S) - runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour saturation. A long press of the button reduces the colour saturation.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf die eingestellte Farbsättigung gesetzt. Ein langer Tastendruck vermindert die Farbsättigung."
+        }
+      },
+      {
+        "id": 9,
+        "name": {
+          "en": "Saturation (S) - up/down",
+          "de": "S&auml;ttigung (S) - hoch / runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the two preset colour saturations. A long press of the button moves the colour saturation alternately up and down.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen den beiden festgelegten Farbsättigungen. Ein langer Tastendruck fährt die Farbsättigung abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 10,
+        "name": {
+          "en": "Effect",
+          "de": "Effekt"
+        },
+        "description": {
+          "en": "A short or long keystroke activates the selected effect.",
+          "de": "Ein kurzer oder langer Tastendruck aktiviert den gewählten Effekt."
+        }
+      },
+      {
+        "id": 11,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active.",
+          "de": "Das Profil ist nicht aktiv."
+        }
+      }
+    ]
+  },
+  "DISPLAY_LEVEL_INPUT_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Brightness (V) - on/brighter",
+          "de": "Helligkeit (V) - ein/heller"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is switched on at the preset brightness value/colour value. A long press of the button brightens the light.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den festgelegten Helligkeitswert/Farbwert eingeschaltet. Ein langer Tastendruck dimmt das Licht hoch."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Brightness (V) - off/darker",
+          "de": "Helligkeit (V) - aus/dunkler"
+        },
+        "description": {
+          "en": "The light is switched off with a brief press of the button. A long press of the button dims the light.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht ausgeschaltet. Ein langer Tastendruck dimmt das Licht herunter."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Helligkeit (V) - on/off &amp; brighter/darker",
+          "de": "Helligkeit (V) - ein/aus &amp; heller/dunkler"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the preset brightness value/colour value and \"off\". A long press of the button brightens/dims the light alternately.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen dem festgelegten Helligkeitswert/Farbwert und \"aus\". Ein langer Tastendruck dimmt das Licht abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Colour value (H) - up",
+          "de": "Farbwert (H) - hoch"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour value. A long press of the button moves the colour value up the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den eingestellten Farbwert gesetzt. Ein langer Tastedruck fährt den Farbwert auf der Farbskala hoch."
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Colour value (H) - down",
+          "de": "Farbwert (H) - runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour value. A long press of the button moves the colour value down the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den eingestellten Farbwert gesetzt. Ein langer Tastedruck fährt den Farbwert auf der Farbskala herunter."
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "Colour value (H) - up/down",
+          "de": "Farbwert (H) - hoch / runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the two preset colour values. A long press of the button moves the colour value alternately up and down the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen den beiden festgelegten Farbwerten. Ein langer Tastedruck fährt den Farbwert auf der Farbskala abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 7,
+        "name": {
+          "en": "Saturation (S) - up",
+          "de": "S&auml;ttigung (S) - hoch"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour saturation. A long press of the button increases the colour saturation.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf die eingestellte Farbsättigung gesetzt. Ein langer Tastendruck erhöht die Farbsättigung."
+        }
+      },
+      {
+        "id": 8,
+        "name": {
+          "en": "Saturation (S) - down",
+          "de": "S&auml;ttigung (S) - runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour saturation. A long press of the button reduces the colour saturation.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf die eingestellte Farbsättigung gesetzt. Ein langer Tastendruck vermindert die Farbsättigung."
+        }
+      },
+      {
+        "id": 9,
+        "name": {
+          "en": "Saturation (S) - up/down",
+          "de": "S&auml;ttigung (S) - hoch / runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the two preset colour saturations. A long press of the button moves the colour saturation alternately up and down.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen den beiden festgelegten Farbsättigungen. Ein langer Tastendruck fährt die Farbsättigung abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 10,
+        "name": {
+          "en": "Effect",
+          "de": "Effekt"
+        },
+        "description": {
+          "en": "A short or long keystroke activates the selected effect.",
+          "de": "Ein kurzer oder langer Tastendruck aktiviert den gewählten Effekt."
+        }
+      },
+      {
+        "id": 11,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active.",
+          "de": "Das Profil ist nicht aktiv."
+        }
+      }
+    ]
+  },
+  "KEY_TRANSCEIVER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Brightness (V) - on/brighter",
+          "de": "Helligkeit (V) - ein/heller"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is switched on at the preset brightness value/colour value. A long press of the button brightens the light.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den festgelegten Helligkeitswert/Farbwert eingeschaltet. Ein langer Tastendruck dimmt das Licht hoch."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Brightness (V) - off/darker",
+          "de": "Helligkeit (V) - aus/dunkler"
+        },
+        "description": {
+          "en": "The light is switched off with a brief press of the button. A long press of the button dims the light.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht ausgeschaltet. Ein langer Tastendruck dimmt das Licht herunter."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Helligkeit (V) - on/off &amp; brighter/darker",
+          "de": "Helligkeit (V) - ein/aus &amp; heller/dunkler"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the preset brightness value/colour value and \"off\". A long press of the button brightens/dims the light alternately.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen dem festgelegten Helligkeitswert/Farbwert und \"aus\". Ein langer Tastendruck dimmt das Licht abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Colour value (H) - up",
+          "de": "Farbwert (H) - hoch"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour value. A long press of the button moves the colour value up the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den eingestellten Farbwert gesetzt. Ein langer Tastedruck fährt den Farbwert auf der Farbskala hoch."
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Colour value (H) - down",
+          "de": "Farbwert (H) - runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour value. A long press of the button moves the colour value down the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den eingestellten Farbwert gesetzt. Ein langer Tastedruck fährt den Farbwert auf der Farbskala herunter."
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "Colour value (H) - up/down",
+          "de": "Farbwert (H) - hoch / runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the two preset colour values. A long press of the button moves the colour value alternately up and down the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen den beiden festgelegten Farbwerten. Ein langer Tastedruck fährt den Farbwert auf der Farbskala abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 7,
+        "name": {
+          "en": "Saturation (S) - up",
+          "de": "S&auml;ttigung (S) - hoch"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour saturation. A long press of the button increases the colour saturation.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf die eingestellte Farbsättigung gesetzt. Ein langer Tastendruck erhöht die Farbsättigung."
+        }
+      },
+      {
+        "id": 8,
+        "name": {
+          "en": "Saturation (S) - down",
+          "de": "S&auml;ttigung (S) - runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour saturation. A long press of the button reduces the colour saturation.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf die eingestellte Farbsättigung gesetzt. Ein langer Tastendruck vermindert die Farbsättigung."
+        }
+      },
+      {
+        "id": 9,
+        "name": {
+          "en": "Saturation (S) - up/down",
+          "de": "S&auml;ttigung (S) - hoch / runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the two preset colour saturations. A long press of the button moves the colour saturation alternately up and down.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen den beiden festgelegten Farbsättigungen. Ein langer Tastendruck fährt die Farbsättigung abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 10,
+        "name": {
+          "en": "Effect",
+          "de": "Effekt"
+        },
+        "description": {
+          "en": "A short or long keystroke activates the selected effect.",
+          "de": "Ein kurzer oder langer Tastendruck aktiviert den gewählten Effekt."
+        }
+      },
+      {
+        "id": 11,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active.",
+          "de": "Das Profil ist nicht aktiv."
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_1": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Brightness (V) - on/brighter",
+          "de": "Helligkeit (V) - ein/heller"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is switched on at the preset brightness value/colour value. A long press of the button brightens the light.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den festgelegten Helligkeitswert/Farbwert eingeschaltet. Ein langer Tastendruck dimmt das Licht hoch."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Brightness (V) - off/darker",
+          "de": "Helligkeit (V) - aus/dunkler"
+        },
+        "description": {
+          "en": "The light is switched off with a brief press of the button. A long press of the button dims the light.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht ausgeschaltet. Ein langer Tastendruck dimmt das Licht herunter."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Helligkeit (V) - on/off &amp; brighter/darker",
+          "de": "Helligkeit (V) - ein/aus &amp; heller/dunkler"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the preset brightness value/colour value and \"off\". A long press of the button brightens/dims the light alternately.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen dem festgelegten Helligkeitswert/Farbwert und \"aus\". Ein langer Tastendruck dimmt das Licht abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Colour value (H) - up",
+          "de": "Farbwert (H) - hoch"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour value. A long press of the button moves the colour value up the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den eingestellten Farbwert gesetzt. Ein langer Tastedruck fährt den Farbwert auf der Farbskala hoch."
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Colour value (H) - down",
+          "de": "Farbwert (H) - runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour value. A long press of the button moves the colour value down the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den eingestellten Farbwert gesetzt. Ein langer Tastedruck fährt den Farbwert auf der Farbskala herunter."
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "Colour value (H) - up/down",
+          "de": "Farbwert (H) - hoch / runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the two preset colour values. A long press of the button moves the colour value alternately up and down the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen den beiden festgelegten Farbwerten. Ein langer Tastedruck fährt den Farbwert auf der Farbskala abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 7,
+        "name": {
+          "en": "Saturation (S) - up",
+          "de": "S&auml;ttigung (S) - hoch"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour saturation. A long press of the button increases the colour saturation.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf die eingestellte Farbsättigung gesetzt. Ein langer Tastendruck erhöht die Farbsättigung."
+        }
+      },
+      {
+        "id": 8,
+        "name": {
+          "en": "Saturation (S) - down",
+          "de": "S&auml;ttigung (S) - runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour saturation. A long press of the button reduces the colour saturation.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf die eingestellte Farbsättigung gesetzt. Ein langer Tastendruck vermindert die Farbsättigung."
+        }
+      },
+      {
+        "id": 9,
+        "name": {
+          "en": "Saturation (S) - up/down",
+          "de": "S&auml;ttigung (S) - hoch / runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the two preset colour saturations. A long press of the button moves the colour saturation alternately up and down.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen den beiden festgelegten Farbsättigungen. Ein langer Tastendruck fährt die Farbsättigung abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 10,
+        "name": {
+          "en": "Effect",
+          "de": "Effekt"
+        },
+        "description": {
+          "en": "A short or long keystroke activates the selected effect.",
+          "de": "Ein kurzer oder langer Tastendruck aktiviert den gewählten Effekt."
+        }
+      },
+      {
+        "id": 11,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active.",
+          "de": "Das Profil ist nicht aktiv."
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_2": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Brightness (V) - on",
+          "de": "Helligkeit (V) - ein"
+        },
+        "description": {
+          "en": "When actuating the switch, the light is switched on at the preset brightness value/colour value.",
+          "de": "Bei Bet%E4tigung des Schalters wird das Licht auf den festgelegten Helligkeitswert/Farbwert eingeschaltet."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Brightness (V) - off",
+          "de": "Helligkeit (V) - aus"
+        },
+        "description": {
+          "en": "The light is switched off when actuating the switch.",
+          "de": "Bei Bet%E4tigung des Schalters wird das Licht ausgeschaltet."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Brightness (V) - on/off",
+          "de": "Helligkeit (V) - ein/aus"
+        },
+        "description": {
+          "en": "When actuating the switch, the light changes between the preset brightness value/colour value and \"off\".",
+          "de": "Bei Bet%E4tigung des Schalters wechselt das Licht zwischen dem festgelegten Helligkeitswert/Farbwert und \"aus\"."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Colour value (H) - A",
+          "de": "Farbwert (H) - A"
+        },
+        "description": {
+          "en": "When actuating the switch, the light is set to the preset colour value.",
+          "de": "Bei Bet%E4tigung des Schalters wird das Licht auf den eingestellten Farbwert gesetzt."
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Colour value (H) - B",
+          "de": "Farbwert (H) - B"
+        },
+        "description": {
+          "en": "When actuating the switch, the light is set to the preset colour value.",
+          "de": "Bei Bet%E4tigung des Schalters wird das Licht auf den eingestellten Farbwert gesetzt."
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "Colour value (H) - A / B",
+          "de": "Farbwert (H) - A / B"
+        },
+        "description": {
+          "en": "When actuating the switch, the light changes between the two preset colour values.",
+          "de": "Bei Bet%E4tigung des Schalters wechselt das Licht zwischen den beiden festgelegten Farbwerten."
+        }
+      },
+      {
+        "id": 7,
+        "name": {
+          "en": "Saturation (S) - up",
+          "de": "S&auml;ttigung (S) - hoch"
+        },
+        "description": {
+          "en": "When actuating the switch, the light is set to the preset colour saturation.",
+          "de": "Bei Bet%E4tigung des Schalters wird das Licht auf die eingestellte Farbsättigung gesetzt."
+        }
+      },
+      {
+        "id": 8,
+        "name": {
+          "en": "Saturation (S) - down",
+          "de": "S&auml;ttigung (S) - runter"
+        },
+        "description": {
+          "en": "When actuating the switch, the light is set to the preset colour saturation.",
+          "de": "Bei Bet%E4tigung des Schalters wird das Licht auf die eingestellte Farbsättigung gesetzt."
+        }
+      },
+      {
+        "id": 9,
+        "name": {
+          "en": "Saturation (S) - up/down",
+          "de": "S&auml;ttigung (S) - hoch / runter"
+        },
+        "description": {
+          "en": "When actuating the switch, the light changes between the two preset colour saturations.",
+          "de": "Bei Bet%E4tigung des Schalters wechselt das Licht zwischen den beiden festgelegten Farbsättigungen."
+        }
+      },
+      {
+        "id": 10,
+        "name": {
+          "en": "Effect",
+          "de": "Effekt"
+        },
+        "description": {
+          "en": "Actuating the switch activates the selected effect.",
+          "de": "Die Bet%E4tigung des Schalters aktiviert den gewählten Effekt."
+        }
+      },
+      {
+        "id": 11,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active.",
+          "de": "Das Profil ist nicht aktiv."
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_3": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Brightness (V) - on",
+          "de": "Helligkeit (V) - ein"
+        },
+        "description": {
+          "en": "When opening the contact, the light is switched on at the preset brightness value/colour value.",
+          "de": "Bei %D6ffnen des Kontaktes wird das Licht auf den festgelegten Helligkeitswert/Farbwert eingeschaltet."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Brightness (V) - off",
+          "de": "Helligkeit (V) - aus"
+        },
+        "description": {
+          "en": "The light is switched off when opening the contact.",
+          "de": "Bei %D6ffnen des Kontaktes wird das Licht ausgeschaltet."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Brightness (V) - on/off",
+          "de": "Helligkeit (V) - ein/aus"
+        },
+        "description": {
+          "en": "When opening the contact, the light changes between the preset brightness value/colour value and \"off\".",
+          "de": "Bei %D6ffnen des Kontaktes wechselt das Licht zwischen dem festgelegten Helligkeitswert/Farbwert und \"aus\"."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Colour value (H) - A",
+          "de": "Farbwert (H) - A"
+        },
+        "description": {
+          "en": "When opening the contact, the light is set to the preset colour value.",
+          "de": "Bei %D6ffnen des Kontaktes wird das Licht auf den eingestellten Farbwert gesetzt."
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Colour value (H) - B",
+          "de": "Farbwert (H) - B"
+        },
+        "description": {
+          "en": "When opening the contact, the light is set to the preset colour value.",
+          "de": "Bei %D6ffnen des Kontaktes wird das Licht auf den eingestellten Farbwert gesetzt."
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "Colour value (H) - A / B",
+          "de": "Farbwert (H) - A / B"
+        },
+        "description": {
+          "en": "When opening the contact, the light changes between the two preset colour values.",
+          "de": "Bei %D6ffnen des Kontaktes wechselt das Licht zwischen den beiden festgelegten Farbwerten."
+        }
+      },
+      {
+        "id": 7,
+        "name": {
+          "en": "Saturation (S) - A",
+          "de": "S&auml;ttigung (S) - A"
+        },
+        "description": {
+          "en": "When opening the contact, the light is set to the preset colour saturation.",
+          "de": "Bei %D6ffnen des Kontaktes wird das Licht auf die eingestellte Farbsättigung gesetzt."
+        }
+      },
+      {
+        "id": 8,
+        "name": {
+          "en": "Saturation (S) - B",
+          "de": "S&auml;ttigung (S) - B"
+        },
+        "description": {
+          "en": "When opening the contact, the light is set to the preset colour saturation.",
+          "de": "Bei %D6ffnen des Kontaktes wird das Licht auf die eingestellte Farbsättigung gesetzt."
+        }
+      },
+      {
+        "id": 9,
+        "name": {
+          "en": "Saturation (S) - A / B",
+          "de": "S&auml;ttigung (S) - A / B"
+        },
+        "description": {
+          "en": "When opening the contact, the light changes between the two preset colour saturations.",
+          "de": "Bei %D6ffnen des Kontaktes wechselt das Licht zwischen den beiden festgelegten Farbsättigungen."
+        }
+      },
+      {
+        "id": 10,
+        "name": {
+          "en": "Effect",
+          "de": "Effekt"
+        },
+        "description": {
+          "en": "Opening the contact activates the selected effect.",
+          "de": "Das %D6ffnen des Kontaktes aktiviert den gewählten Effekt."
+        }
+      },
+      {
+        "id": 11,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active.",
+          "de": "Das Profil ist nicht aktiv."
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_4": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Brightness (V) - on/brighter",
+          "de": "Helligkeit (V) - ein/heller"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is switched on at the preset brightness value/colour value. A long press of the button brightens the light.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den festgelegten Helligkeitswert/Farbwert eingeschaltet. Ein langer Tastendruck dimmt das Licht hoch."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Brightness (V) - off/darker",
+          "de": "Helligkeit (V) - aus/dunkler"
+        },
+        "description": {
+          "en": "The light is switched off with a brief press of the button. A long press of the button dims the light.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht ausgeschaltet. Ein langer Tastendruck dimmt das Licht herunter."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Helligkeit (V) - on/off &amp; brighter/darker",
+          "de": "Helligkeit (V) - ein/aus &amp; heller/dunkler"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the preset brightness value/colour value and \"off\". A long press of the button brightens/dims the light alternately.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen dem festgelegten Helligkeitswert/Farbwert und \"aus\". Ein langer Tastendruck dimmt das Licht abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Colour value (H) - up",
+          "de": "Farbwert (H) - hoch"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour value. A long press of the button moves the colour value up the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den eingestellten Farbwert gesetzt. Ein langer Tastedruck fährt den Farbwert auf der Farbskala hoch."
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Colour value (H) - down",
+          "de": "Farbwert (H) - runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour value. A long press of the button moves the colour value down the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf den eingestellten Farbwert gesetzt. Ein langer Tastedruck fährt den Farbwert auf der Farbskala herunter."
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "Colour value (H) - up/down",
+          "de": "Farbwert (H) - hoch / runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the two preset colour values. A long press of the button moves the colour value alternately up and down the colour scale.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen den beiden festgelegten Farbwerten. Ein langer Tastedruck fährt den Farbwert auf der Farbskala abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 7,
+        "name": {
+          "en": "Saturation (S) - up",
+          "de": "S&auml;ttigung (S) - hoch"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour saturation. A long press of the button increases the colour saturation.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf die eingestellte Farbsättigung gesetzt. Ein langer Tastendruck erhöht die Farbsättigung."
+        }
+      },
+      {
+        "id": 8,
+        "name": {
+          "en": "Saturation (S) - down",
+          "de": "S&auml;ttigung (S) - runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light is set to the preset colour saturation. A long press of the button reduces the colour saturation.",
+          "de": "Mit einem kurzen Tastendruck wird das Licht auf die eingestellte Farbsättigung gesetzt. Ein langer Tastendruck vermindert die Farbsättigung."
+        }
+      },
+      {
+        "id": 9,
+        "name": {
+          "en": "Saturation (S) - up/down",
+          "de": "S&auml;ttigung (S) - hoch / runter"
+        },
+        "description": {
+          "en": "With a brief press of the button, the light changes between the two preset colour saturations. A long press of the button moves the colour saturation alternately up and down.",
+          "de": "Mit einem kurzen Tastendruck wechselt das Licht zwischen den beiden festgelegten Farbsättigungen. Ein langer Tastendruck fährt die Farbsättigung abwechselnd hoch und herunter."
+        }
+      },
+      {
+        "id": 10,
+        "name": {
+          "en": "Effect",
+          "de": "Effekt"
+        },
+        "description": {
+          "en": "A short or long keystroke activates the selected effect.",
+          "de": "Ein kurzer oder langer Tastendruck aktiviert den gewählten Effekt."
+        }
+      },
+      {
+        "id": 11,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active.",
+          "de": "Das Profil ist nicht aktiv."
+        }
+      }
+    ]
+  },
+  "PRESENCEDETECTOR_TRANSCEIVER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Brightness (V) - on",
+          "de": "Helligkeit (V) - ein"
+        },
+        "description": {
+          "en": "When the sensor is triggered, the light is switched on at the preset brightness value/colour value.",
+          "de": "Beim Auslösen des Sensors wird das Licht auf den festgelegten Helligkeitswert/Farbwert eingeschaltet."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Brightness (V) - off",
+          "de": "Helligkeit (V) - aus"
+        },
+        "description": {
+          "en": "The light is switched off when the sensor is triggered.",
+          "de": "Beim Auslösen des Sensors wird das Licht ausgeschaltet."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Brightness (V) - on/off",
+          "de": "Helligkeit (V) - ein/aus"
+        },
+        "description": {
+          "en": "When the sensor is triggered, the light changes between the preset brightness value/colour value and \"off\".",
+          "de": "Beim Auslösen des Sensors wechselt das Licht zwischen dem festgelegten Helligkeitswert/Farbwert und \"aus\"."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Colour value (H) - A",
+          "de": "Farbwert (H) - A"
+        },
+        "description": {
+          "en": "When the sensor is triggered, the light is set to the preset colour value.",
+          "de": "Beim Auslösen des Sensors wird das Licht auf den eingestellten Farbwert gesetzt."
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Colour value (H) - B",
+          "de": "Farbwert (H) - B"
+        },
+        "description": {
+          "en": "When the sensor is triggered, the light is set to the preset colour value.",
+          "de": "Beim Auslösen des Sensors wird das Licht auf den eingestellten Farbwert gesetzt."
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "Colour value (H) - A / B",
+          "de": "Farbwert (H) - A / B"
+        },
+        "description": {
+          "en": "When the sensor is triggered, the light changes between the two preset colour values.",
+          "de": "Beim Auslösen des Sensors wechselt das Licht zwischen den beiden festgelegten Farbwerten."
+        }
+      },
+      {
+        "id": 7,
+        "name": {
+          "en": "Saturation (S) - A",
+          "de": "S&auml;ttigung (S) - A"
+        },
+        "description": {
+          "en": "When the sensor is triggered, the light is set to the preset colour saturation.",
+          "de": "Beim Auslösen des Sensors wird das Licht auf die eingestellte Farbsättigung gesetzt."
+        }
+      },
+      {
+        "id": 8,
+        "name": {
+          "en": "Saturation (S) - B",
+          "de": "S&auml;ttigung (S) - B"
+        },
+        "description": {
+          "en": "When the sensor is triggered, the light is set to the preset colour saturation.",
+          "de": "Beim Auslösen des Sensors wird das Licht auf die eingestellte Farbsättigung gesetzt."
+        }
+      },
+      {
+        "id": 9,
+        "name": {
+          "en": "Saturation (S) - A / B",
+          "de": "S&auml;ttigung (S) - A / B"
+        },
+        "description": {
+          "en": "When the sensor is triggered, the light changes between the two preset colour saturations.",
+          "de": "Beim Auslösen des Sensors wechselt das Licht zwischen den beiden festgelegten Farbsättigungen."
+        }
+      },
+      {
+        "id": 10,
+        "name": {
+          "en": "Effect",
+          "de": "Effekt"
+        },
+        "description": {
+          "en": "Triggering the sensor activates the selected effect.",
+          "de": "Das Auslösen des Sensors aktiviert den gewählten Effekt."
+        }
+      },
+      {
+        "id": 11,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active.",
+          "de": "Das Profil ist nicht aktiv."
+        }
+      }
+    ]
+  }
+}
