@@ -52,7 +52,7 @@ include = ["aiohomematic_config", "aiohomematic_config.*"]
 exclude = ["tests", "tests.*", "dist", "build"]
 
 [tool.setuptools.package-data]
-aiohomematic_config = ["py.typed"]
+aiohomematic_config = ["py.typed", "profiles/*.json"]
 
 # ---------------------------------------------------------------------------
 # pylint

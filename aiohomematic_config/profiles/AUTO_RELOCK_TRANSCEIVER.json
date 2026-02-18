@@ -1,0 +1,515 @@
+{
+  "ACCESS_TRANSCEIVER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Toggle",
+          "de": "Toggle"
+        },
+        "description": {
+          "en": "If authorisation is granted and the correct code is entered, the status of Auto-Relock is toggling (on / off).",
+          "de": "Bei erteilter Berechtigung und Eingabe des korrekten Codes toggelt der Auto-Relock Status (ein / aus)."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "On",
+          "de": "Ein"
+        },
+        "description": {
+          "en": "If authorisation is granted and the correct code is entered, Auto-Relock is switchted on.",
+          "de": "Bei erteilter Berechtigung und Eingabe des korrekten Codes schaltet Auto-Relock ein."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Off",
+          "de": "Aus"
+        },
+        "description": {
+          "en": "If authorisation is granted and the correct code is entered, Auto-Relock is switchted off.",
+          "de": "Bei erteilter Berechtigung und Eingabe des korrekten Codes schaltet Auto-Relock aus."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active",
+          "de": "Das Profil ist nicht aktiv"
+        }
+      }
+    ]
+  },
+  "COND_SWITCH_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Toggle",
+          "de": "Toggle"
+        },
+        "description": {
+          "en": "When receiving the decision value defined, the status of Auto-Relock is toggling (on / off).",
+          "de": "Bei Empfang des gewählten Entscheidungswertes toggelt der Auto-Relock Status (ein / aus)."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "On",
+          "de": "Ein"
+        },
+        "description": {
+          "en": "When receiving the decision value defined, Auto-Relock is switchted on.",
+          "de": "Bei Empfang des gewählten Entscheidungswertes schaltet Auto-Relock ein."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Off",
+          "de": "Aus"
+        },
+        "description": {
+          "en": "When receiving the decision value defined, Auto-Relock is switched off.",
+          "de": "Bei Empfang des gewählten Entscheidungswertesschaltet Auto-Relock aus."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active",
+          "de": "Das Profil ist nicht aktiv"
+        }
+      }
+    ]
+  },
+  "DISPLAY_INPUT_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Toggle",
+          "de": "Toggle"
+        },
+        "description": {
+          "en": "With a long button press, the status of Auto-Relock is toggling (on / off).",
+          "de": "Ein kurzer oder langer Tastendruck toggelt den Auto-Relock Status (ein / aus)."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "On",
+          "de": "Ein"
+        },
+        "description": {
+          "en": "With a short or long button press, Auto-Relock is switchted on.",
+          "de": "Ein kurzer oder langer Tastendruck schaltet Auto-Relock ein."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Off",
+          "de": "Aus"
+        },
+        "description": {
+          "en": "With a short or long button press, Auto-Relock is switchted off.",
+          "de": "Ein kurzer oder langer Tastendruck schaltet Auto-Relock aus."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active",
+          "de": "Das Profil ist nicht aktiv"
+        }
+      }
+    ]
+  },
+  "DISPLAY_LEVEL_INPUT_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Toggle",
+          "de": "Toggle"
+        },
+        "description": {
+          "en": "With a long button press, the status of Auto-Relock is toggling (on / off).",
+          "de": "Ein kurzer oder langer Tastendruck toggelt den Auto-Relock Status (ein / aus)."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "On",
+          "de": "Ein"
+        },
+        "description": {
+          "en": "With a short or long button press, Auto-Relock is switchted on.",
+          "de": "Ein kurzer oder langer Tastendruck schaltet Auto-Relock ein."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Off",
+          "de": "Aus"
+        },
+        "description": {
+          "en": "With a short or long button press, Auto-Relock is switchted off.",
+          "de": "Ein kurzer oder langer Tastendruck schaltet Auto-Relock aus."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active",
+          "de": "Das Profil ist nicht aktiv"
+        }
+      }
+    ]
+  },
+  "KEY_TRANSCEIVER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Toggle",
+          "de": "Toggle"
+        },
+        "description": {
+          "en": "With a long button press, the status of Auto-Relock is toggling (on / off).",
+          "de": "Ein kurzer oder langer Tastendruck toggelt den Auto-Relock Status (ein / aus)."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "On",
+          "de": "Ein"
+        },
+        "description": {
+          "en": "With a short or long button press, Auto-Relock is switchted on.",
+          "de": "Ein kurzer oder langer Tastendruck schaltet Auto-Relock ein."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Off",
+          "de": "Aus"
+        },
+        "description": {
+          "en": "With a short or long button press, Auto-Relock is switchted off.",
+          "de": "Ein kurzer oder langer Tastendruck schaltet Auto-Relock aus."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active",
+          "de": "Das Profil ist nicht aktiv"
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_1": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Toggle",
+          "de": "Toggle"
+        },
+        "description": {
+          "en": "With a long button press, the status of Auto-Relock is toggling (on / off).",
+          "de": "Ein kurzer oder langer Tastendruck toggelt den Auto-Relock Status (ein / aus)."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "On",
+          "de": "Ein"
+        },
+        "description": {
+          "en": "With a short or long button press, Auto-Relock is switchted on.",
+          "de": "Ein kurzer oder langer Tastendruck schaltet Auto-Relock ein."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Off",
+          "de": "Aus"
+        },
+        "description": {
+          "en": "With a short or long button press, Auto-Relock is switchted off.",
+          "de": "Ein kurzer oder langer Tastendruck schaltet Auto-Relock aus."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active",
+          "de": "Das Profil ist nicht aktiv"
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_2": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Toggle",
+          "de": "Toggle"
+        },
+        "description": {
+          "en": "When actuating the switch, the status of Auto-Relock is toggling (on / off).",
+          "de": "Bei Bet%E4tigung des Schalters toggelt der Auto-Relock Status (ein / aus)."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "On",
+          "de": "Ein"
+        },
+        "description": {
+          "en": "When actuating the switch, Auto-Relock is switchted on.",
+          "de": "Bei Bet%E4tigung des Schalters schaltet Auto-Relock ein."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Off",
+          "de": "Aus"
+        },
+        "description": {
+          "en": "When actuating the switch, Auto-Relock is switchted off.",
+          "de": "Bei Bet%E4tigung des Schalters schaltet Auto-Relock aus."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active",
+          "de": "Das Profil ist nicht aktiv"
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_3": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Profile 1",
+          "de": "Profile 1"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_4": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Toggle",
+          "de": "Toggle"
+        },
+        "description": {
+          "en": "With a long button press, the status of Auto-Relock is toggling (on / off).",
+          "de": "Ein kurzer oder langer Tastendruck toggelt den Auto-Relock Status (ein / aus)."
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "On",
+          "de": "Ein"
+        },
+        "description": {
+          "en": "With a short or long button press, Auto-Relock is switchted on.",
+          "de": "Ein kurzer oder langer Tastendruck schaltet Auto-Relock ein."
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Off",
+          "de": "Aus"
+        },
+        "description": {
+          "en": "With a short or long button press, Auto-Relock is switchted off.",
+          "de": "Ein kurzer oder langer Tastendruck schaltet Auto-Relock aus."
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "inactive",
+          "de": "nicht aktiv"
+        },
+        "description": {
+          "en": "The profile is not active",
+          "de": "Das Profil ist nicht aktiv"
+        }
+      }
+    ]
+  }
+}

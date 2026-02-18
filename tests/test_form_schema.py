@@ -311,6 +311,68 @@ class TestFormSchemaGenerator:
         assert param.widget == WidgetType.READ_ONLY
         assert param.writable is False
 
+    def test_require_translation_false_includes_untranslated_params(self) -> None:
+        """Parameters without CCU translations should be included when require_translation=False."""
+        generator = FormSchemaGenerator(locale="en")
+        descriptions: dict[str, ParameterData] = {
+            "SHORT_ON_TIME": ParameterData(
+                TYPE=ParameterType.FLOAT,
+                MIN=0.0,
+                MAX=111600.0,
+                DEFAULT=0.0,
+                UNIT="s",
+                OPERATIONS=Operations.READ | Operations.WRITE,
+                FLAGS=Flag.VISIBLE,
+            ),
+            "LONG_ON_LEVEL": ParameterData(
+                TYPE=ParameterType.FLOAT,
+                MIN=0.0,
+                MAX=1.0,
+                DEFAULT=1.0,
+                OPERATIONS=Operations.READ | Operations.WRITE,
+                FLAGS=Flag.VISIBLE,
+            ),
+        }
+        # With require_translation=True (default), untranslated params are excluded
+        schema_strict = generator.generate(
+            descriptions=descriptions,
+            current_values={"SHORT_ON_TIME": 0.0, "LONG_ON_LEVEL": 1.0},
+            require_translation=True,
+        )
+        assert schema_strict.total_parameters == 0
+
+        # With require_translation=False, untranslated params are included
+        schema_permissive = generator.generate(
+            descriptions=descriptions,
+            current_values={"SHORT_ON_TIME": 0.0, "LONG_ON_LEVEL": 1.0},
+            require_translation=False,
+        )
+        assert schema_permissive.total_parameters == 2
+        all_param_ids = [p.id for s in schema_permissive.sections for p in s.parameters]
+        assert "SHORT_ON_TIME" in all_param_ids
+        assert "LONG_ON_LEVEL" in all_param_ids
+
+    def test_require_translation_false_uses_humanized_labels(self) -> None:
+        """Parameters without translations should get humanized labels as fallback."""
+        generator = FormSchemaGenerator(locale="en")
+        descriptions: dict[str, ParameterData] = {
+            "SHORT_DIM_STEP": ParameterData(
+                TYPE=ParameterType.FLOAT,
+                MIN=0.0,
+                MAX=1.0,
+                DEFAULT=0.05,
+                OPERATIONS=Operations.READ | Operations.WRITE,
+                FLAGS=Flag.VISIBLE,
+            ),
+        }
+        schema = generator.generate(
+            descriptions=descriptions,
+            current_values={"SHORT_DIM_STEP": 0.05},
+            require_translation=False,
+        )
+        param = schema.sections[0].parameters[0]
+        assert param.label == "Short Dim Step"
+
     def test_schedule_parameters_excluded(
         self,
         permissive_generator_en: FormSchemaGenerator,

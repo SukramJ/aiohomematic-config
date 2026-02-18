@@ -1,0 +1,650 @@
+{
+  "KEY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Ventilation lock On",
+          "de": "L&uuml;ftungssperre Ein"
+        },
+        "description": {
+          "en": "A keystroke will activate the ventilation lock (security).",
+          "de": "Mit einem Tastendruck wird die Lüftungssperre (Sicherheit) aktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Ventilation lock Off",
+          "de": "L&uuml;ftungssperre Aus"
+        },
+        "description": {
+          "en": "A keystroke will deactivate the ventilation lock (security).",
+          "de": "Mit einem Tastendruck wird die Lüftungssperre (Sicherheit) deaktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Ventilation lock On / Off",
+          "de": "L&uuml;ftungssperre Ein / Aus"
+        },
+        "description": {
+          "en": "A keystroke will change the state of the ventilation lock (security).",
+          "de": "Mit einem Tastendruck wird der Zustand der Lüftungssperre (Sicherheit) umgekehrt."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "no action",
+          "de": "keine Aktion"
+        },
+        "description": {
+          "en": "This direct link is deactivated.",
+          "de": "Diese Direktverknüpfung wird deaktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "RAINDETECTOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Ventilation lock On",
+          "de": "L&uuml;ftungssperre Ein"
+        },
+        "description": {
+          "en": "When it starts raining, the ventilation lock (security) will be activated",
+          "de": "Beginnt es zu regnen, wird die Lüftungssperre (Sicherheit) aktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Ventilation lock Off",
+          "de": "L&uuml;ftungssperre Aus"
+        },
+        "description": {
+          "en": "When it starts raining, the ventilation lock (security) will be deactivated.",
+          "de": "Beginnt es zu regnen, wird die Lüftungssperre (Sicherheit) deaktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Ventilation lock On / Off",
+          "de": "L&uuml;ftungssperre Ein / Aus"
+        },
+        "description": {
+          "en": "When it starts raining, the ventilation lock (security) will be activated. When the rain detector is drain again, the ventilation lock will be deactivated.",
+          "de": "Beginnt es zu regnen, wird die Lüftungssperre (Sicherheit) aktiviert. Sobald der Regensensor wieder trocken ist, wird die Lüftungssperre deaktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "no action",
+          "de": "keine Aktion"
+        },
+        "description": {
+          "en": "This direct link is deactivated.",
+          "de": "Diese Direktverknüpfung wird deaktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SHUTTER_CONTACT": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Ventilation lock On",
+          "de": "L&uuml;ftungssperre Ein"
+        },
+        "description": {
+          "en": "Closing the shutter contact will activate the ventilation lock (security)",
+          "de": "Beim Schließen des Schließerkontaktes wird die Lüftungssperre (Sicherheit) aktiviert"
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Ventilation lock Off",
+          "de": "L&uuml;ftungssperre Aus"
+        },
+        "description": {
+          "en": "Closing the shutter contact will deactivate the ventilation lock (security).",
+          "de": "Beim Schließen des Schließerkontaktes wird die Lüftungssperre (Sicherheit) deaktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Ventilation lock On / Off",
+          "de": "L&uuml;ftungssperre Ein / Aus"
+        },
+        "description": {
+          "en": "Closing the shutter contact will activate the ventilation lock (security). Opening the shutter contact will deactivate the ventilation lock",
+          "de": "Beim Schließen des Schließerkontaktes wird die Lüftungssperre (Sicherheit) aktiviert. Beim Öffnen des Schließerkontaktes wird die Lüftungssperre deaktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "no action",
+          "de": "keine Aktion"
+        },
+        "description": {
+          "en": "This direct link is deactivated.",
+          "de": "Diese Direktverknüpfung wird deaktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SWITCH_INTERFACE": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Ventilation lock On",
+          "de": "L&uuml;ftungssperre Ein"
+        },
+        "description": {
+          "en": "Toggling the switch will activate the ventilation lock (security).",
+          "de": "Beim Betätigen des Schalters, wird die Lüftungssperre (Sicherheit) aktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Ventilation lock Off",
+          "de": "L&uuml;ftungssperre Aus"
+        },
+        "description": {
+          "en": "Toggling the switch will deactivate the ventilation lock (security).",
+          "de": "Beim Betätigen des Schalters, wird die Lüftungssperre (Sicherheit) deaktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Ventilation lock On / Off",
+          "de": "L&uuml;ftungssperre Ein / Aus"
+        },
+        "description": {
+          "en": "Toggling the switch will change the state of the ventilation lock (security).",
+          "de": "Beim Betätigen des Schalters wechselt der Zustand der Lüftungssperre (Sicherheit)."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "no action",
+          "de": "keine Aktion"
+        },
+        "description": {
+          "en": "This direct link is deactivated.",
+          "de": "Die Verknüpfung wird deaktiviert"
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "VIRTUAL_KEY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Ventilation lock On",
+          "de": "L&uuml;ftungssperre Ein"
+        },
+        "description": {
+          "en": "A keystroke will activate the ventilation lock (security).",
+          "de": "Mit einem Tastendruck wird die Lüftungssperre (Sicherheit) aktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Ventilation lock Off",
+          "de": "L&uuml;ftungssperre Aus"
+        },
+        "description": {
+          "en": "A keystroke will deactivate the ventilation lock (security).",
+          "de": "Mit einem Tastendruck wird die Lüftungssperre (Sicherheit) deaktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Ventilation lock On / Off",
+          "de": "L&uuml;ftungssperre Ein / Aus"
+        },
+        "description": {
+          "en": "A keystroke will change the state of the ventilation lock (security).",
+          "de": "Mit einem Tastendruck wird der Zustand der Lüftungssperre (Sicherheit) umgekehrt."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "no action",
+          "de": "keine Aktion"
+        },
+        "description": {
+          "en": "This direct link is deactivated.",
+          "de": "Diese Direktverknüpfung wird deaktiviert."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "WEATHER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Ventilation lock On",
+          "de": "L&uuml;ftungssperre Ein"
+        },
+        "description": {
+          "en": "When the entered wind strength is reached, the ventilation lock (security) will be activated.",
+          "de": "Wird die eingestellte Windstärke überschritten, wird die Lüftungssperre (Sicherheit) aktiviert."
+        },
+        "params": {
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Ventilation lock Off",
+          "de": "L&uuml;ftungssperre Aus"
+        },
+        "description": {
+          "en": "Below the entered wind strength, the ventilation lock (security) will be deactivated.",
+          "de": "Wird die eingestellte Windstärke unterschritten, wird die Lüftungssperre (Sicherheit) deaktiviert."
+        },
+        "params": {
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Ventilation lock On / Off",
+          "de": "L&uuml;ftungssperre Ein / Aus"
+        },
+        "description": {
+          "en": "When the entered wind strength is reached, the ventilation lock (security) will be activated. Below the entered wind strength, the ventilation lock (security) will be deactivated again.",
+          "de": "Wird die eingestellte Windstärke überschritten, wird die Lüftungssperre (Sicherheit) aktiviert. Wird die Windstärke wieder unterschritten, wird die Lüftungssperre (Sicherheit) deaktiviert."
+        },
+        "params": {
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "no action",
+          "de": "keine Aktion"
+        },
+        "description": {
+          "en": "This direct link is deactivated.",
+          "de": "Diese Direktverknüpfung wird deaktiviert."
+        }
+      }
+    ]
+  }
+}

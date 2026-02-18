@@ -31,6 +31,7 @@ from pydantic import BaseModel
 from aiohomematic_config.const import DEFAULT_LOCALE
 from aiohomematic_config.grouping import ParameterGrouper
 from aiohomematic_config.labels import LabelResolver
+from aiohomematic_config.link_param_metadata import classify_link_parameter, get_time_presets
 from aiohomematic_config.widgets import WidgetType, determine_widget
 
 
@@ -51,6 +52,16 @@ class FormParameter(BaseModel):
     modified: bool = False
     options: list[str] | None = None
     option_labels: dict[str, str] | None = None
+
+    # Link parameter metadata (optional, enriched for LINK paramsets):
+    keypress_group: str | None = None
+    category: str | None = None
+    display_as_percent: bool = False
+    has_last_value: bool = False
+    hidden_by_default: bool = False
+    time_pair_id: str | None = None
+    time_selector_type: str | None = None
+    time_presets: list[dict[str, int | str]] | None = None
 
 
 class FormSection(BaseModel):
@@ -103,6 +114,8 @@ class FormSchemaGenerator:
         channel_type: str = "",
         model: str = "",
         sub_model: str | None = None,
+        require_translation: bool = True,
+        enrich_link_metadata: bool = False,
     ) -> FormSchema:
         """
         Generate a complete form schema for the given paramset.
@@ -114,6 +127,10 @@ class FormSchemaGenerator:
             channel_type: Channel type for grouping hints.
             model: Device model ID for description lookup.
             sub_model: Optional sub-model for description fallback.
+            require_translation: If True, only include parameters with CCU translations.
+                Set to False for LINK paramsets where translations are often unavailable.
+            enrich_link_metadata: If True, classify each parameter and attach
+                link metadata (keypress group, category, time presets, etc.).
 
         Returns:
             A FormSchema ready for JSON serialization.
@@ -125,6 +142,7 @@ class FormSchemaGenerator:
         # 3. OPERATIONS must include READ or WRITE
         # 4. Schedule parameters (XX_WP_*, WEEK_PROGRAM_*) are excluded
         # 5. Only parameters with CCU translations are included (matches CCU WebUI easymode behavior)
+        #    unless require_translation is False (e.g. for LINK paramsets)
         visible_params: dict[str, ParameterData] = {
             param_id: pd
             for param_id, pd in descriptions.items()
@@ -133,7 +151,10 @@ class FormSchemaGenerator:
             and (is_parameter_readable(parameter_data=pd) or is_parameter_writable(parameter_data=pd))
             and not SCHEDULE_PATTERN.match(param_id)
             and not param_id.startswith("WEEK_PROGRAM")
-            and self._label_resolver.has_translation(parameter_id=param_id, channel_type=channel_type)
+            and (
+                not require_translation
+                or self._label_resolver.has_translation(parameter_id=param_id, channel_type=channel_type)
+            )
         }
 
         # Group parameters
@@ -203,6 +224,25 @@ class FormSchemaGenerator:
                     options=options,
                     option_labels=option_labels,
                 )
+                if enrich_link_metadata:
+                    meta = classify_link_parameter(parameter_id=param_id)
+                    form_param.keypress_group = meta.keypress_group.value
+                    form_param.category = meta.category.value
+                    form_param.display_as_percent = meta.display_as_percent
+                    form_param.hidden_by_default = meta.hidden_by_default
+                    form_param.time_pair_id = meta.time_pair_id
+                    if meta.time_selector_type:
+                        form_param.time_selector_type = meta.time_selector_type.value
+                        form_param.time_presets = get_time_presets(
+                            selector_type=meta.time_selector_type,
+                            locale=self._label_resolver.locale,
+                        )
+                    # LEVEL: has_last_value when max > 1.0
+                    if meta.display_as_percent and isinstance(p_max, (int, float)) and p_max > 1.0:
+                        form_param.has_last_value = True
+                    else:
+                        form_param.has_last_value = meta.has_last_value
+
                 form_params.append(form_param)
                 total_params += 1
                 if writable:

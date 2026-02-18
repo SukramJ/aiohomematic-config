@@ -1,0 +1,6213 @@
+{
+  "CAPACITIVE_FILLING_LEVEL_SENSOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Upper fill level",
+          "de": "Oberer F&uuml;llstand"
+        },
+        "description": {
+          "en": "When the maximum fill level will be exceeded or falls below switching can be performed accordingly.",
+          "de": "Wenn der maximale Füllstand über- oder unterschritten wird, kann entsprechend geschaltet werden."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "range",
+            "default": 50.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "range",
+            "default": 180.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Lower fill level",
+          "de": "Unterer F&uuml;llstand"
+        },
+        "description": {
+          "en": "When the minimum fill level will be exceeded or falls below switching can be performed accordingly.",
+          "de": "Wenn der minimale Füllstand über- oder unterschritten wird, kann entsprechend geschaltet werden."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "range",
+            "default": 50.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "range",
+            "default": 90.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      }
+    ]
+  },
+  "CONDITION_CURRENT": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Switch - off",
+          "de": "Schalter aus"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      }
+    ]
+  },
+  "CONDITION_FREQUENCY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Switch - off",
+          "de": "Schalter aus"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      }
+    ]
+  },
+  "CONDITION_POWER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Switch - off",
+          "de": "Schalter aus"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      }
+    ]
+  },
+  "CONDITION_VOLTAGE": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Switch - off",
+          "de": "Schalter aus"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      }
+    ]
+  },
+  "KEY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "With a short or long button press the switch will be toggled on for the set time. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Schalter für die festgelegte Zeit eingeschaltet. Ist eine Verz&oumlgerungszeit eingestellt, erfolgt eine Schaltung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Switch - off",
+          "de": "Schalter aus"
+        },
+        "description": {
+          "en": "With a short or long button press the switch will be toggled off for the set time. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Schalter für die festgelegte Zeit ausgeschaltet. Ist eine Verzögerungszeit eingestellt, erfolgt eine Schaltung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "With a short or long button press the switch will be toggled on or off for the set time (toggle function). If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Schalter für die festgelegte Zeit ein- oder ausgeschaltet (Toggle-Funktion). Ist eine Verzögerungszeit eingestellt, erfolgt eine Schaltung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Staircase light",
+          "de": "Treppenhauslicht"
+        },
+        "description": {
+          "en": "With a short or long button press the switch will be toggled on for the set time.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Schalter für die festgelegte Zeit eingeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 300.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 300.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "MOD_EM8BIT_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "The actuator will be switched on or off, depending on the input value of the sensor and the selected switching direction.",
+          "de": "Der Aktor wird abhängig vom Eingangswert des Sensors und der gewählten Schaltrichtung ein- oder ausgeschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "range",
+            "default": 50.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "range",
+            "default": 180.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      }
+    ]
+  },
+  "MOTION_DETECTOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "When the sensor is triggered the switch will be switched on at least for the time set. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Beim Auslösen des Sensors wird der Schalter mindestens für die festgelegte Zeit eingeschaltet. Ist eine Verz&oumlgerungszeit eingestellt, erfolgt eine Schaltung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 255.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "list",
+            "values": [100.0, 255.0]
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 320.0,
+            "min_value": 0.0,
+            "max_value": 108000.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "list",
+            "values": [0.0, 20.0]
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "list",
+            "values": [1.0, 0.0]
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "list",
+            "values": [0.0, 1.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Staircase light",
+          "de": "Treppenhauslicht"
+        },
+        "description": {
+          "en": "When the sensor is triggered the switch will be switched on without delay at least for the time set.",
+          "de": "Beim Auslösen des Sensors wird der Schalter mindestens für die festgelegte Zeit ohne Verzögerung eingeschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 255.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 320.0,
+            "min_value": 0.0,
+            "max_value": 108000.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "list",
+            "values": [1.0, 0.0]
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "no action",
+          "de": "keine Aktion"
+        },
+        "description": {
+          "en": "The profile is not active.",
+          "de": "Das Profil ist nicht aktiv"
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "PULSE_SENSOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "When the switching command is transmitted the switch will be switched on for the time set. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Beim Senden des Schaltbefehls wird der Schalter für die festgelegte Zeit eingeschaltet. Ist eine Verz&oumlgerungszeit eingestellt, erfolgt eine Schaltung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Switch - off",
+          "de": "Schalter aus"
+        },
+        "description": {
+          "en": "When the switching command is transmitted the switch will be switched off for the time set. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Beim Senden des Schaltbefehls wird der Schalter für die festgelegte Zeit ausgeschaltet. Ist eine Verzögerungszeit eingestellt, erfolgt eine Schaltung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "When the switching command is transmitted the switch will be switched on or off for the time set (toggle function). If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Beim Senden des Schaltbefehls wird der Schalter für die festgelegte Zeit ein- oder ausgeschaltet (Toggle-Funktion). Ist eine Verzögerungszeit eingestellt, erfolgt eine Schaltung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Staircase light",
+          "de": "Treppenhauslicht"
+        },
+        "description": {
+          "en": "When the switching command is transmitted the switch will be switched on for the time set.",
+          "de": "Beim Senden des Schaltbefehls wird der Schalter für die festgelegte Zeit eingeschaltet."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 300.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "RAINDETECTOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "In case of rain the light will be switched on to the defined brightness value, in case of dry conditions it will be switched off. This function can be reversed.",
+          "de": "Bei Regen wird der Schalter für die eingestellte Zeit je nach gewählter Schaltrichtung geschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "In case of rain the switch will be switched on for the set time.",
+          "de": "Bei Regen wird der Schalter für die eingestellte Zeit eingeschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Switch - off",
+          "de": "Schalter aus"
+        },
+        "description": {
+          "en": "In case of rain the switch will be switched off for the set time.",
+          "de": "Bei Regen wird der Schalter für die eingestellte Zeit ausgeschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      }
+    ]
+  },
+  "ROTARY_HANDLE_SENSOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "When the switch contact is opened the switch will be switched on and switched off when the contact is closed. This function can be reversed.",
+          "de": "Beim Öffnen des Schaltkontakts wird der Schalter ein- und beim Schließen ausgeschaltet. Diese Funktion lässt sich auch umkehren."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Change signal",
+          "de": "&Auml;nderungssignal"
+        },
+        "description": {
+          "en": "The switch will be switched on if the defined change signal is recognized.",
+          "de": "Beim Erkennen des festgelegten Änderungssignals wird der Schalter eingeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SENSOR_FOR_CARBON_DIOXIDE": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "In case of increased CO2 concentrations in the room air the switch will be switched on for the set time.",
+          "de": "Bei erhöhtem CO2-Gehalt der Raumluft wird der Schalter für die festgelegte Zeit eingeschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 1200.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "list",
+            "values": [1.0, 2.0]
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [1.0, 2.0]
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "list",
+            "values": [1.0, 2.0]
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "list",
+            "values": [1.0, 2.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "no action",
+          "de": "keine Aktion"
+        },
+        "description": {
+          "en": "The CO2 sensor is not active.",
+          "de": "Der CO2-Sensor ist nicht aktiv."
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SENSOR_WINDOW": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "When the contact is opened the switch will be switched on and switched off when the contact is closed. This function can be reversed.",
+          "de": "Beim Öffnen des Fensers wird der Schalter ein- und beim Schließen ausgeschaltet. Diese Funktion lässt sich auch umkehren."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Change signal",
+          "de": "&Auml;nderungssignal"
+        },
+        "description": {
+          "en": "The switch will be switched on for the time set if the change signal is recognized.",
+          "de": "Beim Erkennen des Änderungssignals wird der Schalter für eine festgelegte Zeit eingeschaltet."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "list",
+            "values": [1.0, 2.0]
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "list",
+            "values": [1.0, 2.0]
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [1.0, 2.0]
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "list",
+            "values": [1.0, 2.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SHUTTER_CONTACT": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "When the contact is opened the switch will be switched on and switched off when the contact is closed. This function can be reversed.",
+          "de": "Beim Öffnen des Kontakts wird der Schalter ein- und beim Schließen ausgeschaltet. Diese Funktion lässt sich auch umkehren."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Change signal",
+          "de": "&Auml;nderungssignal"
+        },
+        "description": {
+          "en": "The switch will be switched on for the time set if the change signal is recognized.",
+          "de": "Beim Erkennen des Änderungssignals wird der Schalter für eine festgelegte Zeit eingeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SMOKE_DETECTOR_TEAM": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "In case of fire alarm the switch will be switched on for the set time. If the alarm will be confirmed by the triggering device or a smoke detector of the same group the switch will be switched off.",
+          "de": "Bei Feueralarm wird der Schalter für die festgelegte Zeit eingeschaltet. Erfolgt die Bestätigung des Alarms am Auslösenden oder einem Rauchmelder der gleichen Gruppe, wird der Schalter ausgeschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SMOKE_DETECTOR_TEAM_V2": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "In case of fire alarm the switch will be switched on for the set time. If the alarm will be confirmed by the triggering device or a smoke detector of the same group the switch will be switched off.",
+          "de": "Bei Feueralarm wird der Schalter für die festgelegte Zeit eingeschaltet. Erfolgt die Bestätigung des Alarms am Auslösenden oder einem Rauchmelder der gleichen Gruppe, wird der Schalter ausgeschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SWITCH": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "By pressing the device button the switch will be switched on for the set time. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem Druck auf die Gerätetaste wird der Schalter für die festgelegte Zeit eingeschaltet. Ist eine Verz&oumlgerungszeit eingestellt, erfolgt eine Schaltung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Switch - off",
+          "de": "Schalter aus"
+        },
+        "description": {
+          "en": "By pressing the device button the switch will be switched off for the set time. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem Druck auf die Gerätetaste wird der Schalter für die festgelegte Zeit ausgeschaltet. Ist eine Verzögerungszeit eingestellt, erfolgt eine Schaltung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "By pressing the device button the switch will be switched on or off for the set time (toggle function). If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem Druck auf die Gerätetaste wird der Schalter für die festgelegte Zeit ein- oder ausgeschaltet (Toggle-Funktion). Ist eine Verzögerungszeit eingestellt, erfolgt eine Schaltung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 116000.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 116000.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Staircase light",
+          "de": "Treppenhauslicht"
+        },
+        "description": {
+          "en": "By pressing the device button the switch will be switched on for the set time.",
+          "de": "Mit einem Druck auf die Gerätetaste wird der Schalter für die festgelegte Zeit eingeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 101.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "range",
+            "default": 300.0,
+            "min_value": 0.0,
+            "max_value": 108000.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 300.0,
+            "min_value": 0.0,
+            "max_value": 108000.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SWITCH_INTERFACE": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on/off/toggle",
+          "de": "Schalter ein / aus / Toggle"
+        },
+        "description": {
+          "en": "By pressing the switch contact the switch changes for the set time to the other status.",
+          "de": "Beim Betätigen des Schaltkontakts wechselt der Schalter für die festgelegte Zeit in den jeweils anderen Zustand."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Staircase light",
+          "de": "Treppenhauslicht"
+        },
+        "description": {
+          "en": "By pressing the switch contact the switch turns on the light for the set time. If the switch contact is pressed again while the light is switched on, the time count begins anew./span>",
+          "de": "Beim Betätigen des Schaltkontakts schaltet der Schalter das Licht für die festgelegte Zeit ein. Wird der Schaltkontakt während der ein-Phase nochmal betätigt, beginnt sie von vorne."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 300.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "By pressing the switch contact the switch will be switched on for a defined time set.",
+          "de": "Beim Betätigen des Schaltkontakts wird der Schalter für eine bestimmte Zeit eingeschaltet."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Switch - off",
+          "de": "Schalter aus"
+        },
+        "description": {
+          "en": "By pressing the switch contact the switch will be switched off for a defined time set.",
+          "de": "Beim Betätigen des Schaltkontakts wird der Schalter für eine bestimmte Zeit ausgeschaltet."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "The switch contact operates like a normal switch",
+          "de": "Der Schaltkontakt arbeitet als gewöhnlicher Schalter"
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SWITCH_TRANSMIT": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "If the wall thermostat sends the command for heating or cooling, the switch actuator will be switched on for the defined time. If the end of the heating/cooling period is send, the switch actuator will be switched off.",
+          "de": "Sendet der Wandthermostat den Heiz-/Kühlbefehl, schaltet der Schaltaktor für die festgelegte Zeit ein. Wird das Ende der Heiz-/Kühlphase gesendet, schaltet der Schaltaktor aus."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "TEMPLATE": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "xxxx",
+          "de": "xxxx"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "yyyy",
+          "de": "yyyy"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      }
+    ]
+  },
+  "TILT_SENSOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "When the switch contact is opened the switch will be switched on and switched off when the contact is closed. This function can be reversed.",
+          "de": "Beim Öffnen des Schaltkontakts wird der Schalter ein- und beim Schließen ausgeschaltet. Diese Funktion lässt sich auch umkehren."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Change signal",
+          "de": "&Auml;nderungssignal"
+        },
+        "description": {
+          "en": "The switch will be switched on if the defined change signal is recognized.",
+          "de": "Beim Erkennen des gewählten Änderungssignals wird der Schalter eingeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Garage light",
+          "de": "Garagenlicht"
+        },
+        "description": {
+          "en": "When the garage door is opened the switch will be switched on and switched off when it is closed again.",
+          "de": "Beim Öffnen des Garagentors wird der Schalter ein- und beim Schließen ausgeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "VIRTUAL_KEY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "With a short or long button press the switch will be toggled on for the set time. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Schalter für die festgelegte Zeit eingeschaltet. Ist eine Verz&oumlgerungszeit eingestellt, erfolgt eine Schaltung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Switch - off",
+          "de": "Schalter aus"
+        },
+        "description": {
+          "en": "With a short or long button press the switch will be toggled off for the set time. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Schalter für die festgelegte Zeit ausgeschaltet. Ist eine Verzögerungszeit eingestellt, erfolgt eine Schaltung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "With a short or long button press the switch will be toggled on or off for the set time (toggle function). If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Schalter für die festgelegte Zeit ein- oder ausgeschaltet (Toggle-Funktion). Ist eine Verzögerungszeit eingestellt, erfolgt eine Schaltung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Staircase light",
+          "de": "Treppenhauslicht"
+        },
+        "description": {
+          "en": "With a short or long button press the switch will be toggled on for the set time.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Schalter für die festgelegte Zeit eingeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 300.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 300.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "WATERDETECTIONSENSOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "In case of humidity the switch will be switched on for the set time. This function can be reversed.",
+          "de": "Bei Feuchtigkeit wird der Schalter für die festgelegte Zeit eingeschaltet. Diese Funktion lässt sich auch umkehren."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Change signal",
+          "de": "&Auml;nderungssignal"
+        },
+        "description": {
+          "en": "When the humidity changes the switch will be switched on for the set time.",
+          "de": "Bei Änderung der Feuchtigkeit wird der Schalter für die festgelegte Zeit eingeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "WEATHER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "In case of strong winds the switch will be switched on. In case of light winds it will be switched off. This function can be reversed.",
+          "de": "Bei starkem Wind wird der Schalter ein- und bei schwachem Wind ausgeschaltet. Diese Funktion lässt sich auch umkehren."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 200.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "list",
+            "values": [100.0, 0.0]
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "When the defined wind velocity is reached the switch will be switched on for the time set.",
+          "de": "Wenn die festgelegte Windgeschwindigkeit erreicht wird, schaltet der Schalter für die festgelegte Zeit ein."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 200.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "list",
+            "values": [100.0, 0.0]
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      }
+    ]
+  },
+  "WEATHER_2": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Schalter ein / aus"
+        },
+        "description": {
+          "en": "In case of strong winds the switch will be switched on. In case of light winds it will be switched off. This function can be reversed.",
+          "de": "Bei starkem Wind wird der Schalter ein- und bei schwachem Wind ausgeschaltet. Diese Funktion lässt sich auch umkehren."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "range",
+            "default": 5.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "range",
+            "default": 25.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Switch - on",
+          "de": "Schalter ein"
+        },
+        "description": {
+          "en": "When the defined wind velocity is reached the switch will be switched on for the time set.",
+          "de": "Wenn die festgelegte Windgeschwindigkeit erreicht wird, schaltet der Schalter für die festgelegte Zeit ein."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "range",
+            "default": 5.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "range",
+            "default": 25.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "range",
+            "default": 111600.0,
+            "min_value": 0.0,
+            "max_value": 111600.0
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          }
+        }
+      }
+    ]
+  }
+}

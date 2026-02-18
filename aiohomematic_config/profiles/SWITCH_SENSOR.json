@@ -1,0 +1,1593 @@
+{
+  "KEY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Alarm ein"
+        },
+        "description": {
+          "en": "With a short or long button press the alarm will be toggled on for the set time. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Alarm für die eingestellte Zeit eingeschaltet. Ist eine Einschaltverzögerungszeit eingestellt, so wird der Alarm erst nach Ablauf dieser Zeit eingeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "LONG_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "LONG_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_MULTIEXECUTE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "SHORT_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 200.0
+          },
+          "SHORT_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Switch - off",
+          "de": "Alarm aus"
+        },
+        "description": {
+          "en": "With a short or long button press the alarm will be toggled off for the set time. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Alarm ausgeschaltet. Ist eine Ausschaltverzögerungszeit eingestellt, so wird der Alarm erst nach Ablauf dieser Zeit ausgeschaltet"
+        },
+        "params": {
+          "LONG_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "LONG_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "LONG_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_MULTIEXECUTE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "SHORT_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 200.0
+          },
+          "SHORT_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Alarm ein / aus"
+        },
+        "description": {
+          "en": "With a short or long button press the alarm will be toggled on or off for the set time (toggle function). If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Alarm je nach aktuellem Zustand für die eingestellte Zeit ein- oder ausgeschaltet (Togglefunktion). Ist eine Einschaltverzögerungszeit eingestellt, so wird der Alarm erst nach Ablauf dieser Zeit eingeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "LONG_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "LONG_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_MULTIEXECUTE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "SHORT_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 200.0
+          },
+          "SHORT_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "MOTION_DETECTOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Alarm ein"
+        },
+        "description": {
+          "en": "When the sensor is triggered the switch will be switched on at least for the time set. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Beim Auslösen des Sensors wird der Alarm mindestens für die festgelegte Zeit eingeschaltet. Ist eine Verz&oumlgerungszeit eingestellt, erfolgt eine Aktivierung erst nach Ablauf dieser Zeit ."
+        },
+        "params": {
+          "LONG_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "LONG_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "LONG_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_MULTIEXECUTE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 255.0
+          },
+          "SHORT_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "SHORT_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 200.0
+          },
+          "SHORT_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "no action",
+          "de": "keine Aktion"
+        },
+        "description": {
+          "en": "The profile is not active.",
+          "de": "Das Profil ist nicht aktiv"
+        },
+        "params": {
+          "SHORT_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "ROTARY_HANDLE_SENSOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Alarm ein"
+        },
+        "description": {
+          "en": "When the window is opened the alarm will be switched on for the time set. This function can be reversed.",
+          "de": "Beim Öffnen des Fensters wird der Alarm für die eingestellte Zeit eingeschaltet.  Ist eine Einschaltverzögerungszeit eingestellt, so wird der Alarm erst nach Ablauf dieser Zeit eingeschaltet Diese Funktion lässt sich auch umkehren."
+        },
+        "params": {
+          "LONG_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "list",
+            "values": [0.0, 1.0]
+          },
+          "SHORT_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "SHORT_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 200.0
+          },
+          "SHORT_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Change signal",
+          "de": "&Auml;nderungssignal"
+        },
+        "description": {
+          "en": "The alarm will be switched on for the time set if a change of the window state is recognized.",
+          "de": "Bei Wechseln des Fensterzustands wird der Alarm für die eingestellte Zeit eingeschaltet.  Ist eine Einschaltverzögerungszeit eingestellt, so wird der Alarm erst nach Ablauf dieser Zeit eingeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "SHORT_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 200.0
+          },
+          "SHORT_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SHUTTER_CONTACT": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Alarm ein"
+        },
+        "description": {
+          "en": "When the contact is opened the alarm will be switched on for the time set. This function can be reversed.",
+          "de": "Beim Öffnen des Kontakts wird der Alarm  für die festgelegte Zeit eingeschaltet. Diese Funktion lässt sich auch umkehren."
+        },
+        "params": {
+          "LONG_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "list",
+            "values": [0.0, 1.0]
+          },
+          "SHORT_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "SHORT_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 200.0
+          },
+          "SHORT_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Change signal",
+          "de": "&Auml;nderungssignal"
+        },
+        "description": {
+          "en": "The alarm will be switched on for the time set if the change signal is recognized.",
+          "de": "Beim Erkennen des Änderungssignals wird der Schalter für eine festgelegte Zeit eingeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "SHORT_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 200.0
+          },
+          "SHORT_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "VIRTUAL_KEY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Switch - on",
+          "de": "Alarm ein"
+        },
+        "description": {
+          "en": "With a short or long button press the alarm will be toggled on for the set time. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Alarm für die eingestellte Zeit eingeschaltet. Ist eine Einschaltverzögerungszeit eingestellt, so wird der Alarm erst nach Ablauf dieser Zeit eingeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "LONG_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "LONG_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_MULTIEXECUTE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "SHORT_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 200.0
+          },
+          "SHORT_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Switch - off",
+          "de": "Alarm aus"
+        },
+        "description": {
+          "en": "With a short or long button press the alarm will be toggled off for the set time. If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Alarm ausgeschaltet. Ist eine Ausschaltverzögerungszeit eingestellt, so wird der Alarm erst nach Ablauf dieser Zeit ausgeschaltet"
+        },
+        "params": {
+          "LONG_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "LONG_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "LONG_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_MULTIEXECUTE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "SHORT_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 200.0
+          },
+          "SHORT_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Switch - on/off",
+          "de": "Alarm ein / aus"
+        },
+        "description": {
+          "en": "With a short or long button press the alarm will be toggled on or off for the set time (toggle function). If a delay is set switching will be performed after the delay time has expired.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Alarm je nach aktuellem Zustand für die eingestellte Zeit ein- oder ausgeschaltet (Togglefunktion). Ist eine Einschaltverzögerungszeit eingestellt, so wird der Alarm erst nach Ablauf dieser Zeit eingeschaltet."
+        },
+        "params": {
+          "LONG_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "LONG_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "LONG_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_MULTIEXECUTE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_ACTION_TYPE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_COND_VALUE_LO_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_OFF_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_OFF_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFFDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 120.0
+          },
+          "SHORT_ON_TIME_MODE_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_LEVEL_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 200.0
+          },
+          "SHORT_ONDELAY_TIME_SIRSEN": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  }
+}

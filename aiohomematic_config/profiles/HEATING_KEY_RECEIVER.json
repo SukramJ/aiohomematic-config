@@ -1,0 +1,2042 @@
+{
+  "DISPLAY_INPUT_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Desired temperature",
+          "de": "Gew&uuml;nschte Temperatur"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "list",
+            "values": [6.0, 0.0]
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Auto mode",
+          "de": "Auto-Modus"
+        },
+        "description": {
+          "en": "With a short or long button press the auto mode will be selected.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Auto-Modus gewählt."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Manu mode",
+          "de": "Manu-Modus"
+        },
+        "description": {
+          "en": "With a short or long button press the manu mode will be selected.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Manu-Modus gewählt."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Thermostat \"off\"",
+          "de": "Thermostat \"aus\""
+        },
+        "description": {
+          "en": "With a short or long button press the thermostat will be switched off.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Thermostat ausgeschaltet."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 10.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 10.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Thermostat \"on\"",
+          "de": "Thermostat \"ein\""
+        },
+        "description": {
+          "en": "With a short or long button press the thermostat will be switched on.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Thermostat eingeschaltet.."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 9.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 9.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "Boost mode \"on \\\\ off\"",
+          "de": "Boostmodus \"ein \\\\ aus\""
+        },
+        "description": {
+          "en": "With a short or long button press the boost mode will be switched on or off.",
+          "de": "Mit einem kurzen  oder langen Tastendruck wird der Boostmodus ein- bzw. ausgeschaltet.."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      }
+    ]
+  },
+  "DISPLAY_LEVEL_INPUT_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Desired temperature",
+          "de": "Gew&uuml;nschte Temperatur"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "list",
+            "values": [6.0, 0.0]
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Auto mode",
+          "de": "Auto-Modus"
+        },
+        "description": {
+          "en": "With a short or long button press the auto mode will be selected.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Auto-Modus gewählt."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Manu mode",
+          "de": "Manu-Modus"
+        },
+        "description": {
+          "en": "With a short or long button press the manu mode will be selected.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Manu-Modus gewählt."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Thermostat \"off\"",
+          "de": "Thermostat \"aus\""
+        },
+        "description": {
+          "en": "With a short or long button press the thermostat will be switched off.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Thermostat ausgeschaltet."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 10.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 10.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Thermostat \"on\"",
+          "de": "Thermostat \"ein\""
+        },
+        "description": {
+          "en": "With a short or long button press the thermostat will be switched on.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Thermostat eingeschaltet.."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 9.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 9.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "Boost mode \"on \\\\ off\"",
+          "de": "Boostmodus \"ein \\\\ aus\""
+        },
+        "description": {
+          "en": "With a short or long button press the boost mode will be switched on or off.",
+          "de": "Mit einem kurzen  oder langen Tastendruck wird der Boostmodus ein- bzw. ausgeschaltet.."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      }
+    ]
+  },
+  "KEY_TRANSCEIVER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Desired temperature",
+          "de": "Gew&uuml;nschte Temperatur"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "list",
+            "values": [6.0, 0.0]
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Auto mode",
+          "de": "Auto-Modus"
+        },
+        "description": {
+          "en": "With a short or long button press the auto mode will be selected.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Auto-Modus gewählt."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Manu mode",
+          "de": "Manu-Modus"
+        },
+        "description": {
+          "en": "With a short or long button press the manu mode will be selected.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Manu-Modus gewählt."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Thermostat \"off\"",
+          "de": "Thermostat \"aus\""
+        },
+        "description": {
+          "en": "With a short or long button press the thermostat will be switched off.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Thermostat ausgeschaltet."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 10.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 10.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Thermostat \"on\"",
+          "de": "Thermostat \"ein\""
+        },
+        "description": {
+          "en": "With a short or long button press the thermostat will be switched on.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Thermostat eingeschaltet.."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 9.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 9.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "Boost mode \"on \\\\ off\"",
+          "de": "Boostmodus \"ein \\\\ aus\""
+        },
+        "description": {
+          "en": "With a short or long button press the boost mode will be switched on or off.",
+          "de": "Mit einem kurzen  oder langen Tastendruck wird der Boostmodus ein- bzw. ausgeschaltet.."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_1": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Desired temperature",
+          "de": "Gew&uuml;nschte Temperatur"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "list",
+            "values": [6.0, 0.0]
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Auto mode",
+          "de": "Auto-Modus"
+        },
+        "description": {
+          "en": "With a short or long button press the auto mode will be selected.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Auto-Modus gewählt."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Manu mode",
+          "de": "Manu-Modus"
+        },
+        "description": {
+          "en": "With a short or long button press the manu mode will be selected.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Manu-Modus gewählt."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Thermostat \"off\"",
+          "de": "Thermostat \"aus\""
+        },
+        "description": {
+          "en": "With a short or long button press the thermostat will be switched off.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Thermostat ausgeschaltet."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 10.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 10.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Thermostat \"on\"",
+          "de": "Thermostat \"ein\""
+        },
+        "description": {
+          "en": "With a short or long button press the thermostat will be switched on.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird der Thermostat eingeschaltet.."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 9.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 9.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "Boost mode \"on \\\\ off\"",
+          "de": "Boostmodus \"ein \\\\ aus\""
+        },
+        "description": {
+          "en": "With a short or long button press the boost mode will be switched on or off.",
+          "de": "Mit einem kurzen  oder langen Tastendruck wird der Boostmodus ein- bzw. ausgeschaltet.."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_2": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Desired temperature",
+          "de": "Gew&uuml;nschte Temperatur"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "list",
+            "values": [6.0, 0.0]
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Auto mode",
+          "de": "Auto-Modus"
+        },
+        "description": {
+          "en": "When activating the switch the auto mode will be selected.",
+          "de": "Bei Bet%E4tigung des Schalters wird der Auto-Modus gewählt."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Manu mode",
+          "de": "Manu-Modus"
+        },
+        "description": {
+          "en": "When activating the switch the manu mode will be selected.",
+          "de": "Bei Bet%E4tigung des Schalters wird der Manu-Modus gewählt."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "Thermostat \"off\"",
+          "de": "Thermostat \"aus\""
+        },
+        "description": {
+          "en": "When activating the switch the thermostat will be switched off.",
+          "de": "Bei Bet%E4tigung des Schalters wird der Thermostat ausgeschaltet."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 10.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 10.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 5,
+        "name": {
+          "en": "Thermostat \"on\"",
+          "de": "Thermostat \"ein\""
+        },
+        "description": {
+          "en": "When activating the switch the thermostat will be switched on.",
+          "de": "Bei Bet%E4tigung des Schalters wird der Thermostat eingeschaltet.."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 9.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 9.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      },
+      {
+        "id": 6,
+        "name": {
+          "en": "Boost mode \"on \\\\ off\"",
+          "de": "Boostmodus \"ein \\\\ aus\""
+        },
+        "description": {
+          "en": "When activating the switch the boost mode will be switched on or off.",
+          "de": "Bei Bet%E4tigung des Schalters wird der Boostmodus ein- bzw. ausgeschaltet.."
+        },
+        "params": {
+          "LONG_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "LONG_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "LONG_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          },
+          "SHORT_CONTROL_MODE_RC": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_DELTA_TEMPERATURE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME_BASE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 7.0
+          },
+          "SHORT_ON_TIME_FACTOR": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 31.0
+          },
+          "SHORT_TEMPERATURE_RC": {
+            "constraint_type": "range",
+            "default": 17.0,
+            "min_value": 5.0,
+            "max_value": 30.0
+          }
+        }
+      }
+    ]
+  }
+}

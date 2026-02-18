@@ -1,0 +1,2336 @@
+{
+  "ACCELERATION_TRANSCEIVER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Lights on / off",
+          "de": "Beleuchtung ein / aus"
+        },
+        "description": {
+          "en": "According to the selected switching mode, the light of the garage door drive is switched on or off (toggle function).",
+          "de": "Entsprechend dem gewählten Schaltmodus wird die Beleuchtung des Garagentorantriebes in den entgegengesetzten Zustand geschaltet (Toggle-Funktion)."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0, 5.0]
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0, 5.0]
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Lights on",
+          "de": "Beleuchtung ein"
+        },
+        "description": {
+          "en": "According to the selected switching mode, the light of the garage door drive is switched on.",
+          "de": "Entsprechend dem gewählten Schaltmodus wird die Beleuchtung des Garagentorantriebes eingeschaltet."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0, 5.0]
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0, 5.0]
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Lights off",
+          "de": "Beleuchtung aus"
+        },
+        "description": {
+          "en": "According to the selected switching mode, the light of the garage door drive is switched off.",
+          "de": "Entsprechend dem gewählten Schaltmodus wird die Beleuchtung des Garagentorantriebes ausgeschaltet."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0, 5.0]
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0, 5.0]
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "no action",
+          "de": "keine Aktion"
+        },
+        "description": {
+          "en": "The sensor is not active",
+          "de": "Der Sensor ist nicht aktiv"
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "DISPLAY_INPUT_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Lights on / off",
+          "de": "Beleuchtung ein / aus"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched on or off (toggle function).",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes ein- oder ausgeschaltet (Toggle-Funktion)."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Lights on",
+          "de": "Beleuchtung ein"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched on.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes eingeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Lights off",
+          "de": "Beleuchtung aus"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched off.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes ausgeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "DISPLAY_LEVEL_INPUT_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Lights on / off",
+          "de": "Beleuchtung ein / aus"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched on or off (toggle function).",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes ein- oder ausgeschaltet (Toggle-Funktion)."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Lights on",
+          "de": "Beleuchtung ein"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched on.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes eingeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Lights off",
+          "de": "Beleuchtung aus"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched off.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes ausgeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "KEY_TRANSCEIVER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Lights on / off",
+          "de": "Beleuchtung ein / aus"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched on or off (toggle function).",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes ein- oder ausgeschaltet (Toggle-Funktion)."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Lights on",
+          "de": "Beleuchtung ein"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched on.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes eingeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Lights off",
+          "de": "Beleuchtung aus"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched off.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes ausgeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "MOTIONDETECTOR_TRANSCEIVER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Lights on / off",
+          "de": "Beleuchtung ein / aus"
+        },
+        "description": {
+          "en": "When triggering the sensor, the light of the garage door drive is switched into the opposite status (toggle function).",
+          "de": "Beim Auslösen des Sensors wird die Beleuchtung des Garagentorantriebes in den entgegengesetzten Zustand geschaltet (Toggle-Funktion)."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "range",
+            "default": 50.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Lights on",
+          "de": "Beleuchtung ein"
+        },
+        "description": {
+          "en": "When triggering the sensor, the light of the garage door drive is switched on.",
+          "de": "Beim Auslösen des Sensors wird die Beleuchtung des Garagentorantriebes eingeschaltet."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "range",
+            "default": 50.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Lights off",
+          "de": "Beleuchtung aus"
+        },
+        "description": {
+          "en": "When triggering the sensor, the light of the garage door drive is switched off.",
+          "de": "Beim Auslösen des Sensors wird die Beleuchtung des Garagentorantriebes ausgeschaltet."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "range",
+            "default": 50.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "no action",
+          "de": "keine Aktion"
+        },
+        "description": {
+          "en": "The profile is not active.",
+          "de": "Das Profil ist nicht aktiv"
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "MOTIONDETECTOR_VIRTUAL_TRANSCEIVER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Lights on / off",
+          "de": "Beleuchtung ein / aus"
+        },
+        "description": {
+          "en": "When triggering the sensor, the light of the garage door drive is switched into the opposite status (toggle function).",
+          "de": "Beim Auslösen des Sensors wird die Beleuchtung des Garagentorantriebes in den entgegengesetzten Zustand geschaltet (Toggle-Funktion)."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "range",
+            "default": 50.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Lights on",
+          "de": "Beleuchtung ein"
+        },
+        "description": {
+          "en": "When triggering the sensor, the light of the garage door drive is switched on.",
+          "de": "Beim Auslösen des Sensors wird die Beleuchtung des Garagentorantriebes eingeschaltet."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "range",
+            "default": 50.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Lights off",
+          "de": "Beleuchtung aus"
+        },
+        "description": {
+          "en": "When triggering the sensor, the light of the garage door drive is switched off.",
+          "de": "Beim Auslösen des Sensors wird die Beleuchtung des Garagentorantriebes ausgeschaltet."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "range",
+            "default": 50.0,
+            "min_value": 0.0,
+            "max_value": 255.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 4,
+        "name": {
+          "en": "no action",
+          "de": "keine Aktion"
+        },
+        "description": {
+          "en": "The profile is not active.",
+          "de": "Das Profil ist nicht aktiv"
+        },
+        "params": {
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_1": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Lights on / off",
+          "de": "Beleuchtung ein / aus"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched on or off (toggle function).",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes ein- oder ausgeschaltet (Toggle-Funktion)."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Lights on",
+          "de": "Beleuchtung ein"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched on.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes eingeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Lights off",
+          "de": "Beleuchtung aus"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched off.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes ausgeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_2": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Lights on / off",
+          "de": "Beleuchtung ein / aus"
+        },
+        "description": {
+          "en": "When activating the switch the light of the garage door drive will be switched on or off for the set time (toggle function).",
+          "de": "Bei Bet%E4tigung des Schalters wird die Beleuchtung des Garagentorantriebes ein- oder ausgeschaltet (Toggle-Funktion)."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "list",
+            "values": [50.0, 0.0]
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Lights on",
+          "de": "Beleuchtung ein"
+        },
+        "description": {
+          "en": "When activating the switch the light of the garage door drive will be switched on for the set time.",
+          "de": "Bei Bet%E4tigung des Schalters wird die Beleuchtung des Garagentorantriebes eingeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Lights off",
+          "de": "Beleuchtung aus"
+        },
+        "description": {
+          "en": "When activating the switch the light of the garage door drive will be switched off for the set time.",
+          "de": "Bei Bet%E4tigung des Schalters wird die Beleuchtung des Garagentorantriebes ausgeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_3": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Lights toggle",
+          "de": "Beleuchtung toggle"
+        },
+        "description": {
+          "en": "When the contact is opened the switch will be switched into the opposite status. This function can be reversed.",
+          "de": "Beim Öffnen des Kontakts wird die Beleuchtung des Garagentorantriebes in den entgegengesetzten Zustand geschaltet (Toggle-Funktion). Diese Funktion lässt sich auch umkehren."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0]
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0]
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Lights on / off",
+          "de": "Beleuchtung ein / aus"
+        },
+        "description": {
+          "en": "When the contact is opened the switch will be switched on and switched off when the contact is closed. This function can be reversed.",
+          "de": "Beim Öffnen des Kontakts wird die Beleuchtung des Garagentorantriebes ein- und beim Schließen ausgeschaltet. Diese Funktion lässt sich auch umkehren."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 49.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0]
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0]
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Change signal",
+          "de": "&Auml;nderungssignal"
+        },
+        "description": {
+          "en": "The switch will be switched on for the time set if the change signal is recognized.",
+          "de": "Beim Erkennen des Änderungssignals wird die Beleuchtung des Garagentorantriebes eingeschaltet."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0, 5.0]
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0, 5.0]
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "MULTI_MODE_INPUT_TRANSMITTER_4": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Lights on / off",
+          "de": "Beleuchtung ein / aus"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched on or off (toggle function).",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes ein- oder ausgeschaltet (Toggle-Funktion)."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Lights on",
+          "de": "Beleuchtung ein"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched on.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes eingeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Lights off",
+          "de": "Beleuchtung aus"
+        },
+        "description": {
+          "en": "With a short or long button press, the light of the garage door drive is switched off.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Beleuchtung des Garagentorantriebes ausgeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "SHUTTER_CONTACT": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Lights toggle",
+          "de": "Beleuchtung toggle"
+        },
+        "description": {
+          "en": "When opening the contact, the light of the garage door drive is switched into the opposite status (toggle function). This function can be reversed.",
+          "de": "Beim Öffnen des Kontakts wird die Beleuchtung des Garagentorantriebes in den entgegengesetzten Zustand geschaltet (Toggle-Funktion). Diese Funktion lässt sich auch umkehren."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0]
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0]
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Lights on / off",
+          "de": "Beleuchtung ein / aus"
+        },
+        "description": {
+          "en": "When the contact is opened the light of the garage door drive is switched on and switched off when the contact is closed. This function can be reversed.",
+          "de": "Beim Öffnen des Kontakts wird die Beleuchtung des Garagentorantriebes ein- und beim Schließen ausgeschaltet. Diese Funktion lässt sich auch umkehren."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 49.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0]
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0]
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Change signal",
+          "de": "&Auml;nderungssignal"
+        },
+        "description": {
+          "en": "If the change signal is detected, the light of the garage door drive is switched on",
+          "de": "Beim Erkennen des Änderungssignals wird die Beleuchtung des Garagentorantriebes eingeschaltet."
+        },
+        "params": {
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0, 5.0]
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0, 5.0]
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "SWITCH_TRANSCEIVER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Lights on / off",
+          "de": "Beleuchtung ein / aus"
+        },
+        "description": {
+          "en": "When activating the switch, the light of the garage door drive is switched on or off (toggle function).",
+          "de": "Bei Bet%E4tigung des Schalters wird die Beleuchtung des Garagentorantriebes ein- oder ausgeschaltet (Toggle-Funktion)."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Lights on",
+          "de": "Beleuchtung ein"
+        },
+        "description": {
+          "en": "When activating the switch, the light of the garage door drive is switched on.",
+          "de": "Bei Bet%E4tigung des Schalters wird die Beleuchtung des Garagentorantriebes eingeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Lights off",
+          "de": "Beleuchtung aus"
+        },
+        "description": {
+          "en": "When activating the switch, the light of the garage door drive is switched off.",
+          "de": "Bei Bet%E4tigung des Schalters wird die Beleuchtung des Garagentorantriebes ausgeschaltet."
+        },
+        "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          }
+        }
+      }
+    ]
+  }
+}

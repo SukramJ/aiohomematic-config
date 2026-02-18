@@ -1,0 +1,28 @@
+{
+  "CLIMATECONTROL_REGULATOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Profile 1",
+          "de": "Profile 1"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      }
+    ]
+  }
+}

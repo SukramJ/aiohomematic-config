@@ -1,0 +1,2431 @@
+{
+  "CONDITION_CURRENT": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "CONDITION_FREQUENCY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "CONDITION_POWER": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "CONDITION_VOLTAGE": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "KEY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "With a short or long button press the signal lamp of the chime will be triggered according to the selected mode.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Signalleuchte des Gongs entsprechend des gewähten Modus geschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "The button is deactivated.",
+          "de": "Die Taste ist deaktiviert."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "KEY_PAIR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp off",
+          "de": "Signalleuchte aus"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_ACT_NUM": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp on",
+          "de": "Signalleuchte ein"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          }
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "en": "Button deactivated",
+          "de": "Taste deaktiviert"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "MOTION_DETECTOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "The signal lamp of the chime will flash when the sensor is triggered. If a delay time is set, the flash will be triggered after the time has expired.The transmission interval of the motion detector (channel parameter) should be set to dynamic and the minimum transmission interval should be 15s .",
+          "de": "Beim Auslösen des Sensors wird die Signalleuchte des Gongs eingeschaltet. Ist eine Verz&oumlgerungszeit eingestellt, wird die Leuchte erst nach Ablauf dieser Zeit geschaltet.Beim Bewegungsmelder (Kanalparameter) wird ein Sendeabstande von dynamisch und ein Mindestsendeabstand von 15s empfohlen."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 255.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "list",
+            "values": [100.0, 255.0]
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 300.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "list",
+            "values": [0.0, 20.0]
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "list",
+            "values": [0.0, 1.0]
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0]
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0]
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "list",
+            "values": [0.0, 2.0]
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "The motion detector is deactivated.",
+          "de": "Der Bewegungsmelder ist deaktiviert."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "PULSE_SENSOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "The signal lamp of the chime will flash when the switching command is triggered. If a delay is set the lamp will flash after the delay time has expired.",
+          "de": "Beim Senden des Schaltbefehls wird die Signalleuchte des Gongs eingeschaltet. Ist eine Verz&oumlgerungszeit eingestellt, wird die Leuchte erst nach Ablauf dieser Zeit geschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "The sensor is deactivated.",
+          "de": "Der Sensor ist deaktiviert."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SENSOR_WINDOW": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "When the window is operated the flash of the chime will be triggered according to the selected direction.",
+          "de": "Beim Betätigen des Fensters wird die Signalleuchte des Gongs entsprechend der gewählten Richtung geschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "list",
+            "values": [0.0, 1.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "This direct link will be deactivated.",
+          "de": "Diese Verknüpfung wird deaktiviert"
+        },
+        "params": {
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACT_NUM": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SHUTTER_CONTACT": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "When the contact is operated the flash of the chime will be triggered according to the selected direction.",
+          "de": "Beim Betätigen des Kontakts wird die Signalleuchte des Gongs entsprechend der gewählten Richtung geschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [4.0, 3.0]
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "list",
+            "values": [4.0, 3.0]
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "The contact is deactivated.",
+          "de": "Der Kontakt ist deaktiviert."
+        },
+        "params": {
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACT_NUM": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SMOKE_DETECTOR_TEAM": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "The signal lamp of the chime will flash when the smoke detector is triggered.",
+          "de": "Beim Auslösen des Rauchmelders wird die Signalleuchte des Gongs geschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "The smoke detector is deactivated.",
+          "de": "Der Rauchmelder ist deaktiviert."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SMOKE_DETECTOR_TEAM_V2": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "The signal lamp of the chime will flash when the smoke detector is triggered.",
+          "de": "Beim Auslösen des Rauchmelders wird die Signalleuchte des Gongs geschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "The smoke detector is deactivated.",
+          "de": "Der Rauchmelder ist deaktiviert."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "SWITCH_INTERFACE": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "When the switch contact is operated the flash of the chime will be triggered according to the selected mode.",
+          "de": "Beim Betätigen des Schaltkontakts wird die Signalleuchte des Gongs entsprechend des gewählten Modus geschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "The switching interface is deactivated.",
+          "de": "Das Schaltinterface ist deaktiviert."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "TILT_SENSOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "When the switch contact is operated the signal lamp of the chime will be triggered according to the selected direction.",
+          "de": "Beim Betätigen des Schaltkontakts wird die Signalleuchte des Gongs entsprechend der gewählten Richtung geschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [4.0, 3.0]
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "list",
+            "values": [4.0, 3.0]
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "The tilt sensor is deactivated.",
+          "de": "Der Tiltsensor ist deaktiviert."
+        },
+        "params": {
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "VIRTUAL_KEY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "With a short or long button press the signal lamp of the chime will flash. If a delay is set the signal lamp will flash after the delay time has expired.",
+          "de": "Mit einem kurzen oder langen Tastendruck wird die Signalleuchte des Gongs eingeschaltet. Ist eine Verz&oumlgerungszeit eingestellt, wird die Signalleuchte erst nach Ablauf dieser Zeit geschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          },
+          "LONG_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 100.0
+          },
+          "LONG_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "LONG_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "LONG_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_MULTIEXECUTE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "The virtual button is deactivated.",
+          "de": "Die virtuelle Taste ist deaktiviert."
+        },
+        "params": {
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACT_NUM": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "WATERDETECTIONSENSOR": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Signal lamp active",
+          "de": "Signalleuchte aktiv"
+        },
+        "description": {
+          "en": "In case of humidity the signal lamp of the chime will be triggered according to the selected direction.",
+          "de": "Bei Feuchtigkeit wird die Signalleuchte des Gongs entsprechend der gewählten Richtung geschaltet."
+        },
+        "params": {
+          "SHORT_CT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_CT_OFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_CT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_COND_VALUE_LO": {
+            "constraint_type": "fixed",
+            "value": 50.0
+          },
+          "SHORT_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 180.0
+          },
+          "SHORT_ONDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ON_TIME": {
+            "constraint_type": "list",
+            "values": [111600.0, 6.0]
+          },
+          "SHORT_OFFDELAY_TIME": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME": {
+            "constraint_type": "fixed",
+            "value": 111600.0
+          },
+          "SHORT_ON_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_OFF_TIME_MODE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [4.0, 3.0]
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "list",
+            "values": [4.0, 3.0]
+          },
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "list",
+            "values": [6.0, 7.0]
+          },
+          "LONG_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Signal lamp inactive",
+          "de": "Signalleuchte nicht aktiv"
+        },
+        "description": {
+          "en": "The water sensor is deactivated.",
+          "de": "Der Wassermelder ist deaktiviert."
+        },
+        "params": {
+          "SHORT_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_ACT_NUM": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACT_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "LONG_ACT_NUM": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,3 +1,14 @@
+# Version 2026.2.5 (2026-02-17)
+
+- Add `link_param_metadata` module for classifying link paramset parameters
+- Add `LinkParamCategory`, `KeypressGroup`, `TimeSelectorType` enums
+- Add `LinkParamMeta`, `TimePreset` dataclasses
+- Add `classify_link_parameter()` for SHORT/LONG grouping, time pair detection, and category classification
+- Add `get_time_presets()`, `decode_time_value()`, `encode_time_value()` for time base/factor handling
+- Add time preset tables for on/off, delay, and ramp durations (extracted from OCCU)
+- Add `enrich_link_metadata` parameter to `FormSchemaGenerator.generate()`
+- Add optional link metadata fields to `FormParameter`: `keypress_group`, `category`, `display_as_percent`, `has_last_value`, `hidden_by_default`, `time_pair_id`, `time_selector_type`, `time_presets`
+
 # Version 2026.2.4 (2026-02-13)
 
 - Add locale-aware section titles to `ParameterGrouper` (German translations)

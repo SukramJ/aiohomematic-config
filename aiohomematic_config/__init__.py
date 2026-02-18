@@ -33,22 +33,61 @@ from aiohomematic_config.exporter import ExportedConfiguration, export_configura
 from aiohomematic_config.form_schema import FormParameter, FormSchema, FormSchemaGenerator, FormSection
 from aiohomematic_config.grouping import ParameterGroup, ParameterGrouper
 from aiohomematic_config.labels import LabelResolver
+from aiohomematic_config.link_param_metadata import (
+    PRESETS_BY_TYPE,
+    KeypressGroup,
+    LinkParamCategory,
+    LinkParamMeta,
+    TimePreset,
+    TimeSelectorType,
+    classify_link_parameter,
+    decode_time_value,
+    encode_time_value,
+    get_time_presets,
+)
+from aiohomematic_config.profile_data import ChannelProfileSet, ProfileDef, ProfileParamConstraint, ResolvedProfile
+from aiohomematic_config.profile_store import ProfileStore
 from aiohomematic_config.session import ConfigSession
 from aiohomematic_config.widgets import WidgetType, determine_widget
 
 __all__ = [
-    "ConfigSession",
+    # const
+    "VERSION",
+    # exporter
     "ExportedConfiguration",
+    "export_configuration",
+    "import_configuration",
+    # form_schema
     "FormParameter",
     "FormSchema",
     "FormSchemaGenerator",
     "FormSection",
-    "LabelResolver",
+    # grouping
     "ParameterGroup",
     "ParameterGrouper",
-    "VERSION",
+    # labels
+    "LabelResolver",
+    # link_param_metadata
+    "KeypressGroup",
+    "LinkParamCategory",
+    "LinkParamMeta",
+    "PRESETS_BY_TYPE",
+    "TimePreset",
+    "TimeSelectorType",
+    "classify_link_parameter",
+    "decode_time_value",
+    "encode_time_value",
+    "get_time_presets",
+    # profile_data
+    "ChannelProfileSet",
+    "ProfileDef",
+    "ProfileParamConstraint",
+    "ResolvedProfile",
+    # profile_store
+    "ProfileStore",
+    # session
+    "ConfigSession",
+    # widgets
     "WidgetType",
     "determine_widget",
-    "export_configuration",
-    "import_configuration",
 ]

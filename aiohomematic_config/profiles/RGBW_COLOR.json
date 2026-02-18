@@ -1,0 +1,124 @@
+{
+  "KEY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Select mode",
+          "de": "W&auml;hle Modus"
+        },
+        "description": {
+          "en": "You can define the mode of the button here. There are the following options: increase the color value, decrease the color value and - depending on the button press counter -  alternate between increasing and decreasing of the color value.",
+          "de": "Hier können Sie den Modus der Taste einstellen. Es gibt folgende Möglichkeiten: Farbwert erhöhen, Farbwert verringern und Farbwert abwechselnd erhöhen oder verringern, abhängig vom Tastendruckzähler."
+        },
+        "params": {
+          "SHORT_ACT_HSV_COLOR_VALUE": {
+            "constraint_type": "list",
+            "values": [253.0, 254.0, 255.0]
+          },
+          "LONG_ACT_HSV_COLOR_VALUE": {
+            "constraint_type": "list",
+            "values": [253.0, 254.0, 255.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Set color",
+          "de": "Setze Farbe"
+        },
+        "description": {
+          "en": "You can set the button for activating a particular color value here. You can set a color value for the short and for the long button press separately.",
+          "de": "Hier können Sie eine Taste mit einer Farbe für den kurzen und langen Tastendruck belegen"
+        },
+        "params": {
+          "SHORT_ACT_HSV_COLOR_VALUE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 200.0
+          },
+          "LONG_ACT_HSV_COLOR_VALUE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 200.0
+          }
+        }
+      }
+    ]
+  },
+  "VIRTUAL_KEY": {
+    "profiles": [
+      {
+        "id": 0,
+        "name": {
+          "en": "Expert",
+          "de": "Experte"
+        },
+        "description": {
+          "en": "",
+          "de": ""
+        }
+      },
+      {
+        "id": 1,
+        "name": {
+          "en": "Select mode",
+          "de": "W&auml;hle Modus"
+        },
+        "description": {
+          "en": "You can define the mode of the button here. There are the following options: increase the color value, decrease the color value and - depending on the button press counter -  alternate between increasing and decreasing of the color value.",
+          "de": "Hier können Sie den Modus der Taste einstellen. Es gibt folgende Möglichkeiten: Farbwert erhöhen, Farbwert verringern und Farbwert abwechselnd erhöhen oder verringern, abhängig vom Tastendruckzähler."
+        },
+        "params": {
+          "SHORT_ACT_HSV_COLOR_VALUE": {
+            "constraint_type": "list",
+            "values": [253.0, 254.0, 255.0]
+          },
+          "LONG_ACT_HSV_COLOR_VALUE": {
+            "constraint_type": "list",
+            "values": [253.0, 254.0, 255.0]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "en": "Set color",
+          "de": "Setze Farbe"
+        },
+        "description": {
+          "en": "You can set the button for activating a particular color value here. You can set a color value for the short and for the long button press separately.",
+          "de": "Hier können Sie eine Taste mit einer Farbe für den kurzen und langen Tastendruck belegen"
+        },
+        "params": {
+          "SHORT_ACT_HSV_COLOR_VALUE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 200.0
+          },
+          "LONG_ACT_HSV_COLOR_VALUE": {
+            "constraint_type": "range",
+            "default": 0.0,
+            "min_value": 0.0,
+            "max_value": 200.0
+          }
+        }
+      }
+    ]
+  }
+}
