@@ -1,3 +1,12 @@
+# Version 2026.2.6 (2026-02-19)
+
+- Add `change_log` module for tracking paramset configuration changes
+- Add `ConfigChangeLog` class with FIFO-capped storage, filtering, and serialization
+- Add `ConfigChangeEntry` frozen dataclass for immutable change records
+- Add `build_change_diff()` helper for computing old/new value diffs
+- Export `ConfigChangeLog`, `ConfigChangeEntry`, `build_change_diff` in public API
+- Bump aiohomematic dependency to >=2026.2.20
+
 # Version 2026.2.5 (2026-02-17)
 
 - Add `link_param_metadata` module for classifying link paramset parameters
