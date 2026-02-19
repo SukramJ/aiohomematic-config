@@ -244,3 +244,78 @@ class TestMatchActiveProfile:
             current_values={"FOO": 1},
         )
         assert result == 0
+
+
+class TestAsyncGetProfiles:
+    """Tests for ProfileStore.async_get_profiles."""
+
+    async def test_async_get_profiles(self, store: ProfileStore) -> None:
+        """Test async variant returns same results as sync."""
+        profiles = await store.async_get_profiles(
+            receiver_channel_type="DIMMER_VIRTUAL_RECEIVER",
+            sender_channel_type="SWITCH_TRANSCEIVER",
+        )
+        assert profiles is not None
+        assert len(profiles) >= 2
+        assert profiles[0].id == 0
+
+    async def test_async_get_profiles_caching(self, store: ProfileStore) -> None:
+        """Test that async variant uses cache on repeated calls."""
+        profiles1 = await store.async_get_profiles(
+            receiver_channel_type="DIMMER_VIRTUAL_RECEIVER",
+            sender_channel_type="SWITCH_TRANSCEIVER",
+        )
+        profiles2 = await store.async_get_profiles(
+            receiver_channel_type="DIMMER_VIRTUAL_RECEIVER",
+            sender_channel_type="SWITCH_TRANSCEIVER",
+        )
+        assert profiles1 is not None
+        assert profiles2 is not None
+        assert len(profiles1) == len(profiles2)
+
+    async def test_async_get_profiles_nonexistent(self, store: ProfileStore) -> None:
+        """Test async variant returns None for unknown receiver."""
+        profiles = await store.async_get_profiles(
+            receiver_channel_type="NONEXISTENT_RECEIVER",
+            sender_channel_type="SWITCH_TRANSCEIVER",
+        )
+        assert profiles is None
+
+
+class TestAsyncMatchActiveProfile:
+    """Tests for ProfileStore.async_match_active_profile."""
+
+    async def test_async_match_active_profile(self, store: ProfileStore) -> None:
+        """Test async variant matches profile correctly."""
+        values = {
+            "SHORT_PROFILE_ACTION_TYPE": 1.0,
+            "SHORT_JT_ON": 3.0,
+            "SHORT_JT_OFF": 1.0,
+            "SHORT_JT_OFFDELAY": 3.0,
+            "SHORT_JT_ONDELAY": 1.0,
+            "SHORT_JT_RAMPOFF": 2.0,
+            "SHORT_JT_RAMPON": 2.0,
+            "LONG_PROFILE_ACTION_TYPE": 3.0,
+            "LONG_JT_ON": 3.0,
+            "LONG_JT_OFF": 1.0,
+            "LONG_JT_OFFDELAY": 3.0,
+            "LONG_JT_ONDELAY": 1.0,
+            "LONG_JT_RAMPOFF": 2.0,
+            "LONG_JT_RAMPON": 2.0,
+            "LONG_MULTIEXECUTE": 1.0,
+        }
+        result = await store.async_match_active_profile(
+            receiver_channel_type="DIMMER_VIRTUAL_RECEIVER",
+            sender_channel_type="SWITCH_TRANSCEIVER",
+            current_values=values,
+        )
+        assert result == 1
+
+    async def test_async_match_unknown_receiver(self, store: ProfileStore) -> None:
+        """Test async variant returns Expert (0) for unknown receiver."""
+        result = await store.async_match_active_profile(
+            receiver_channel_type="NONEXISTENT_RECEIVER",
+            sender_channel_type="SWITCH_TRANSCEIVER",
+            current_values={"FOO": 1},
+        )
+        assert result == 0

@@ -1,3 +1,8 @@
+# Version 2026.2.7 (2026-02-19)
+
+- Add `async_get_profiles()` and `async_match_active_profile()` to `ProfileStore` for event-loop-safe usage
+- Fix blocking `read_text` / `open` calls inside the async event loop (uses `asyncio.to_thread`)
+
 # Version 2026.2.6 (2026-02-19)
 
 - Add `change_log` module for tracking paramset configuration changes
