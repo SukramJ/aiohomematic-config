@@ -315,7 +315,7 @@ class TestFormSchemaGenerator:
         """Parameters without CCU translations should be included when require_translation=False."""
         generator = FormSchemaGenerator(locale="en")
         descriptions: dict[str, ParameterData] = {
-            "SHORT_ON_TIME": ParameterData(
+            "FAKE_UNKNOWN_PARAM_A": ParameterData(
                 TYPE=ParameterType.FLOAT,
                 MIN=0.0,
                 MAX=111600.0,
@@ -324,7 +324,7 @@ class TestFormSchemaGenerator:
                 OPERATIONS=Operations.READ | Operations.WRITE,
                 FLAGS=Flag.VISIBLE,
             ),
-            "LONG_ON_LEVEL": ParameterData(
+            "FAKE_UNKNOWN_PARAM_B": ParameterData(
                 TYPE=ParameterType.FLOAT,
                 MIN=0.0,
                 MAX=1.0,
@@ -336,7 +336,7 @@ class TestFormSchemaGenerator:
         # With require_translation=True (default), untranslated params are excluded
         schema_strict = generator.generate(
             descriptions=descriptions,
-            current_values={"SHORT_ON_TIME": 0.0, "LONG_ON_LEVEL": 1.0},
+            current_values={"FAKE_UNKNOWN_PARAM_A": 0.0, "FAKE_UNKNOWN_PARAM_B": 1.0},
             require_translation=True,
         )
         assert schema_strict.total_parameters == 0
@@ -344,19 +344,19 @@ class TestFormSchemaGenerator:
         # With require_translation=False, untranslated params are included
         schema_permissive = generator.generate(
             descriptions=descriptions,
-            current_values={"SHORT_ON_TIME": 0.0, "LONG_ON_LEVEL": 1.0},
+            current_values={"FAKE_UNKNOWN_PARAM_A": 0.0, "FAKE_UNKNOWN_PARAM_B": 1.0},
             require_translation=False,
         )
         assert schema_permissive.total_parameters == 2
         all_param_ids = [p.id for s in schema_permissive.sections for p in s.parameters]
-        assert "SHORT_ON_TIME" in all_param_ids
-        assert "LONG_ON_LEVEL" in all_param_ids
+        assert "FAKE_UNKNOWN_PARAM_A" in all_param_ids
+        assert "FAKE_UNKNOWN_PARAM_B" in all_param_ids
 
     def test_require_translation_false_uses_humanized_labels(self) -> None:
         """Parameters without translations should get humanized labels as fallback."""
         generator = FormSchemaGenerator(locale="en")
         descriptions: dict[str, ParameterData] = {
-            "SHORT_DIM_STEP": ParameterData(
+            "FAKE_UNKNOWN_PARAM_X": ParameterData(
                 TYPE=ParameterType.FLOAT,
                 MIN=0.0,
                 MAX=1.0,
@@ -367,11 +367,11 @@ class TestFormSchemaGenerator:
         }
         schema = generator.generate(
             descriptions=descriptions,
-            current_values={"SHORT_DIM_STEP": 0.05},
+            current_values={"FAKE_UNKNOWN_PARAM_X": 0.05},
             require_translation=False,
         )
         param = schema.sections[0].parameters[0]
-        assert param.label == "Short Dim Step"
+        assert param.label == "Fake Unknown Param X"
 
     def test_schedule_parameters_excluded(
         self,
