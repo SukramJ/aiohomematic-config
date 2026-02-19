@@ -1,6 +1,6 @@
 # Version 2026.2.7 (2026-02-19)
 
-- Add `async_get_profiles()` and `async_match_active_profile()` to `ProfileStore` for event-loop-safe usage
+- **Breaking**: `ProfileStore.get_profiles()` and `ProfileStore.match_active_profile()` are now async
 - Fix blocking `read_text` / `open` calls inside the async event loop (uses `asyncio.to_thread`)
 
 # Version 2026.2.6 (2026-02-19)
