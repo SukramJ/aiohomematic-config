@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import html
 from importlib.resources import files
 import json
@@ -20,7 +21,7 @@ class ProfileStore:
         """Initialize the profile store."""
         self._cache: dict[str, dict[str, ChannelProfileSet]] = {}
 
-    def get_profiles(
+    async def get_profiles(
         self,
         *,
         receiver_channel_type: str,
@@ -28,7 +29,7 @@ class ProfileStore:
         locale: str = DEFAULT_LOCALE,
     ) -> list[ResolvedProfile] | None:
         """Return resolved profiles for a channel type pair, or None if unavailable."""
-        profile_set = self._load_profile_set(
+        profile_set = await self._load_profile_set(
             receiver_channel_type=receiver_channel_type,
             sender_channel_type=sender_channel_type,
         )
@@ -37,7 +38,7 @@ class ProfileStore:
 
         return [_resolve_profile(profile=p, locale=locale) for p in profile_set.profiles]
 
-    def match_active_profile(
+    async def match_active_profile(
         self,
         *,
         receiver_channel_type: str,
@@ -45,7 +46,7 @@ class ProfileStore:
         current_values: dict[str, Any],
     ) -> int:
         """Return the ID of the currently active profile (0 = Expert fallback)."""
-        profile_set = self._load_profile_set(
+        profile_set = await self._load_profile_set(
             receiver_channel_type=receiver_channel_type,
             sender_channel_type=sender_channel_type,
         )
@@ -59,7 +60,7 @@ class ProfileStore:
                 return profile.id
         return 0
 
-    def _load_profile_set(
+    async def _load_profile_set(
         self,
         *,
         receiver_channel_type: str,
@@ -67,7 +68,8 @@ class ProfileStore:
     ) -> ChannelProfileSet | None:
         """Load profile set from JSON, with caching."""
         if receiver_channel_type not in self._cache:
-            self._cache[receiver_channel_type] = _load_receiver_profiles(
+            self._cache[receiver_channel_type] = await asyncio.to_thread(
+                _load_receiver_profiles,
                 receiver_channel_type=receiver_channel_type,
             )
         return self._cache[receiver_channel_type].get(sender_channel_type)
