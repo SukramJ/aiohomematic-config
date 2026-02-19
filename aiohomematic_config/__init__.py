@@ -28,6 +28,7 @@ Quick start::
 
 from __future__ import annotations
 
+from aiohomematic_config.change_log import ConfigChangeEntry, ConfigChangeLog, build_change_diff
 from aiohomematic_config.const import VERSION
 from aiohomematic_config.exporter import ExportedConfiguration, export_configuration, import_configuration
 from aiohomematic_config.form_schema import FormParameter, FormSchema, FormSchemaGenerator, FormSection
@@ -51,6 +52,10 @@ from aiohomematic_config.session import ConfigSession
 from aiohomematic_config.widgets import WidgetType, determine_widget
 
 __all__ = [
+    # change_log
+    "ConfigChangeEntry",
+    "ConfigChangeLog",
+    "build_change_diff",
     # const
     "VERSION",
     # exporter

@@ -18,6 +18,7 @@ This document provides comprehensive guidance for AI assistants working on the a
 ```
 aiohomematic_config/        # Main package
     __init__.py             # Public API, __all__
+    change_log.py           # ConfigChangeLog, ConfigChangeEntry, build_change_diff
     const.py                # VERSION, constants, thresholds
     form_schema.py          # FormSchemaGenerator
     grouping.py             # ParameterGrouper
@@ -110,6 +111,7 @@ Never import concrete classes like `CentralUnit`, `InterfaceClient`, etc.
 ### Module dependency graph
 
 ```
+change_log.py     <- (standalone)
 const.py          <- no internal deps
 widgets.py        <- const.py
 labels.py         <- const.py
