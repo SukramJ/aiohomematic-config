@@ -1,3 +1,13 @@
+# Version 2026.2.8 (2026-02-21)
+
+- Add `schedule_facade` module for schedule management in the configuration panel
+- Add `ScheduleDeviceInfo`, `ClimateScheduleData`, `DeviceScheduleData` dataclasses
+- Add `list_schedule_devices()` for discovering devices with schedule support
+- Add `get_climate_schedule()` / `set_climate_schedule_weekday()` / `set_climate_active_profile()` for climate schedules
+- Add `get_device_schedule()` / `set_device_schedule()` for generic device schedules
+- Export all schedule facade types and functions in public API
+- Fix table formatting in API docs
+
 # Version 2026.2.7 (2026-02-19)
 
 - **Breaking**: `ProfileStore.get_profiles()` and `ProfileStore.match_active_profile()` are now async
