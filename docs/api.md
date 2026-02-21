@@ -19,28 +19,28 @@ schema = generator.generate(
 
 ### generate() Parameters
 
-| Parameter             | Type                            | Default | Description                                                         |
-| --------------------- | ------------------------------- | ------- | ------------------------------------------------------------------- |
-| `descriptions`        | `Mapping[str, ParameterData]`   | —       | Parameter descriptions (from get_paramset_description)              |
-| `current_values`      | `dict[str, Any]`                | —       | Current parameter values (from get_paramset)                        |
-| `channel_address`     | `str`                           | `""`    | Channel address for context                                         |
-| `channel_type`        | `str`                           | `""`    | Channel type for grouping hints and label lookup                    |
-| `model`               | `str`                           | `""`    | Device model ID for description lookup                              |
-| `sub_model`           | `str \| None`                   | `None`  | Optional sub-model for description fallback                         |
-| `require_translation` | `bool`                          | `True`  | Only include parameters with CCU translations (False for LINK sets) |
-| `enrich_link_metadata`| `bool`                          | `False` | Attach link metadata (keypress group, category, time presets, etc.) |
+| Parameter              | Type                          | Default | Description                                                         |
+| ---------------------- | ----------------------------- | ------- | ------------------------------------------------------------------- |
+| `descriptions`         | `Mapping[str, ParameterData]` | —       | Parameter descriptions (from get_paramset_description)              |
+| `current_values`       | `dict[str, Any]`              | —       | Current parameter values (from get_paramset)                        |
+| `channel_address`      | `str`                         | `""`    | Channel address for context                                         |
+| `channel_type`         | `str`                         | `""`    | Channel type for grouping hints and label lookup                    |
+| `model`                | `str`                         | `""`    | Device model ID for description lookup                              |
+| `sub_model`            | `str \| None`                 | `None`  | Optional sub-model for description fallback                         |
+| `require_translation`  | `bool`                        | `True`  | Only include parameters with CCU translations (False for LINK sets) |
+| `enrich_link_metadata` | `bool`                        | `False` | Attach link metadata (keypress group, category, time presets, etc.) |
 
 ### FormSchema
 
-| Field                 | Type                | Description                            |
-| --------------------- | ------------------- | -------------------------------------- |
-| `channel_address`     | `str`               | Channel address                        |
-| `channel_type`        | `str`               | Channel type                           |
-| `model_description`   | `str`               | Human-readable device model name       |
-| `channel_type_label`  | `str`               | Translated channel type label          |
-| `sections`            | `list[FormSection]` | Grouped parameter sections             |
-| `total_parameters`    | `int`               | Total visible parameters               |
-| `writable_parameters` | `int`               | Writable parameters count              |
+| Field                 | Type                | Description                      |
+| --------------------- | ------------------- | -------------------------------- |
+| `channel_address`     | `str`               | Channel address                  |
+| `channel_type`        | `str`               | Channel type                     |
+| `model_description`   | `str`               | Human-readable device model name |
+| `channel_type_label`  | `str`               | Translated channel type label    |
+| `sections`            | `list[FormSection]` | Grouped parameter sections       |
+| `total_parameters`    | `int`               | Total visible parameters         |
+| `writable_parameters` | `int`               | Writable parameters count        |
 
 ### FormSection
 
@@ -52,30 +52,30 @@ schema = generator.generate(
 
 ### FormParameter
 
-| Field                | Type                              | Description                                    |
-| -------------------- | --------------------------------- | ---------------------------------------------- |
-| `id`                 | `str`                             | Parameter ID                                   |
-| `label`              | `str`                             | Human-readable label                           |
-| `type`               | `str`                             | Parameter type                                 |
-| `widget`             | `WidgetType`                      | Recommended UI widget                          |
-| `min`                | `float \| int \| None`            | Minimum value (numeric types only)             |
-| `max`                | `float \| int \| None`            | Maximum value (numeric types only)             |
-| `step`               | `float \| None`                   | Step increment (numeric types only)            |
-| `unit`               | `str`                             | Unit string                                    |
-| `default`            | `Any`                             | Default value                                  |
-| `current_value`      | `Any`                             | Current value                                  |
-| `writable`           | `bool`                            | Whether parameter is writable                  |
-| `modified`           | `bool`                            | Whether value differs from default             |
-| `options`            | `list[str] \| None`              | Enum option values                             |
-| `option_labels`      | `dict[str, str] \| None`         | Translated labels for enum option values       |
-| `keypress_group`     | `str \| None`                    | Link: SHORT / LONG / COMMON                   |
-| `category`           | `str \| None`                    | Link: time / level / jump_target / etc.        |
-| `display_as_percent` | `bool`                            | Link: show value as percentage                 |
-| `has_last_value`     | `bool`                            | Link: supports "last value" option             |
-| `hidden_by_default`  | `bool`                            | Link: hide in default view (jump targets etc.) |
-| `time_pair_id`       | `str \| None`                    | Link: groups BASE/FACTOR pairs                 |
-| `time_selector_type` | `str \| None`                    | Link: timeOnOff / delay / rampOnOff            |
-| `time_presets`       | `list[dict[str, int \| str]] \| None` | Link: preset options for time selector    |
+| Field                | Type                                  | Description                                    |
+| -------------------- | ------------------------------------- | ---------------------------------------------- |
+| `id`                 | `str`                                 | Parameter ID                                   |
+| `label`              | `str`                                 | Human-readable label                           |
+| `type`               | `str`                                 | Parameter type                                 |
+| `widget`             | `WidgetType`                          | Recommended UI widget                          |
+| `min`                | `float \| int \| None`                | Minimum value (numeric types only)             |
+| `max`                | `float \| int \| None`                | Maximum value (numeric types only)             |
+| `step`               | `float \| None`                       | Step increment (numeric types only)            |
+| `unit`               | `str`                                 | Unit string                                    |
+| `default`            | `Any`                                 | Default value                                  |
+| `current_value`      | `Any`                                 | Current value                                  |
+| `writable`           | `bool`                                | Whether parameter is writable                  |
+| `modified`           | `bool`                                | Whether value differs from default             |
+| `options`            | `list[str] \| None`                   | Enum option values                             |
+| `option_labels`      | `dict[str, str] \| None`              | Translated labels for enum option values       |
+| `keypress_group`     | `str \| None`                         | Link: SHORT / LONG / COMMON                    |
+| `category`           | `str \| None`                         | Link: time / level / jump_target / etc.        |
+| `display_as_percent` | `bool`                                | Link: show value as percentage                 |
+| `has_last_value`     | `bool`                                | Link: supports "last value" option             |
+| `hidden_by_default`  | `bool`                                | Link: hide in default view (jump targets etc.) |
+| `time_pair_id`       | `str \| None`                         | Link: groups BASE/FACTOR pairs                 |
+| `time_selector_type` | `str \| None`                         | Link: timeOnOff / delay / rampOnOff            |
+| `time_presets`       | `list[dict[str, int \| str]] \| None` | Link: preset options for time selector         |
 
 ## WidgetType
 
@@ -116,18 +116,18 @@ if session.is_dirty:
 
 ### Methods
 
-| Method                     | Returns                       | Description                            |
-| -------------------------- | ----------------------------- | -------------------------------------- |
-| `set(parameter, value)`    | `None`                        | Set value, record for undo             |
-| `undo()`                   | `bool`                        | Undo last change                       |
-| `redo()`                   | `bool`                        | Redo last undone change                |
-| `get_changes()`            | `dict[str, Any]`              | Changed values for put_paramset        |
-| `get_changed_parameters()` | `dict[str, ParamsetChange]`   | Detailed diff between initial/current  |
-| `get_current_value()`      | `Any`                         | Current value of a parameter           |
-| `validate()`               | `dict[str, ValidationResult]` | Validate all values                    |
-| `validate_changes()`       | `dict[str, ValidationResult]` | Validate only changed values           |
-| `reset_to_defaults()`      | `None`                        | Reset to parameter defaults            |
-| `discard()`                | `None`                        | Revert all changes                     |
+| Method                     | Returns                       | Description                           |
+| -------------------------- | ----------------------------- | ------------------------------------- |
+| `set(parameter, value)`    | `None`                        | Set value, record for undo            |
+| `undo()`                   | `bool`                        | Undo last change                      |
+| `redo()`                   | `bool`                        | Redo last undone change               |
+| `get_changes()`            | `dict[str, Any]`              | Changed values for put_paramset       |
+| `get_changed_parameters()` | `dict[str, ParamsetChange]`   | Detailed diff between initial/current |
+| `get_current_value()`      | `Any`                         | Current value of a parameter          |
+| `validate()`               | `dict[str, ValidationResult]` | Validate all values                   |
+| `validate_changes()`       | `dict[str, ValidationResult]` | Validate only changed values          |
+| `reset_to_defaults()`      | `None`                        | Reset to parameter defaults           |
+| `discard()`                | `None`                        | Revert all changes                    |
 
 ### Properties
 
@@ -154,10 +154,10 @@ has = resolver.has_translation(parameter_id="TEMPERATURE_OFFSET", channel_type="
 
 ### Methods
 
-| Method                                       | Returns | Description                                    |
-| -------------------------------------------- | ------- | ---------------------------------------------- |
-| `resolve(parameter_id, channel_type="")`     | `str`   | Translated label or humanized fallback         |
-| `has_translation(parameter_id, channel_type)` | `bool`  | Whether a CCU translation exists               |
+| Method                                        | Returns | Description                            |
+| --------------------------------------------- | ------- | -------------------------------------- |
+| `resolve(parameter_id, channel_type="")`      | `str`   | Translated label or humanized fallback |
+| `has_translation(parameter_id, channel_type)` | `bool`  | Whether a CCU translation exists       |
 
 ### Properties
 
@@ -184,16 +184,16 @@ config = import_configuration(json_data=json_str)
 
 ### ExportedConfiguration
 
-| Field             | Type              | Description                |
-| ----------------- | ----------------- | -------------------------- |
-| `version`         | `str`             | Export format version      |
-| `exported_at`     | `str`             | ISO timestamp              |
-| `device_address`  | `str`             | Device address             |
-| `model`           | `str`             | Device model               |
-| `channel_address` | `str`             | Channel address            |
-| `channel_type`    | `str`             | Channel type               |
-| `paramset_key`    | `str`             | Paramset key               |
-| `values`          | `dict[str, Any]`  | Configuration values       |
+| Field             | Type             | Description           |
+| ----------------- | ---------------- | --------------------- |
+| `version`         | `str`            | Export format version |
+| `exported_at`     | `str`            | ISO timestamp         |
+| `device_address`  | `str`            | Device address        |
+| `model`           | `str`            | Device model          |
+| `channel_address` | `str`            | Channel address       |
+| `channel_type`    | `str`            | Channel type          |
+| `paramset_key`    | `str`            | Paramset key          |
+| `values`          | `dict[str, Any]` | Configuration values  |
 
 ## ConfigChangeLog
 
@@ -236,17 +236,17 @@ removed = log.clear_by_entry_id(entry_id="device_001")
 
 ### ConfigChangeEntry
 
-| Field             | Type                          | Description               |
-| ----------------- | ----------------------------- | ------------------------- |
-| `timestamp`       | `str`                         | ISO timestamp             |
-| `entry_id`        | `str`                         | Identifier for grouping   |
-| `interface_id`    | `str`                         | Interface identifier      |
-| `channel_address` | `str`                         | Channel address           |
-| `device_name`     | `str`                         | Human-readable name       |
-| `device_model`    | `str`                         | Device model              |
-| `paramset_key`    | `str`                         | Paramset key              |
-| `changes`         | `dict[str, dict[str, Any]]`   | Parameter diffs           |
-| `source`          | `str`                         | Change origin             |
+| Field             | Type                        | Description             |
+| ----------------- | --------------------------- | ----------------------- |
+| `timestamp`       | `str`                       | ISO timestamp           |
+| `entry_id`        | `str`                       | Identifier for grouping |
+| `interface_id`    | `str`                       | Interface identifier    |
+| `channel_address` | `str`                       | Channel address         |
+| `device_name`     | `str`                       | Human-readable name     |
+| `device_model`    | `str`                       | Device model            |
+| `paramset_key`    | `str`                       | Paramset key            |
+| `changes`         | `dict[str, dict[str, Any]]` | Parameter diffs         |
+| `source`          | `str`                       | Change origin           |
 
 ## Link Parameter Metadata
 
@@ -266,15 +266,15 @@ meta = classify_link_parameter(parameter_id="SHORT_ON_TIME_BASE")
 
 Returns a `LinkParamMeta` dataclass with:
 
-| Field                | Type                       | Description                              |
-| -------------------- | -------------------------- | ---------------------------------------- |
+| Field                | Type                       | Description                                             |
+| -------------------- | -------------------------- | ------------------------------------------------------- |
 | `category`           | `LinkParamCategory`        | time / level / jump_target / condition / action / other |
-| `keypress_group`     | `KeypressGroup`            | short / long / common                    |
-| `display_as_percent` | `bool`                     | Show value as percentage                 |
-| `has_last_value`     | `bool`                     | Supports "last value" option             |
-| `hidden_by_default`  | `bool`                     | Hide in default view                     |
-| `time_pair_id`       | `str \| None`             | Groups BASE/FACTOR pairs                 |
-| `time_selector_type` | `TimeSelectorType \| None` | timeOnOff / delay / rampOnOff            |
+| `keypress_group`     | `KeypressGroup`            | short / long / common                                   |
+| `display_as_percent` | `bool`                     | Show value as percentage                                |
+| `has_last_value`     | `bool`                     | Supports "last value" option                            |
+| `hidden_by_default`  | `bool`                     | Hide in default view                                    |
+| `time_pair_id`       | `str \| None`              | Groups BASE/FACTOR pairs                                |
+| `time_selector_type` | `TimeSelectorType \| None` | timeOnOff / delay / rampOnOff                           |
 
 ### Time Encoding / Decoding
 
@@ -325,31 +325,31 @@ profile_id = await store.match_active_profile(
 
 ### ResolvedProfile
 
-| Field             | Type                | Description                        |
-| ----------------- | ------------------- | ---------------------------------- |
-| `id`              | `int`               | Profile ID                         |
-| `name`            | `str`               | Localized profile name             |
-| `description`     | `str`               | Localized profile description      |
-| `editable_params` | `list[str]`         | Parameters the user can adjust     |
-| `fixed_params`    | `dict[str, float]`  | Parameters fixed by this profile   |
-| `default_values`  | `dict[str, float]`  | Default values for editable params |
+| Field             | Type               | Description                        |
+| ----------------- | ------------------ | ---------------------------------- |
+| `id`              | `int`              | Profile ID                         |
+| `name`            | `str`              | Localized profile name             |
+| `description`     | `str`              | Localized profile description      |
+| `editable_params` | `list[str]`        | Parameters the user can adjust     |
+| `fixed_params`    | `dict[str, float]` | Parameters fixed by this profile   |
+| `default_values`  | `dict[str, float]` | Default values for editable params |
 
 ### ProfileDef
 
-| Field         | Type                                   | Description                     |
-| ------------- | -------------------------------------- | ------------------------------- |
-| `id`          | `int`                                  | Profile ID                      |
-| `name`        | `dict[str, str]`                       | Names by locale                 |
-| `description` | `dict[str, str]`                       | Descriptions by locale          |
-| `params`      | `dict[str, ProfileParamConstraint]`    | Parameter constraints           |
+| Field         | Type                                | Description            |
+| ------------- | ----------------------------------- | ---------------------- |
+| `id`          | `int`                               | Profile ID             |
+| `name`        | `dict[str, str]`                    | Names by locale        |
+| `description` | `dict[str, str]`                    | Descriptions by locale |
+| `params`      | `dict[str, ProfileParamConstraint]` | Parameter constraints  |
 
 ### ProfileParamConstraint
 
-| Field             | Type                           | Description                 |
-| ----------------- | ------------------------------ | --------------------------- |
-| `constraint_type` | `"fixed" \| "list" \| "range"` | Type of constraint          |
-| `value`           | `float \| None`               | Fixed value                 |
-| `values`          | `list[float] \| None`         | Allowed values (list)       |
-| `default`         | `float \| None`               | Default value               |
-| `min_value`       | `float \| None`               | Range minimum               |
-| `max_value`       | `float \| None`               | Range maximum               |
+| Field             | Type                           | Description           |
+| ----------------- | ------------------------------ | --------------------- |
+| `constraint_type` | `"fixed" \| "list" \| "range"` | Type of constraint    |
+| `value`           | `float \| None`                | Fixed value           |
+| `values`          | `list[float] \| None`          | Allowed values (list) |
+| `default`         | `float \| None`                | Default value         |
+| `min_value`       | `float \| None`                | Range minimum         |
+| `max_value`       | `float \| None`                | Range maximum         |

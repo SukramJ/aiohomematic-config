@@ -48,6 +48,17 @@ from aiohomematic_config.link_param_metadata import (
 )
 from aiohomematic_config.profile_data import ChannelProfileSet, ProfileDef, ProfileParamConstraint, ResolvedProfile
 from aiohomematic_config.profile_store import ProfileStore
+from aiohomematic_config.schedule_facade import (
+    ClimateScheduleData,
+    DeviceScheduleData,
+    ScheduleDeviceInfo,
+    get_climate_schedule,
+    get_device_schedule,
+    list_schedule_devices,
+    set_climate_active_profile,
+    set_climate_schedule_weekday,
+    set_device_schedule,
+)
 from aiohomematic_config.session import ConfigSession
 from aiohomematic_config.widgets import WidgetType, determine_widget
 
@@ -90,6 +101,16 @@ __all__ = [
     "ResolvedProfile",
     # profile_store
     "ProfileStore",
+    # schedule_facade
+    "ClimateScheduleData",
+    "DeviceScheduleData",
+    "ScheduleDeviceInfo",
+    "get_climate_schedule",
+    "get_device_schedule",
+    "list_schedule_devices",
+    "set_climate_active_profile",
+    "set_climate_schedule_weekday",
+    "set_device_schedule",
     # session
     "ConfigSession",
     # widgets
