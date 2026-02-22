@@ -15,7 +15,7 @@ import dataclasses
 import inspect
 from typing import TYPE_CHECKING, Any
 
-from aiohomematic.const import ScheduleProfile, ScheduleType, WeekdayStr
+from aiohomematic.const import ScheduleProfile, WeekdayStr
 from aiohomematic.interfaces import ClimateWeekProfileDataPointProtocol
 from aiohomematic.model.schedule_models import ClimateWeekdaySchedule
 
@@ -68,11 +68,6 @@ def list_schedule_devices(
         if (wp_dp := device.week_profile_data_point) is None:
             continue
 
-        schedule_domain: str | None = None
-        if wp_dp.schedule_type == ScheduleType.DEFAULT:
-            # Determine domain from sensor entity attributes if possible
-            schedule_domain = _get_schedule_domain(device=device)
-
         result.append(
             ScheduleDeviceInfo(
                 address=device.address,
@@ -81,7 +76,7 @@ def list_schedule_devices(
                 interface_id=device.interface_id,
                 channel_address=wp_dp.schedule_channel_address or "",
                 schedule_type=wp_dp.schedule_type.value,
-                schedule_domain=schedule_domain,
+                schedule_domain=wp_dp.schedule_domain,
             )
         )
     return result
@@ -168,7 +163,7 @@ async def get_device_schedule(
         schedule_data=schedule_data,
         max_entries=wp_dp.max_entries,
         available_target_channels={k: dataclasses.asdict(v) for k, v in wp_dp.available_target_channels.items()},
-        schedule_domain=_get_schedule_domain(device=device),
+        schedule_domain=wp_dp.schedule_domain,
     )
 
 
@@ -183,23 +178,6 @@ async def set_device_schedule(
         raise ValueError(msg)
 
     await wp_dp.set_schedule(schedule_data=schedule_data)
-
-
-def _get_schedule_domain(*, device: DeviceProtocol) -> str | None:
-    """Determine the schedule domain from the device's week profile data point."""
-    if (wp_dp := device.week_profile_data_point) is None:
-        return None
-
-    # Check if the data point has schedule_domain metadata
-    schedule = wp_dp.schedule
-    if isinstance(schedule, dict) and "entries" in schedule and (entries := schedule.get("entries", {})):
-        # Try to infer from the first entry's structure
-        first_entry = next(iter(entries.values()), None)
-        if isinstance(first_entry, dict) and "level_2" in first_entry:
-            return "cover"
-        if isinstance(first_entry, dict) and "ramp_time" in first_entry:
-            return "light"
-    return None
 
 
 __all__ = tuple(
