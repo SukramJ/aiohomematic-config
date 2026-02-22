@@ -1,3 +1,8 @@
+# Version 2026.2.9 (2026-02-22)
+
+- Use `schedule_domain` property from aiohomematic instead of local heuristic
+- Remove `_get_schedule_domain()` helper and `ScheduleType` import from `schedule_facade`
+
 # Version 2026.2.8 (2026-02-21)
 
 - Add `schedule_facade` module for schedule management in the configuration panel
