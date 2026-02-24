@@ -99,7 +99,7 @@ class ConfigChangeLog:
         if entry_id:
             filtered = [e for e in filtered if e.entry_id == entry_id]
         if channel_address:
-            filtered = [e for e in filtered if e.channel_address == channel_address]
+            filtered = [e for e in filtered if e.channel_address.startswith(channel_address)]
         total = len(filtered)
         result = list(reversed(filtered[-limit:]))
         return result, total
