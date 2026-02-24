@@ -1,3 +1,7 @@
+# Version 2026.2.10 (2026-02-24)
+
+- Use prefix matching for `channel_address` filter in `ConfigChangeLog.get_entries()` to match all channels of a device
+
 # Version 2026.2.9 (2026-02-22)
 
 - Use `schedule_domain` property from aiohomematic instead of local heuristic

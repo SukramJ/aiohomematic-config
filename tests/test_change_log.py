@@ -223,6 +223,44 @@ class TestConfigChangeLog:
         assert total == 1
         assert entries[0].channel_address == "VCU:2"
 
+    def test_get_entries_filter_device_address(self) -> None:
+        """Test filtering by device address matches all channels."""
+        log = ConfigChangeLog()
+        log.add(
+            entry_id="e1",
+            interface_id="iface",
+            channel_address="VCU:0",
+            device_name="Dev",
+            device_model="Mod",
+            paramset_key="MASTER",
+            changes={},
+            source="manual",
+        )
+        log.add(
+            entry_id="e1",
+            interface_id="iface",
+            channel_address="VCU:1",
+            device_name="Dev",
+            device_model="Mod",
+            paramset_key="MASTER",
+            changes={},
+            source="manual",
+        )
+        log.add(
+            entry_id="e1",
+            interface_id="iface",
+            channel_address="OTHER:1",
+            device_name="Dev2",
+            device_model="Mod",
+            paramset_key="MASTER",
+            changes={},
+            source="manual",
+        )
+        entries, total = log.get_entries(channel_address="VCU")
+        assert total == 2
+        assert entries[0].channel_address == "VCU:1"
+        assert entries[1].channel_address == "VCU:0"
+
     def test_get_entries_filter_entry_id(self) -> None:
         """Test filtering by entry_id."""
         log = ConfigChangeLog()
