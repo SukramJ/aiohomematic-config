@@ -1,3 +1,9 @@
+# Version 2026.2.12 (2026-02-27)
+
+- Add `device_icon` field to `FormSchema` with icon filename from CCU device database
+- Use `get_device_icon()` from aiohomematic to resolve device model icons
+- Bump aiohomematic dependency to >=2026.2.30
+
 # Version 2026.2.11 (2026-02-27)
 
 - Add `description` field to `FormParameter` with Markdown-formatted parameter help text
