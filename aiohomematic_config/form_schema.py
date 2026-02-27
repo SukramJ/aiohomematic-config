@@ -16,6 +16,7 @@ from typing import Any
 from aiohomematic.ccu_translations import (
     get_channel_type_translation,
     get_device_model_description,
+    get_parameter_help,
     get_parameter_value_translation,
 )
 from aiohomematic.const import SCHEDULE_PATTERN, ParameterData, ParameterType
@@ -40,6 +41,7 @@ class FormParameter(BaseModel):
 
     id: str
     label: str
+    description: str | None = None
     type: str
     widget: WidgetType
     min: float | int | None = None
@@ -210,6 +212,10 @@ class FormSchemaGenerator:
                     label=self._label_resolver.resolve(
                         parameter_id=param_id,
                         channel_type=channel_type,
+                    ),
+                    description=get_parameter_help(
+                        parameter=param_id,
+                        locale=self._label_resolver.locale,
                     ),
                     type=str(param_type),
                     widget=widget,

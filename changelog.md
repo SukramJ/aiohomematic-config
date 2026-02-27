@@ -1,3 +1,9 @@
+# Version 2026.2.11 (2026-02-27)
+
+- Add `description` field to `FormParameter` with Markdown-formatted parameter help text
+- Use `get_parameter_help()` from aiohomematic to populate help texts (locale-aware, with LINK prefix stripping)
+- Bump aiohomematic dependency to >=2026.2.29
+
 # Version 2026.2.10 (2026-02-24)
 
 - Use prefix matching for `channel_address` filter in `ConfigChangeLog.get_entries()` to match all channels of a device
