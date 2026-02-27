@@ -51,6 +51,76 @@ class TestFormSchemaGenerator:
         )
         assert schema.channel_type_label == "NONEXISTENT_CHANNEL_TYPE"
 
+    def test_description_locale_de(
+        self,
+        permissive_generator_de: FormSchemaGenerator,
+    ) -> None:
+        """Description should use the correct locale."""
+        descriptions: dict[str, ParameterData] = {
+            "TEMPERATURE_OFFSET": ParameterData(
+                TYPE=ParameterType.FLOAT,
+                MIN=-3.5,
+                MAX=3.5,
+                DEFAULT=0.0,
+                UNIT="°C",
+                OPERATIONS=Operations.READ | Operations.WRITE,
+                FLAGS=Flag.VISIBLE,
+            ),
+        }
+        schema_de = permissive_generator_de.generate(
+            descriptions=descriptions,
+            current_values={"TEMPERATURE_OFFSET": 0.0},
+        )
+        param_de = schema_de.sections[0].parameters[0]
+        assert param_de.description is not None
+
+    def test_description_none_for_unknown_parameter(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
+        """Description should be None when no help text exists."""
+        descriptions: dict[str, ParameterData] = {
+            "FAKE_UNKNOWN_PARAM_Z": ParameterData(
+                TYPE=ParameterType.FLOAT,
+                MIN=0.0,
+                MAX=1.0,
+                DEFAULT=0.0,
+                OPERATIONS=Operations.READ | Operations.WRITE,
+                FLAGS=Flag.VISIBLE,
+            ),
+        }
+        schema = permissive_generator_en.generate(
+            descriptions=descriptions,
+            current_values={"FAKE_UNKNOWN_PARAM_Z": 0.0},
+            require_translation=False,
+        )
+        param = schema.sections[0].parameters[0]
+        assert param.description is None
+
+    def test_description_populated_for_known_parameter(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
+        """Description should contain Markdown help text for known parameters."""
+        descriptions: dict[str, ParameterData] = {
+            "TEMPERATURE_OFFSET": ParameterData(
+                TYPE=ParameterType.FLOAT,
+                MIN=-3.5,
+                MAX=3.5,
+                DEFAULT=0.0,
+                UNIT="°C",
+                OPERATIONS=Operations.READ | Operations.WRITE,
+                FLAGS=Flag.VISIBLE,
+            ),
+        }
+        schema = permissive_generator_en.generate(
+            descriptions=descriptions,
+            current_values={"TEMPERATURE_OFFSET": 0.0},
+        )
+        param = schema.sections[0].parameters[0]
+        assert param.description is not None
+        assert len(param.description) > 0
+
     def test_empty_descriptions(self) -> None:
         generator = FormSchemaGenerator(locale="en")
         schema = generator.generate(
