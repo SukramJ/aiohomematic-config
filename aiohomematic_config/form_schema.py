@@ -15,6 +15,7 @@ from typing import Any
 
 from aiohomematic.ccu_translations import (
     get_channel_type_translation,
+    get_device_icon,
     get_device_model_description,
     get_parameter_help,
     get_parameter_value_translation,
@@ -81,6 +82,7 @@ class FormSchema(BaseModel):
     channel_type: str
     model_description: str = ""
     channel_type_label: str = ""
+    device_icon: str | None = None
     sections: list[FormSection]
     total_parameters: int
     writable_parameters: int
@@ -286,11 +288,17 @@ class FormSchemaGenerator:
                 or ""
             )
 
+        # Resolve device icon
+        device_icon: str | None = None
+        if model:
+            device_icon = get_device_icon(model=model)
+
         return FormSchema(
             channel_address=channel_address,
             channel_type=channel_type,
             model_description=model_description,
             channel_type_label=channel_type_label,
+            device_icon=device_icon,
             sections=sections,
             total_parameters=total_params,
             writable_parameters=writable_params,

@@ -121,6 +121,36 @@ class TestFormSchemaGenerator:
         assert param.description is not None
         assert len(param.description) > 0
 
+    def test_device_icon(self) -> None:
+        """device_icon should be resolved for known models."""
+        generator = FormSchemaGenerator(locale="en")
+        schema = generator.generate(
+            descriptions={},
+            current_values={},
+            model="HmIP-SWDO",
+        )
+        assert schema.device_icon is not None
+        assert schema.device_icon.endswith(".png")
+
+    def test_device_icon_empty(self) -> None:
+        """device_icon should be None when no model is given."""
+        generator = FormSchemaGenerator(locale="en")
+        schema = generator.generate(
+            descriptions={},
+            current_values={},
+        )
+        assert schema.device_icon is None
+
+    def test_device_icon_unknown_model(self) -> None:
+        """device_icon should be None for unknown models."""
+        generator = FormSchemaGenerator(locale="en")
+        schema = generator.generate(
+            descriptions={},
+            current_values={},
+            model="NONEXISTENT-MODEL",
+        )
+        assert schema.device_icon is None
+
     def test_empty_descriptions(self) -> None:
         generator = FormSchemaGenerator(locale="en")
         schema = generator.generate(
