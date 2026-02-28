@@ -6,7 +6,9 @@ import asyncio
 import html
 from importlib.resources import files
 import json
+import math
 from typing import Any
+from urllib.parse import unquote
 
 from aiohomematic_config.const import DEFAULT_LOCALE
 from aiohomematic_config.profile_data import ChannelProfileSet, ProfileDef, ProfileParamConstraint, ResolvedProfile
@@ -45,7 +47,12 @@ class ProfileStore:
         sender_channel_type: str,
         current_values: dict[str, Any],
     ) -> int:
-        """Return the ID of the currently active profile (0 = Expert fallback)."""
+        """
+        Return the ID of the currently active profile (0 = Expert fallback).
+
+        When multiple profiles match, the most specific one wins.
+        Specificity is determined by the number of "fixed" constraints.
+        """
         profile_set = await self._load_profile_set(
             receiver_channel_type=receiver_channel_type,
             sender_channel_type=sender_channel_type,
@@ -53,12 +60,20 @@ class ProfileStore:
         if profile_set is None:
             return 0
 
+        best_id = 0
+        best_score: float = -math.inf
+
         for profile in profile_set.profiles:
             if profile.id == 0 or not profile.params:
                 continue
-            if _matches_profile(params=profile.params, current_values=current_values):
-                return profile.id
-        return 0
+            if (
+                _matches_profile(params=profile.params, current_values=current_values)
+                and (score := _profile_specificity(params=profile.params)) > best_score
+            ):
+                best_score = score
+                best_id = profile.id
+
+        return best_id
 
     async def _load_profile_set(
         self,
@@ -120,6 +135,25 @@ def _matches_profile(
     return True
 
 
+def _profile_specificity(*, params: dict[str, ProfileParamConstraint]) -> int:
+    """
+    Score a profile by how specific its constraints are.
+
+    A profile with only "fixed" constraints is more specific than one with
+    "list" or "range" constraints. Non-fixed constraints are penalized
+    heavily so that an all-fixed profile always wins over one with loose
+    constraints, regardless of the total number of parameters.
+    """
+    fixed_count = 0
+    loose_count = 0
+    for constraint in params.values():
+        if constraint.constraint_type == "fixed":
+            fixed_count += 1
+        else:
+            loose_count += 1
+    return fixed_count - loose_count * 100
+
+
 def _resolve_profile(*, profile: ProfileDef, locale: str) -> ResolvedProfile:
     """Resolve a profile definition to a locale-specific representation."""
     editable: list[str] = []
@@ -139,8 +173,8 @@ def _resolve_profile(*, profile: ProfileDef, locale: str) -> ResolvedProfile:
 
     return ResolvedProfile(
         id=profile.id,
-        name=html.unescape(raw_name),
-        description=html.unescape(raw_description),
+        name=html.unescape(unquote(raw_name, encoding="iso-8859-1")),
+        description=html.unescape(unquote(raw_description, encoding="iso-8859-1")),
         editable_params=editable,
         fixed_params=fixed,
         default_values=defaults,

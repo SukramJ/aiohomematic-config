@@ -1,3 +1,8 @@
+# Version 2026.2.13 (2026-02-28)
+
+- Fix URL-encoded umlauts in profile names and descriptions (`%D6` → `Ö`) by adding `urllib.parse.unquote()` before `html.unescape()`
+- Fix profile matching to prefer most specific profile when multiple profiles match (highest fixed-constraint count wins)
+
 # Version 2026.2.12 (2026-02-27)
 
 - Add `device_icon` field to `FormSchema` with icon filename from CCU device database
