@@ -67,6 +67,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -207,6 +239,38 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -349,6 +413,18 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -489,6 +565,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -7327,6 +7419,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -7630,6 +7754,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -7917,6 +8073,18 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -8058,6 +8226,14 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "LONG_MAX_TIME_FIRST_DIR": {
             "constraint_type": "range",
             "default": 0.1,
@@ -8187,6 +8363,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -8510,6 +8702,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -8813,6 +9037,34 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -9100,6 +9352,14 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -9241,6 +9501,14 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "LONG_MAX_TIME_FIRST_DIR": {
             "constraint_type": "range",
             "default": 0.1,
@@ -9370,6 +9638,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -9535,6 +9819,38 @@
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -9675,6 +9991,38 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -9817,6 +10165,14 @@
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
           },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -9957,6 +10313,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -10284,13 +10656,25 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
           "SHORT_JT_OFFDELAY": {
             "constraint_type": "list",
             "values": [3.0, 1.0]
           },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
           "SHORT_JT_ONDELAY": {
             "constraint_type": "list",
             "values": [1.0, 7.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
           },
           "SHORT_JT_RAMPON": {
             "constraint_type": "list",
@@ -10611,9 +10995,17 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
           "SHORT_JT_OFFDELAY": {
             "constraint_type": "list",
             "values": [4.0, 8.0]
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
           },
           "SHORT_JT_ONDELAY": {
             "constraint_type": "list",
@@ -10622,6 +11014,10 @@
           "SHORT_JT_RAMPOFF": {
             "constraint_type": "list",
             "values": [6.0, 5.0]
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
           },
           "SHORT_JT_REFOFF": {
             "constraint_type": "list",
@@ -11063,6 +11459,14 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "LONG_MAX_TIME_FIRST_DIR": {
             "constraint_type": "range",
             "default": 0.1,
@@ -11196,6 +11600,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -14309,6 +14729,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -14615,6 +15067,38 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -15048,6 +15532,14 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "LONG_MAX_TIME_FIRST_DIR": {
             "constraint_type": "range",
             "default": 0.1,
@@ -15181,6 +15673,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -15346,6 +15854,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -15486,6 +16026,38 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -15628,6 +16200,18 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -15768,6 +16352,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -16093,6 +16693,38 @@
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -16394,6 +17026,38 @@
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -16647,6 +17311,14 @@
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
           },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -16788,6 +17460,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "LONG_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 0.0
@@ -16915,6 +17603,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -17238,6 +17942,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -17541,6 +18277,34 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -17828,6 +18592,14 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -17969,6 +18741,14 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "LONG_MAX_TIME_FIRST_DIR": {
             "constraint_type": "range",
             "default": 0.1,
@@ -18098,6 +18878,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -21346,6 +22142,14 @@
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
           },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -21635,6 +22439,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 0.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -22010,6 +22830,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -22313,6 +23165,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -22600,6 +23484,18 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -22741,6 +23637,14 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "LONG_MAX_TIME_FIRST_DIR": {
             "constraint_type": "range",
             "default": 0.1,
@@ -22870,6 +23774,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -23230,6 +24150,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -23533,6 +24485,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -23820,6 +24804,18 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -23961,6 +24957,14 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "LONG_MAX_TIME_FIRST_DIR": {
             "constraint_type": "range",
             "default": 0.1,
@@ -24090,6 +25094,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -25007,6 +26027,38 @@
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -25147,6 +26199,38 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -25289,6 +26373,14 @@
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
           },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -25429,6 +26521,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -25750,6 +26858,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -26051,6 +27191,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -26336,6 +27508,18 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -26477,6 +27661,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "LONG_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "LONG_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 0.0
@@ -26604,6 +27804,22 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 2.0, 3.0]
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -26769,6 +27985,38 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -26909,6 +28157,38 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_OFFDELAY": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 6.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 5.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
@@ -27051,6 +28331,10 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",
             "value": 25.5
@@ -27191,6 +28475,14 @@
           "SHORT_DRIVING_MODE": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_REFOFF": {
+            "constraint_type": "fixed",
+            "value": 8.0
+          },
+          "SHORT_JT_REFON": {
+            "constraint_type": "fixed",
+            "value": 7.0
           },
           "SHORT_MAX_TIME_FIRST_DIR": {
             "constraint_type": "fixed",

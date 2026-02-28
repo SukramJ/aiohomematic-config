@@ -20,7 +20,8 @@
       "Bash(.venv/bin/ruff format:*)",
       "Bash(python3:*)",
       "Bash(mypy:*)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(ruff check:*)"
     ]
   }
 }

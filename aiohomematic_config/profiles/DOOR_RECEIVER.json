@@ -51,6 +51,22 @@
             "constraint_type": "list",
             "values": [0.0, 1.0, 4.0]
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -95,6 +111,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 4.0]
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -141,6 +173,22 @@
             "constraint_type": "list",
             "values": [0.0, 1.0, 4.0]
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -185,6 +233,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "list",
             "values": [0.0, 1.0, 4.0]
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -286,6 +350,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -371,6 +451,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 2.0
@@ -412,6 +508,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -439,6 +551,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -481,6 +609,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -508,6 +652,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -550,6 +710,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -577,6 +753,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -619,6 +811,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -646,6 +854,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -747,6 +971,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -832,6 +1072,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 2.0
@@ -873,6 +1129,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -900,6 +1172,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -942,6 +1230,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -969,6 +1273,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -1011,6 +1331,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -1038,6 +1374,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -1080,6 +1432,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -1107,6 +1475,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -1208,6 +1592,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -1293,6 +1693,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 2.0
@@ -1334,6 +1750,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -1361,6 +1793,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -1403,6 +1851,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -1430,6 +1894,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -1472,6 +1952,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -1499,6 +1995,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -1541,6 +2053,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -1568,6 +2096,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -1684,6 +2228,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -1769,6 +2329,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 2.0
@@ -1810,6 +2386,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -1837,6 +2429,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -1879,6 +2487,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -1906,6 +2530,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -1948,6 +2588,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -1975,6 +2631,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -2017,6 +2689,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -2044,6 +2732,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -2145,6 +2849,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -2230,6 +2950,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 2.0
@@ -2271,6 +3007,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -2298,6 +3050,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -2340,6 +3108,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -2367,6 +3151,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -2409,6 +3209,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -2436,6 +3252,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -2478,6 +3310,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -2505,6 +3353,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -2792,6 +3656,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -2877,6 +3757,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 2.0
@@ -2918,6 +3814,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -2945,6 +3857,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -2987,6 +3915,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -3014,6 +3958,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -3056,6 +4016,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -3083,6 +4059,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -3125,6 +4117,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -3152,6 +4160,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -3439,6 +4463,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -3524,6 +4564,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 2.0
@@ -3565,6 +4621,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -3592,6 +4664,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 1.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -3634,6 +4722,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -3661,6 +4765,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 3.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -3703,6 +4823,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -3730,6 +4866,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 2.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -3772,6 +4924,22 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "LONG_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "LONG_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
           "LONG_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",
             "value": 1.0
@@ -3799,6 +4967,22 @@
           "SHORT_CT_RAMPON": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPOFF": {
+            "constraint_type": "fixed",
+            "value": 4.0
+          },
+          "SHORT_JT_RAMPON": {
+            "constraint_type": "fixed",
+            "value": 4.0
           },
           "SHORT_PROFILE_ACTION_TYPE": {
             "constraint_type": "fixed",

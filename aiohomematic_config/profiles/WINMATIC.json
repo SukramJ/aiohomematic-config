@@ -1332,6 +1332,10 @@
             "constraint_type": "list",
             "values": [0.0, 7.0]
           },
+          "SHORT_OFF_LEVEL": {
+            "constraint_type": "list",
+            "values": [-0.005, 0.0]
+          },
           "SHORT_ON_LEVEL": {
             "constraint_type": "fixed",
             "value": 1.0
