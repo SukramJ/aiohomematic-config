@@ -6,6 +6,7 @@ import asyncio
 import html
 from importlib.resources import files
 import json
+import math
 from typing import Any
 from urllib.parse import unquote
 
@@ -60,7 +61,7 @@ class ProfileStore:
             return 0
 
         best_id = 0
-        best_score = -1
+        best_score: float = -math.inf
 
         for profile in profile_set.profiles:
             if profile.id == 0 or not profile.params:
