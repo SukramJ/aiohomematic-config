@@ -1,3 +1,9 @@
+# Version 2026.2.14 (2026-02-28)
+
+- Resolve TCL `$variable` references in easymode profile constraints (e.g. `$NOP`, `$RAMP_ON`)
+- Add `.env` support to `parse_easymode_profiles.py` via `python-dotenv`
+- Regenerate all profile JSON files with improved constraint parsing
+
 # Version 2026.2.13 (2026-02-28)
 
 - Fix URL-encoded umlauts in profile names and descriptions (`%D6` → `Ö`) by adding `urllib.parse.unquote()` before `html.unescape()`

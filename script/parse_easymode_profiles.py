@@ -38,6 +38,8 @@ import sys
 from typing import Any
 import urllib.request
 
+from dotenv import load_dotenv
+
 # Regex patterns for TCL parsing
 _PROFILES_MAP_RE = re.compile(r'set\s+PROFILES_MAP\((\d+)\)\s+"?\\?\$\{(\w+)\}"?')
 _PROFILE_PARAM_RE = re.compile(r"set\s+PROFILE_(\d+)\((\w+)\)\s+(.*)")
@@ -205,9 +207,44 @@ def _fetch_remote_file(ccu_url: str, relative_path: str) -> str:
 # ---------------------------------------------------------------------------
 
 
-def _parse_constraint(raw_value: str) -> dict[str, Any] | None:
+def _resolve_tcl_value(raw: str, constants: dict[str, float]) -> float | None:
+    """Resolve a single TCL token (number or $variable) to a float."""
+    raw = raw.strip()
+    if raw.startswith("$"):
+        var_name = raw[1:]
+        # Skip PROFILE_N(...) references like $PROFILE_1(UI_DESCRIPTION)
+        if "(" in var_name:
+            return None
+        return constants.get(var_name)
+    try:
+        return float(raw)
+    except ValueError:
+        return None
+
+
+_SET_CONST_RE = re.compile(r"^set\s+(\w+)\s+(\d+(?:\.\d+)?)\s*$", re.MULTILINE)
+
+
+def _collect_tcl_constants(tcl_content: str) -> dict[str, float]:
+    """Collect top-level 'set VAR number' constants from TCL content."""
+    constants: dict[str, float] = {}
+    for match in _SET_CONST_RE.finditer(tcl_content):
+        name = match.group(1)
+        # Skip PROFILE_* and PROFILES_MAP entries
+        if name.startswith("PROFILE"):
+            continue
+        constants[name] = float(match.group(2))
+    return constants
+
+
+def _parse_constraint(
+    raw_value: str,
+    constants: dict[str, float] | None = None,
+) -> dict[str, Any] | None:
     """Parse a TCL constraint value into a JSON-serializable dict."""
     raw_value = raw_value.strip()
+    if constants is None:
+        constants = {}
 
     # Range constraint: {default range min - max}
     m = _RANGE_RE.match(raw_value)
@@ -219,22 +256,28 @@ def _parse_constraint(raw_value: str) -> dict[str, Any] | None:
             "max_value": float(m.group(3)),
         }
 
-    # List constraint: {val1 val2 ...} (numbers only, no 'range')
-    m = _LIST_RE.match(raw_value)
-    if m:
-        values = [float(v) for v in m.group(1).split()]
-        if len(values) > 1:
-            return {"constraint_type": "list", "values": values}
-        if len(values) == 1:
-            return {"constraint_type": "fixed", "value": values[0]}
+    # List constraint: {val1 val2 ...} or {$VAR1 $VAR2 ...}
+    if raw_value.startswith("{") and raw_value.endswith("}"):
+        inner = raw_value[1:-1].strip()
+        if "range" not in inner:
+            tokens = inner.split()
+            values: list[float] = []
+            for token in tokens:
+                resolved = _resolve_tcl_value(token, constants)
+                if resolved is not None:
+                    values.append(resolved)
+            if len(values) > 1:
+                return {"constraint_type": "list", "values": values}
+            if len(values) == 1:
+                return {"constraint_type": "fixed", "value": values[0]}
+            return None
 
-    # Single numeric value
-    try:
-        val = float(raw_value)
-    except ValueError:
-        return None
-    else:
-        return {"constraint_type": "fixed", "value": val}
+    # Single value: numeric or $variable reference
+    resolved = _resolve_tcl_value(raw_value, constants)
+    if resolved is not None:
+        return {"constraint_type": "fixed", "value": resolved}
+
+    return None
 
 
 _HTML_TAG_RE = re.compile(r"<[^>]+>")
@@ -289,6 +332,9 @@ def _parse_tcl_profiles(
         loc_key = match.group(2)
         profile_map[profile_id] = loc_key
 
+    # Collect TCL constants (set NOP 0, set RAMP_ON 1, etc.)
+    constants = _collect_tcl_constants(tcl_content)
+
     # Extract profile parameters
     profile_params: dict[int, dict[str, dict[str, Any]]] = {}
     for match in _PROFILE_PARAM_RE.finditer(tcl_content):
@@ -299,7 +345,7 @@ def _parse_tcl_profiles(
         if param_name in _SKIP_KEYS:
             continue
 
-        constraint = _parse_constraint(raw_value)
+        constraint = _parse_constraint(raw_value, constants)
         if constraint is not None:
             if profile_id not in profile_params:
                 profile_params[profile_id] = {}
@@ -555,6 +601,8 @@ def _parse_receiver_remote(
 
 def main() -> int:
     """Parse easymode profiles from OCCU source."""
+    load_dotenv()
+
     occu_path = os.environ.get("OCCU_PATH")
     ccu_url = os.environ.get("CCU_URL")
     receivers_str = os.environ.get("RECEIVERS")

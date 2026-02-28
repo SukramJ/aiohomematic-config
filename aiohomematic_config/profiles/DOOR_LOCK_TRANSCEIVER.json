@@ -39,9 +39,21 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PERMISSION_MASK": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
           }
         }
       },
@@ -72,9 +84,21 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 3.0
+          },
           "SHORT_PERMISSION_MASK": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
           }
         }
       },
@@ -105,9 +129,21 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 1.0
+          },
           "SHORT_PERMISSION_MASK": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
           }
         }
       },
@@ -138,9 +174,21 @@
             "constraint_type": "fixed",
             "value": 0.0
           },
+          "SHORT_JT_OFF": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
+          "SHORT_JT_ON": {
+            "constraint_type": "fixed",
+            "value": 2.0
+          },
           "SHORT_PERMISSION_MASK": {
             "constraint_type": "fixed",
             "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 1.0
           }
         }
       },
@@ -153,6 +201,16 @@
         "description": {
           "en": "The profile is not active",
           "de": "Das Profil ist nicht aktiv"
+        },
+        "params": {
+          "LONG_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          },
+          "SHORT_PROFILE_ACTION_TYPE": {
+            "constraint_type": "fixed",
+            "value": 0.0
+          }
         }
       }
     ]
