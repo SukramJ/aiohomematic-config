@@ -1,3 +1,8 @@
+# Version 2026.2.15 (2026-03-01)
+
+- Handle TCL `[subst {...}]` wrappers in easymode profile constraint parsing
+- Regenerate all profile JSON files with `[subst]` support
+
 # Version 2026.2.14 (2026-02-28)
 
 - Resolve TCL `$variable` references in easymode profile constraints (e.g. `$NOP`, `$RAMP_ON`)
