@@ -1667,9 +1667,17 @@
             "constraint_type": "fixed",
             "value": 1.0
           },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
+          },
           "SHORT_JT_OFFDELAY": {
             "constraint_type": "fixed",
             "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
           },
           "LONG_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -2082,9 +2090,17 @@
             "constraint_type": "fixed",
             "value": 1.0
           },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
+          },
           "SHORT_JT_OFFDELAY": {
             "constraint_type": "fixed",
             "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
           },
           "LONG_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -2162,9 +2178,17 @@
             "constraint_type": "fixed",
             "value": 1.0
           },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
+          },
           "SHORT_JT_OFFDELAY": {
             "constraint_type": "fixed",
             "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
           },
           "LONG_ACTION_TYPE": {
             "constraint_type": "fixed",
@@ -2405,9 +2429,17 @@
             "constraint_type": "fixed",
             "value": 1.0
           },
+          "SHORT_JT_ON": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
+          },
           "SHORT_JT_OFFDELAY": {
             "constraint_type": "fixed",
             "value": 2.0
+          },
+          "SHORT_JT_ONDELAY": {
+            "constraint_type": "list",
+            "values": [3.0, 4.0]
           },
           "LONG_ACTION_TYPE": {
             "constraint_type": "fixed",

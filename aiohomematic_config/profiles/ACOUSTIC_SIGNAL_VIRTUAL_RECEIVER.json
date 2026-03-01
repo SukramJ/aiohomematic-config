@@ -17536,6 +17536,10 @@
           "de": "Bei Empfang des gewählten Entscheidungswertes wird die gewählte MP3-Datei entsprechend der gewählten Einstellungen abgespielt oder beendet."
         },
         "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 149.0
+          },
           "SHORT_COND_VALUE_HI": {
             "constraint_type": "range",
             "default": 99.0,
@@ -17862,6 +17866,10 @@
           "de": "Bei Empfang des gewählten Entscheidungswertes wird die gewählte MP3-Datei entsprechend der gewählten Einstellungen beendet."
         },
         "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
           "SHORT_COND_VALUE_HI": {
             "constraint_type": "range",
             "default": 100.0,
@@ -18282,6 +18290,10 @@
           "de": ""
         },
         "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 149.0
+          },
           "SHORT_COND_VALUE_HI": {
             "constraint_type": "range",
             "default": 99.0,
