@@ -237,6 +237,9 @@ def _collect_tcl_constants(tcl_content: str) -> dict[str, float]:
     return constants
 
 
+_SUBST_RE = re.compile(r"^\[subst\s+\{(.*)\}\]$")
+
+
 def _parse_constraint(
     raw_value: str,
     constants: dict[str, float] | None = None,
@@ -245,6 +248,11 @@ def _parse_constraint(
     raw_value = raw_value.strip()
     if constants is None:
         constants = {}
+
+    # TCL [subst {$VAR1 $VAR2 ...}] — strip wrapper, process inner list
+    subst_match = _SUBST_RE.match(raw_value)
+    if subst_match:
+        raw_value = "{" + subst_match.group(1) + "}"
 
     # Range constraint: {default range min - max}
     m = _RANGE_RE.match(raw_value)
