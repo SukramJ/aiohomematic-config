@@ -1,3 +1,10 @@
+# Version 2026.3.0 (2026-03-01)
+
+- Follow TCL `source` includes to resolve profiles defined in shared files (e.g. `profiles.tcl`, `profilesTunableWhite.tcl`)
+- Strip trailing TCL comments (`;#`) from constraint values
+- Add profiles for new receiver types: `AUTO_RELOCK_TRANSCEIVER`, `DOOR_LOCK_TRANSCEIVER`, `UNIVERSAL_LIGHT_RECEIVER_LSC`, `UNIVERSAL_LIGHT_RECEIVER_RGB(W)`, `UNIVERSAL_LIGHT_RECEIVER_RGBW_DALI`, `UNIVERSAL_LIGHT_RECEIVER_TW`
+- Regenerate all profile JSON files
+
 # Version 2026.2.15 (2026-03-01)
 
 - Handle TCL `[subst {...}]` wrappers in easymode profile constraint parsing

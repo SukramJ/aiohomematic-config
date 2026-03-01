@@ -15555,13 +15555,13 @@
             "constraint_type": "fixed",
             "value": 3.0
           },
-          "SHORT_CT_ONDELAY": {
-            "constraint_type": "fixed",
-            "value": 2.0
-          },
           "SHORT_CT_ON": {
             "constraint_type": "fixed",
             "value": 3.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
           },
           "SHORT_CT_RAMPOFF": {
             "constraint_type": "fixed",
@@ -16035,13 +16035,13 @@
             "constraint_type": "fixed",
             "value": 3.0
           },
-          "SHORT_CT_ONDELAY": {
-            "constraint_type": "fixed",
-            "value": 2.0
-          },
           "SHORT_CT_ON": {
             "constraint_type": "fixed",
             "value": 3.0
+          },
+          "SHORT_CT_ONDELAY": {
+            "constraint_type": "fixed",
+            "value": 2.0
           },
           "SHORT_CT_RAMPOFF": {
             "constraint_type": "fixed",
@@ -22387,6 +22387,10 @@
           "de": "Bei Empfang des gewählten Entscheidungswertes wird der Dimmer ein- bzw. ausgeschaltet."
         },
         "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 149.0
+          },
           "SHORT_COND_VALUE_HI": {
             "constraint_type": "range",
             "default": 99.0,
@@ -22749,6 +22753,10 @@
           "de": "Bei Empfang des gewählten Entscheidungswertes wird der Dimmer für eine festgelegte Zeit ausgeschaltet."
         },
         "params": {
+          "LONG_COND_VALUE_HI": {
+            "constraint_type": "fixed",
+            "value": 150.0
+          },
           "SHORT_COND_VALUE_HI": {
             "constraint_type": "range",
             "default": 100.0,

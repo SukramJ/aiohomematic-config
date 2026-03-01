@@ -29,6 +29,7 @@ Environment Variables:
 
 from __future__ import annotations
 
+import contextlib
 import json
 import os
 from pathlib import Path
@@ -46,6 +47,7 @@ _PROFILE_PARAM_RE = re.compile(r"set\s+PROFILE_(\d+)\((\w+)\)\s+(.*)")
 _RANGE_RE = re.compile(r"\{([\d.]+)\s+range\s+([\d.]+)\s+-\s+([\d.]+)\}")
 _LIST_RE = re.compile(r"^\{([\d.\s]+)\}$")
 _LOC_RE = re.compile(r'"(\w+)"\s*:\s*"((?:[^"\\]|\\.)*)"')
+_SOURCE_PROFILE_RE = re.compile(r"source\s+\[file join .+?easymodes/(\w+(?:\([^)]*\))?)/(\w+)\.tcl\]")
 # Internal TCL keys to skip
 _SKIP_KEYS = frozenset(
     {
@@ -248,6 +250,10 @@ def _parse_constraint(
     raw_value = raw_value.strip()
     if constants is None:
         constants = {}
+
+    # Strip trailing TCL comments: 149 ;# match with profile 4
+    if ";#" in raw_value:
+        raw_value = raw_value.split(";#")[0].strip()
 
     # TCL [subst {$VAR1 $VAR2 ...}] — strip wrapper, process inner list
     subst_match = _SUBST_RE.match(raw_value)
@@ -453,6 +459,26 @@ def _load_localization_local(
     return strings
 
 
+def _resolve_sourced_content_local(
+    tcl_content: str,
+    occu_base: Path,
+) -> str:
+    """Prepend content from `source`d profile TCL files to the sender content."""
+    sourced_parts: list[str] = []
+    for match in _SOURCE_PROFILE_RE.finditer(tcl_content):
+        sourced_receiver = match.group(1)
+        sourced_name = match.group(2)
+        # Only follow profile includes, not helper files
+        if not sourced_name.startswith("profile"):
+            continue
+        sourced_path = occu_base / sourced_receiver / f"{sourced_name}.tcl"
+        if sourced_path.exists():
+            sourced_parts.append(sourced_path.read_text(encoding="utf-8", errors="replace"))
+    if sourced_parts:
+        return "\n".join(sourced_parts) + "\n" + tcl_content
+    return tcl_content
+
+
 def _parse_receiver_local(
     *,
     occu_path: Path,
@@ -473,6 +499,8 @@ def _parse_receiver_local(
         if sender_type in _SKIP_TCL_FILES:
             continue
         tcl_content = tcl_file.read_text(encoding="utf-8", errors="replace")
+        # Inline content from sourced profile TCL files
+        tcl_content = _resolve_sourced_content_local(tcl_content, base)
 
         loc_en = _load_localization_local(
             occu_base=base,
@@ -556,6 +584,25 @@ def _list_sender_tcl_files_remote(
     return found
 
 
+def _resolve_sourced_content_remote(
+    tcl_content: str,
+    ccu_url: str,
+) -> str:
+    """Prepend content from `source`d profile TCL files (remote) to the sender content."""
+    sourced_parts: list[str] = []
+    base = _EASYMODE_BASE
+    for match in _SOURCE_PROFILE_RE.finditer(tcl_content):
+        sourced_receiver = match.group(1)
+        sourced_name = match.group(2)
+        if not sourced_name.startswith("profile"):
+            continue
+        with contextlib.suppress(Exception):
+            sourced_parts.append(_fetch_remote_file(ccu_url, f"{base}/{sourced_receiver}/{sourced_name}.tcl"))
+    if sourced_parts:
+        return "\n".join(sourced_parts) + "\n" + tcl_content
+    return tcl_content
+
+
 def _parse_receiver_remote(
     *,
     ccu_url: str,
@@ -575,6 +622,8 @@ def _parse_receiver_remote(
         except Exception as err:
             print(f"  WARNING: Failed to fetch {sender_type}.tcl: {err}", file=sys.stderr)
             continue
+        # Inline content from sourced profile TCL files
+        tcl_content = _resolve_sourced_content_remote(tcl_content, ccu_url)
 
         loc_en = _load_localization_remote(
             ccu_url=ccu_url,
