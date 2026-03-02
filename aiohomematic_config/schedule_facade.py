@@ -9,18 +9,14 @@ integration's websocket_api.py as a thin wrapper.
 Public API of this module is defined by __all__.
 """
 
-from __future__ import annotations
-
 import dataclasses
 import inspect
-from typing import TYPE_CHECKING, Any
+from typing import Any
 
 from aiohomematic.const import ScheduleProfile, WeekdayStr
 from aiohomematic.interfaces import ClimateWeekProfileDataPointProtocol
+from aiohomematic.interfaces.model import DeviceProtocol
 from aiohomematic.model.schedule_models import ClimateWeekdaySchedule
-
-if TYPE_CHECKING:
-    from aiohomematic.interfaces.model import DeviceProtocol
 
 
 @dataclasses.dataclass(frozen=True, slots=True)

@@ -26,8 +26,6 @@ Quick start::
     # schema is a Pydantic model, JSON-serializable
 """
 
-from __future__ import annotations
-
 from aiohomematic_config.change_log import ConfigChangeEntry, ConfigChangeLog, build_change_diff
 from aiohomematic_config.const import VERSION
 from aiohomematic_config.exporter import ExportedConfiguration, export_configuration, import_configuration

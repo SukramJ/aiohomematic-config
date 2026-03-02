@@ -1,7 +1,5 @@
 """Tests for link parameter metadata classification."""
 
-from __future__ import annotations
-
 from aiohomematic_config import (
     KeypressGroup,
     LinkParamCategory,

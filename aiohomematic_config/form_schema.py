@@ -7,8 +7,6 @@ JSON-serializable form schema that any frontend can render.
 Public API of this module is defined by __all__.
 """
 
-from __future__ import annotations
-
 from collections.abc import Mapping
 import inspect
 from typing import Any

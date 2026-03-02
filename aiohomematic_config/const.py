@@ -4,12 +4,10 @@ Constants and version for aiohomematic-config.
 Public API of this module is defined by __all__.
 """
 
-from __future__ import annotations
-
 import inspect
 from typing import Final
 
-VERSION: Final = "2026.3.1"
+VERSION: Final = "2026.3.2"
 
 # Widget slider threshold: if an integer range is <= this value, use a slider
 SLIDER_RANGE_THRESHOLD: Final = 20

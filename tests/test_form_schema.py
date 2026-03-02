@@ -1,7 +1,5 @@
 """Tests for form schema generator."""
 
-from __future__ import annotations
-
 from typing import Any
 
 from aiohomematic.const import Flag, Operations, ParameterData, ParameterType

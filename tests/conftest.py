@@ -1,7 +1,5 @@
 """Shared test fixtures for aiohomematic-config."""
 
-from __future__ import annotations
-
 from typing import Any
 
 from aiohomematic.const import Flag, Operations, ParameterData, ParameterType

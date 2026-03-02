@@ -1,7 +1,5 @@
 """Load and query easymode profile definitions."""
 
-from __future__ import annotations
-
 import asyncio
 import html
 from importlib.resources import files
@@ -98,7 +96,7 @@ def _load_receiver_profiles(
     try:
         data_file = files("aiohomematic_config.profiles").joinpath(f"{receiver_channel_type}.json")
         raw = json.loads(data_file.read_text(encoding="utf-8"))
-    except (FileNotFoundError, ModuleNotFoundError):
+    except FileNotFoundError, ModuleNotFoundError:
         return {}
 
     return {sender_type: ChannelProfileSet.model_validate(sender_data) for sender_type, sender_data in raw.items()}
@@ -116,7 +114,7 @@ def _matches_profile(
 
         try:
             current_num = float(current)
-        except (ValueError, TypeError):
+        except ValueError, TypeError:
             return False
 
         if constraint.constraint_type == "fixed":

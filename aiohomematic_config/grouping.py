@@ -7,8 +7,6 @@ prefix-based heuristics and curated category mappings.
 Public API of this module is defined by __all__.
 """
 
-from __future__ import annotations
-
 from collections.abc import Mapping
 from dataclasses import dataclass, field
 import inspect

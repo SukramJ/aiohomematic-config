@@ -7,8 +7,6 @@ transfer, or comparison purposes.
 Public API of this module is defined by __all__.
 """
 
-from __future__ import annotations
-
 from datetime import UTC, datetime
 import inspect
 import json

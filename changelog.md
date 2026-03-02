@@ -1,3 +1,10 @@
+# Version 2026.3.2 (2026-03-06)
+
+- **Python 3.14 minimum**: Dropped Python 3.13 support
+- Remove `from __future__ import annotations` required import (no longer needed with Python 3.14)
+- Bump aiohomematic dependency to >=2026.3.2
+- Update all tool configurations (ruff, mypy, pylint) to target Python 3.14
+
 # Version 2026.3.1 (2026-03-05)
 
 - Add `device_active_profile_index` field to `ClimateScheduleData` for active profile index from device

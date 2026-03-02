@@ -1,7 +1,5 @@
 """Tests for parameter grouping."""
 
-from __future__ import annotations
-
 from aiohomematic.const import Flag, Operations, ParameterData, ParameterType
 
 from aiohomematic_config import ParameterGroup, ParameterGrouper

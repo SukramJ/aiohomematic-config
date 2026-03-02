@@ -1,7 +1,5 @@
 """Tests for label resolution."""
 
-from __future__ import annotations
-
 from aiohomematic_config import LabelResolver
 
 

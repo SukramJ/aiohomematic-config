@@ -1,7 +1,5 @@
 """Configuration change log for tracking paramset modifications."""
 
-from __future__ import annotations
-
 from dataclasses import asdict, dataclass
 from datetime import UTC, datetime
 from typing import Any, Final
