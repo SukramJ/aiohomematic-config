@@ -1,3 +1,9 @@
+# Version 2026.3.1 (2026-03-05)
+
+- Add `device_active_profile_index` field to `ClimateScheduleData` for active profile index from device
+- Fix pre-commit branch protection to use `main` instead of `master`
+- Bump aiohomematic dependency to >=2026.3.1
+
 # Version 2026.3.0 (2026-03-01)
 
 - Follow TCL `source` includes to resolve profiles defined in shared files (e.g. `profiles.tcl`, `profilesTunableWhite.tcl`)

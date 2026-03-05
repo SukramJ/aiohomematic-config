@@ -43,6 +43,7 @@ class ClimateScheduleData:
     schedule_data: dict[str, Any]
     available_profiles: list[str]
     active_profile: str
+    device_active_profile_index: int | None
     min_temp: float
     max_temp: float
     step: float
@@ -103,6 +104,7 @@ async def get_climate_schedule(
         schedule_data=schedule_data,
         available_profiles=[p.value for p in wp_dp.available_profiles],
         active_profile=wp_dp.current_schedule_profile.value,
+        device_active_profile_index=wp_dp.device_active_profile_index,
         min_temp=wp_dp.min_temp or 5.0,
         max_temp=wp_dp.max_temp or 30.5,
         step=0.5,
