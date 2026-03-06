@@ -22,16 +22,15 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
     "Programming Language :: Python :: Implementation :: CPython",
     "Topic :: Home Automation",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Typing :: Typed",
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 dependencies = [
-    "aiohomematic>=2026.3.1",
+    "aiohomematic>=2026.3.2",
     "pydantic>=2.10.0",
 ]
 
@@ -59,7 +58,7 @@ aiohomematic_config = ["py.typed", "profiles/*.json"]
 # ---------------------------------------------------------------------------
 
 [tool.pylint.MAIN]
-py-version = "3.13"
+py-version = "3.14"
 ignore = ["tests"]
 jobs = 2
 init-hook = """\
@@ -353,7 +352,7 @@ markers = [
 # ---------------------------------------------------------------------------
 
 [tool.ruff]
-target-version = "py313"
+target-version = "py314"
 line-length = 120
 
 lint.select = [
@@ -431,7 +430,6 @@ fixture-parentheses = false
 
 [tool.ruff.lint.isort]
 force-sort-within-sections = true
-required-imports = ["from __future__ import annotations"]
 known-first-party = ["aiohomematic_config"]
 known-third-party = ["pydantic", "aiohomematic"]
 combine-as-imports = true
@@ -488,7 +486,7 @@ output = "coverage.xml"
 # ---------------------------------------------------------------------------
 
 [tool.mypy]
-python_version = "3.13"
+python_version = "3.14"
 plugins = ["pydantic.mypy"]
 strict = true
 show_error_codes = true

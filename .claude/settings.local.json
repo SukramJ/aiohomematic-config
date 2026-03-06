@@ -21,7 +21,10 @@
       "Bash(python3:*)",
       "Bash(mypy:*)",
       "Bash(pip install:*)",
-      "Bash(ruff check:*)"
+      "Bash(ruff check:*)",
+      "Bash(source:*)",
+      "Bash(ruff rule:*)",
+      "Bash(pytest:*)"
     ]
   }
 }

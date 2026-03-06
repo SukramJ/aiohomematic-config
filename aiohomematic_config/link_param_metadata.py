@@ -1,7 +1,5 @@
 """Metadata classification for link paramset parameters."""
 
-from __future__ import annotations
-
 from dataclasses import dataclass
 from enum import StrEnum, unique
 import math

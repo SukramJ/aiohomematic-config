@@ -8,8 +8,6 @@ formatting when no translation is available.
 Public API of this module is defined by __all__.
 """
 
-from __future__ import annotations
-
 import inspect
 from typing import Final
 

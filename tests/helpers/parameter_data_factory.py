@@ -1,7 +1,5 @@
 """Factory functions for creating mock ParameterData in tests."""
 
-from __future__ import annotations
-
 from aiohomematic.const import Flag, Operations, ParameterData, ParameterType
 
 

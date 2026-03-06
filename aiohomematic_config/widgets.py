@@ -7,8 +7,6 @@ based on its type, range, and metadata.
 Public API of this module is defined by __all__.
 """
 
-from __future__ import annotations
-
 from enum import StrEnum, unique
 import inspect
 
