@@ -13,6 +13,14 @@ This document provides comprehensive guidance for AI assistants working on the a
 - **Fully testable without CCU**: All tests use mock `ParameterData` dictionaries.
 - **Same quality standards as aiohomematic**: mypy strict, ruff, pylint, 85%+ coverage.
 
+## Workflow Rules
+
+1. **Plan before coding**: Before writing any code, describe your approach and wait for approval.
+2. **Clarify ambiguity**: If requirements are ambiguous, ask clarifying questions before writing any code.
+3. **Suggest edge-case tests**: After finishing any code change, list edge cases and suggest test cases to cover them.
+4. **Bug fix = test first**: When fixing a bug, start by writing a test that reproduces it, then fix the code until the test passes.
+5. **Learn from corrections**: Every time you are corrected, reflect on the mistake and update your memory to prevent repeating it.
+
 ## Codebase Structure
 
 ```
