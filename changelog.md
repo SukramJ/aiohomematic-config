@@ -1,3 +1,9 @@
+# Version 2026.3.3 (2026-03-21)
+
+- Add `is_hmip` parameter to `FormSchemaGenerator.generate()` to resolve channel types for HmIP-specific translation lookups (e.g., `SHUTTER_CONTACT` → `SHUTTER_CONTACT_HMIP`)
+- Use `resolve_channel_type()` from aiohomematic for HmIP channel type resolution
+- Bump aiohomematic dependency to >=2026.3.11
+
 # Version 2026.3.2 (2026-03-06)
 
 - **Python 3.14 minimum**: Dropped Python 3.13 support

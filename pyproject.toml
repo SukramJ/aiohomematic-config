@@ -30,7 +30,7 @@ classifiers = [
 ]
 requires-python = ">=3.14"
 dependencies = [
-    "aiohomematic>=2026.3.2",
+    "aiohomematic>=2026.3.11",
     "pydantic>=2.10.0",
 ]
 
