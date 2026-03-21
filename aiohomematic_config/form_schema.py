@@ -17,6 +17,7 @@ from aiohomematic.ccu_translations import (
     get_device_model_description,
     get_parameter_help,
     get_parameter_value_translation,
+    resolve_channel_type,
 )
 from aiohomematic.const import SCHEDULE_PATTERN, ParameterData, ParameterType
 from aiohomematic.parameter_tools import (
@@ -118,6 +119,7 @@ class FormSchemaGenerator:
         sub_model: str | None = None,
         require_translation: bool = True,
         enrich_link_metadata: bool = False,
+        is_hmip: bool = False,
     ) -> FormSchema:
         """
         Generate a complete form schema for the given paramset.
@@ -133,11 +135,16 @@ class FormSchemaGenerator:
                 Set to False for LINK paramsets where translations are often unavailable.
             enrich_link_metadata: If True, classify each parameter and attach
                 link metadata (keypress group, category, time presets, etc.).
+            is_hmip: If True, resolve channel type to HmIP-specific variant
+                for correct translation lookups (e.g., SHUTTER_CONTACT → SHUTTER_CONTACT_HMIP).
 
         Returns:
             A FormSchema ready for JSON serialization.
 
         """
+        # Resolve channel type for HmIP devices (e.g., SHUTTER_CONTACT → SHUTTER_CONTACT_HMIP)
+        channel_type = resolve_channel_type(channel_type=channel_type, is_hmip=is_hmip)
+
         # Filter parameters using CCU-compatible rules:
         # 1. FLAGS & VISIBLE must be set
         # 2. FLAGS & INTERNAL must NOT be set

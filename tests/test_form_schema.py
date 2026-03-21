@@ -537,3 +537,67 @@ class TestFormSchemaGenerator:
             current_values=switch_values,
         )
         assert schema.total_parameters == 3
+
+
+class TestIsHmipChannelTypeResolution:
+    """Test that is_hmip resolves channel types for HmIP-specific translations."""
+
+    def test_hmip_channel_type_label_resolved(self) -> None:
+        """Test that the channel type label uses the HmIP-specific translation."""
+        generator = FormSchemaGenerator(locale="de")
+        schema = generator.generate(
+            descriptions={},
+            current_values={},
+            channel_type="SHUTTER_CONTACT",
+            is_hmip=True,
+        )
+        # SHUTTER_CONTACT_HMIP should have its own channel type label
+        assert schema.channel_type_label != ""
+
+    def test_hmip_parameter_labels_use_resolved_type(self) -> None:
+        """Test that parameter labels use the resolved HmIP channel type."""
+        msg_for_pos_a: ParameterData = {
+            "TYPE": ParameterType.ENUM,
+            "FLAGS": Flag.VISIBLE | Flag.SERVICE,
+            "OPERATIONS": Operations.READ | Operations.WRITE,
+            "DEFAULT": "NO_MSG",
+            "VALUE_LIST": ["NO_MSG", "OPEN_MSG"],
+            "MIN": "NO_MSG",
+            "MAX": "OPEN_MSG",
+        }
+        generator = FormSchemaGenerator(locale="de")
+        schema = generator.generate(
+            descriptions={"MSG_FOR_POS_A": msg_for_pos_a},
+            current_values={"MSG_FOR_POS_A": "NO_MSG"},
+            channel_type="SHUTTER_CONTACT",
+            is_hmip=True,
+        )
+        # Should have a section with MSG_FOR_POS_A using HmIP translation
+        assert schema.total_parameters == 1
+        param = schema.sections[0].parameters[0]
+        assert param.id == "MSG_FOR_POS_A"
+        # The label should be the HmIP variant ("offen" not "geschlossen")
+        assert "offen" in param.label.lower()
+
+    def test_hmip_resolves_channel_type(self) -> None:
+        """Test that is_hmip=True resolves SHUTTER_CONTACT to SHUTTER_CONTACT_HMIP."""
+        generator = FormSchemaGenerator(locale="de")
+        schema = generator.generate(
+            descriptions={},
+            current_values={},
+            channel_type="SHUTTER_CONTACT",
+            is_hmip=True,
+        )
+        # The resolved channel type should be stored in the schema
+        assert schema.channel_type == "SHUTTER_CONTACT_HMIP"
+
+    def test_non_hmip_keeps_channel_type(self) -> None:
+        """Test that is_hmip=False keeps the original channel type."""
+        generator = FormSchemaGenerator(locale="de")
+        schema = generator.generate(
+            descriptions={},
+            current_values={},
+            channel_type="SHUTTER_CONTACT",
+            is_hmip=False,
+        )
+        assert schema.channel_type == "SHUTTER_CONTACT"

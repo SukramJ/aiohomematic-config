@@ -24,7 +24,8 @@
       "Bash(ruff check:*)",
       "Bash(source:*)",
       "Bash(ruff rule:*)",
-      "Bash(pytest:*)"
+      "Bash(pytest:*)",
+      "Bash(script/setup)"
     ]
   }
 }
