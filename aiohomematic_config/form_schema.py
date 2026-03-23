@@ -20,6 +20,7 @@ from aiohomematic.ccu_translations import (
     resolve_channel_type,
 )
 from aiohomematic.const import SCHEDULE_PATTERN, ParameterData, ParameterType
+from aiohomematic.easymode_data import SenderTypeMetadata, get_channel_metadata, get_option_preset
 from aiohomematic.parameter_tools import (
     get_parameter_step,
     is_parameter_internal,
@@ -65,6 +66,14 @@ class FormParameter(BaseModel):
     time_selector_type: str | None = None
     time_presets: list[dict[str, int | str]] | None = None
 
+    # Easymode metadata (UC2: conditional visibility):
+    visible_when: dict[str, Any] | None = None
+    # Easymode metadata (UC5: option presets):
+    presets: list[dict[str, Any]] | None = None
+    allow_custom_value: bool = False
+    # Easymode metadata (UC6: subset membership):
+    subset_group_id: str | None = None
+
 
 class FormSection(BaseModel):
     """A logical group of parameters in a form."""
@@ -72,6 +81,24 @@ class FormSection(BaseModel):
     id: str
     title: str
     parameters: list[FormParameter]
+
+
+class SubsetOption(BaseModel):
+    """A single option in a subset group."""
+
+    id: int
+    label: str
+    values: dict[str, int | float | str]
+
+
+class SubsetGroup(BaseModel):
+    """A group of parameters that form a combined selection."""
+
+    id: str
+    label: str
+    member_params: list[str]
+    options: list[SubsetOption]
+    current_option_id: int | None = None
 
 
 class FormSchema(BaseModel):
@@ -85,6 +112,8 @@ class FormSchema(BaseModel):
     sections: list[FormSection]
     total_parameters: int
     writable_parameters: int
+    # Easymode metadata (UC6: subset groups):
+    subset_groups: list[SubsetGroup] | None = None
 
 
 class FormSchemaGenerator:
@@ -115,6 +144,7 @@ class FormSchemaGenerator:
         current_values: dict[str, Any],
         channel_address: str = "",
         channel_type: str = "",
+        sender_type: str = "",
         model: str = "",
         sub_model: str | None = None,
         require_translation: bool = True,
@@ -129,6 +159,7 @@ class FormSchemaGenerator:
             current_values: Current parameter values (from get_paramset).
             channel_address: Channel address for context.
             channel_type: Channel type for grouping hints.
+            sender_type: Sender channel type for easymode metadata lookup.
             model: Device model ID for description lookup.
             sub_model: Optional sub-model for description fallback.
             require_translation: If True, only include parameters with CCU translations.
@@ -166,10 +197,16 @@ class FormSchemaGenerator:
             )
         }
 
-        # Group parameters
+        # Load easymode metadata for enrichment
+        st_meta: SenderTypeMetadata | None = None
+        if channel_type and sender_type and (ch_meta := get_channel_metadata(channel_type=channel_type)):
+            st_meta = ch_meta.sender_types.get(sender_type)
+
+        # Group parameters (with metadata-based ordering when available)
         groups = self._grouper.group(
             descriptions=visible_params,
             channel_type=channel_type,
+            sender_type=sender_type,
         )
 
         # Build sections
@@ -256,6 +293,14 @@ class FormSchemaGenerator:
                     else:
                         form_param.has_last_value = meta.has_last_value
 
+                # Enrich with easymode metadata (presets, visibility, subsets)
+                if st_meta:
+                    self._enrich_easymode(
+                        form_param=form_param,
+                        st_meta=st_meta,
+                        current_values=current_values,
+                    )
+
                 form_params.append(form_param)
                 total_params += 1
                 if writable:
@@ -298,6 +343,14 @@ class FormSchemaGenerator:
         if model:
             device_icon = get_device_icon(model=model)
 
+        # Build subset groups from easymode metadata
+        subset_groups: list[SubsetGroup] | None = None
+        if st_meta and st_meta.subsets:
+            subset_groups = self._build_subset_groups(
+                st_meta=st_meta,
+                current_values=current_values,
+            )
+
         return FormSchema(
             channel_address=channel_address,
             channel_type=channel_type,
@@ -307,7 +360,96 @@ class FormSchemaGenerator:
             sections=sections,
             total_parameters=total_params,
             writable_parameters=writable_params,
+            subset_groups=subset_groups,
         )
+
+    def _build_subset_groups(
+        self,
+        *,
+        st_meta: SenderTypeMetadata,
+        current_values: dict[str, Any],
+    ) -> list[SubsetGroup]:
+        """Build subset group definitions for the form schema."""
+        groups: list[SubsetGroup] = []
+        for subset in st_meta.subsets:
+            # Check if current values match this subset
+            all_match = all(current_values.get(p) == v for p, v in subset.values.items())
+
+            options = [
+                SubsetOption(
+                    id=subset.id,
+                    label=subset.name_key,
+                    values=subset.values,
+                )
+            ]
+
+            # Check if a group for these member_params already exists
+            existing = next(
+                (g for g in groups if set(g.member_params) == set(subset.member_params)),
+                None,
+            )
+            if existing:
+                existing.options.append(options[0])
+                if all_match:
+                    existing.current_option_id = subset.id
+            else:
+                groups.append(
+                    SubsetGroup(
+                        id=f"subset_{subset.member_params[0]}",
+                        label=subset.name_key,
+                        member_params=list(subset.member_params),
+                        options=options,
+                        current_option_id=subset.id if all_match else None,
+                    )
+                )
+
+        return groups
+
+    def _enrich_easymode(
+        self,
+        *,
+        form_param: FormParameter,
+        st_meta: SenderTypeMetadata,
+        current_values: dict[str, Any],
+    ) -> None:
+        """Enrich a FormParameter with easymode metadata (presets, visibility, subsets)."""
+        param_id = form_param.id
+
+        # UC5: Option presets
+        if (preset_type := st_meta.option_presets.get(param_id)) and (
+            preset_def := get_option_preset(preset_type=preset_type)
+        ):
+            form_param.presets = [
+                {
+                    "value": entry.value,
+                    "label": (entry.label or (entry.label_key or str(entry.value))),
+                }
+                for entry in preset_def.presets
+            ]
+            form_param.allow_custom_value = preset_def.allow_custom
+
+        # UC6: Subset membership
+        for subset in st_meta.subsets:
+            if param_id in subset.member_params:
+                form_param.subset_group_id = f"subset_{subset.id}"
+                break
+
+        # UC2: Conditional visibility
+        for cv_rule in getattr(st_meta, "conditional_visibility", ()):
+            if param_id in cv_rule.show:
+                form_param.visible_when = {
+                    "trigger_param": cv_rule.trigger,
+                    "trigger_value": cv_rule.trigger_value,
+                    "invert": False,
+                }
+                break
+            if param_id in cv_rule.hide:
+                form_param.visible_when = {
+                    "trigger_param": cv_rule.trigger,
+                    "trigger_value": cv_rule.trigger_value,
+                    "invert": True,
+                }
+                break
 
 
 def _humanize_value(*, value: str) -> str:
