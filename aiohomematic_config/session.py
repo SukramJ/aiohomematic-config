@@ -13,7 +13,13 @@ import inspect
 from typing import Any, Final
 
 from aiohomematic.const import ParameterData
-from aiohomematic.parameter_tools import ParamsetChange, ValidationResult, diff_paramset, validate_paramset
+from aiohomematic.parameter_tools import (
+    ParamsetChange,
+    ValidationResult,
+    diff_paramset,
+    validate_cross_parameters,
+    validate_paramset,
+)
 
 
 @dataclass(frozen=True)
@@ -148,11 +154,18 @@ class ConfigSession:
         Validate all current values against their descriptions.
 
         Returns only failures. An empty dict means all values are valid.
+        Includes both single-parameter and cross-parameter validation.
         """
         result: dict[str, ValidationResult] = validate_paramset(
             descriptions=self._descriptions,
             values=self._current_values,
         )
+        # Add cross-parameter validation errors
+        for param_id, error_key in validate_cross_parameters(
+            values=self._current_values,
+        ).items():
+            if param_id not in result:
+                result[param_id] = ValidationResult(valid=False, reason=error_key)
         return result
 
     def validate_changes(self) -> dict[str, ValidationResult]:
@@ -160,6 +173,7 @@ class ConfigSession:
         Validate only the changed values.
 
         Returns only failures for parameters that differ from initial values.
+        Includes cross-parameter validation against the full current state.
         """
         if not (changes := self.get_changes()):
             return {}
@@ -167,6 +181,13 @@ class ConfigSession:
             descriptions=self._descriptions,
             values=changes,
         )
+        # Cross-validate changes merged with current state
+        for param_id, error_key in validate_cross_parameters(
+            values=changes,
+            current_values=self._current_values,
+        ).items():
+            if param_id not in result:
+                result[param_id] = ValidationResult(valid=False, reason=error_key)
         return result
 
 

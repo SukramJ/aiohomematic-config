@@ -26,6 +26,21 @@ class TestConfigSession:
         assert not session.can_redo
         assert session.get_current_value(parameter="TEMPERATURE_OFFSET") == 1.5
 
+    def test_get_changed_parameters(
+        self,
+        thermostat_descriptions: dict[str, ParameterData],
+        thermostat_values: dict[str, Any],
+    ) -> None:
+        session = ConfigSession(
+            descriptions=thermostat_descriptions,
+            initial_values=thermostat_values,
+        )
+        session.set(parameter="TEMPERATURE_OFFSET", value=2.0)
+        result = session.get_changed_parameters()
+        assert "TEMPERATURE_OFFSET" in result
+        assert result["TEMPERATURE_OFFSET"].old_value == 1.5
+        assert result["TEMPERATURE_OFFSET"].new_value == 2.0
+
     def test_get_changes(
         self,
         thermostat_descriptions: dict[str, ParameterData],
@@ -202,3 +217,56 @@ class TestConfigSession:
             initial_values=thermostat_values,
         )
         assert not session.undo()
+
+    def test_validate_changes_returns_empty_when_no_changes(
+        self,
+        thermostat_descriptions: dict[str, ParameterData],
+        thermostat_values: dict[str, Any],
+    ) -> None:
+        session = ConfigSession(
+            descriptions=thermostat_descriptions,
+            initial_values=thermostat_values,
+        )
+        result = session.validate_changes()
+        assert result == {}
+
+    def test_validate_changes_validates_only_changed(
+        self,
+        thermostat_descriptions: dict[str, ParameterData],
+        thermostat_values: dict[str, Any],
+    ) -> None:
+        session = ConfigSession(
+            descriptions=thermostat_descriptions,
+            initial_values=thermostat_values,
+        )
+        session.set(parameter="TEMPERATURE_OFFSET", value=99.0)
+        result = session.validate_changes()
+        assert "TEMPERATURE_OFFSET" in result
+        assert result["TEMPERATURE_OFFSET"].valid is False
+
+    def test_validate_returns_empty_for_valid_values(
+        self,
+        thermostat_descriptions: dict[str, ParameterData],
+        thermostat_values: dict[str, Any],
+    ) -> None:
+        session = ConfigSession(
+            descriptions=thermostat_descriptions,
+            initial_values=thermostat_values,
+        )
+        result = session.validate()
+        assert result == {}
+
+    def test_validate_returns_failures_for_invalid_values(
+        self,
+        thermostat_descriptions: dict[str, ParameterData],
+        thermostat_values: dict[str, Any],
+    ) -> None:
+        session = ConfigSession(
+            descriptions=thermostat_descriptions,
+            initial_values=thermostat_values,
+        )
+        # Set out-of-range value (max is 3.5)
+        session.set(parameter="TEMPERATURE_OFFSET", value=99.0)
+        result = session.validate()
+        assert "TEMPERATURE_OFFSET" in result
+        assert result["TEMPERATURE_OFFSET"].valid is False

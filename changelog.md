@@ -1,3 +1,14 @@
+# Version 2026.3.4 (2026-03-24)
+
+- Add easymode metadata enrichment to `FormSchemaGenerator`: conditional visibility (`visible_when`), option presets (`presets`, `allow_custom_value`), and subset membership (`subset_group_id`)
+- Add `SubsetOption` and `SubsetGroup` models for combined parameter selection groups
+- Add `sender_type` parameter to `FormSchemaGenerator.generate()` and `ParameterGrouper.group()`
+- Add metadata-based parameter ordering in `ParameterGrouper` using easymode `parameter_order`
+- Add cross-parameter validation via `validate_cross_parameters()` in `ConfigSession.validate()` and `ConfigSession.validate_changes()`
+- Add `master_profile_store` module with `MasterProfileStore` and `ResolvedMasterProfile` for MASTER paramset easymode profiles
+- Add index-based fallback for VALUE_LIST option label translation (easymode TCL stores options as numeric indices)
+- Bump aiohomematic dependency to >=2026.3.14
+
 # Version 2026.3.3 (2026-03-21)
 
 - Add `is_hmip` parameter to `FormSchemaGenerator.generate()` to resolve channel types for HmIP-specific translation lookups (e.g., `SHUTTER_CONTACT` → `SHUTTER_CONTACT_HMIP`)

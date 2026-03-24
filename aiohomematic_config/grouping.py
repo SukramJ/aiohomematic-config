@@ -14,6 +14,7 @@ import re
 from typing import Final
 
 from aiohomematic.const import ParameterData
+from aiohomematic.easymode_data import get_channel_metadata
 
 from aiohomematic_config.const import DEFAULT_LOCALE
 
@@ -129,18 +130,80 @@ class ParameterGrouper:
         *,
         descriptions: Mapping[str, ParameterData],
         channel_type: str = "",
+        sender_type: str = "",
     ) -> tuple[ParameterGroup, ...]:
         """
         Group parameters into logical sections.
 
+        When easymode metadata is available for the channel type, use the
+        semantically defined groups from the CCU WebUI instead of
+        prefix-based heuristics.
+
         Args:
             descriptions: Parameter descriptions to group.
-            channel_type: Optional channel type for context-aware grouping.
+            channel_type: Optional receiver channel type for metadata lookup.
+            sender_type: Optional sender channel type for metadata lookup.
 
         Returns:
             Tuple of ParameterGroup instances.
 
         """
+        # Try metadata-based grouping first
+        if (
+            channel_type
+            and sender_type
+            and (
+                result := self._groups_from_metadata(
+                    descriptions=descriptions,
+                    channel_type=channel_type,
+                    sender_type=sender_type,
+                )
+            )
+        ):
+            return result
+
+        # Fallback: pattern-based grouping
+        return self._groups_from_patterns(descriptions=descriptions)
+
+    def _groups_from_metadata(
+        self,
+        *,
+        descriptions: Mapping[str, ParameterData],
+        channel_type: str,
+        sender_type: str,
+    ) -> tuple[ParameterGroup, ...] | None:
+        """Build groups from easymode metadata if available."""
+        if not (metadata := get_channel_metadata(channel_type=channel_type)):
+            return None
+        st_meta = metadata.sender_types.get(sender_type)
+        if not st_meta or not st_meta.parameter_order:
+            return None
+
+        # Use parameter_order for sorting within a single group
+        available = set(descriptions.keys())
+        ordered_params = [p for p in st_meta.parameter_order if p in available]
+        # Add remaining params not in the order list
+        remaining = sorted(available - set(ordered_params))
+        if not (all_params := ordered_params + remaining):
+            return None
+
+        # For now, return all params in a single ordered section
+        # (semantic grouping from metadata will be added when
+        #  parameter_groups field is populated by the extraction script)
+        return (
+            ParameterGroup(
+                id="all",
+                title=self._translate(group_id="other", fallback="Settings"),
+                parameters=tuple(all_params),
+            ),
+        )
+
+    def _groups_from_patterns(
+        self,
+        *,
+        descriptions: Mapping[str, ParameterData],
+    ) -> tuple[ParameterGroup, ...]:
+        """Group parameters using prefix-based pattern matching (fallback)."""
         # Reset collectors
         for collector in self._collectors:
             collector.parameters.clear()

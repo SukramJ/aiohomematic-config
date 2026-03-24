@@ -40,3 +40,4 @@ coverage.json
 Thumbs.db
 .env
 /.claude
+.claude/settings.local.json
