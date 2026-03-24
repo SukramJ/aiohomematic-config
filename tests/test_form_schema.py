@@ -323,7 +323,7 @@ class TestFormSchemaGenerator:
     ) -> None:
         """option_labels should fall back to humanized values when no translations exist."""
         descriptions: dict[str, ParameterData] = {
-            "CHANNEL_OPERATION_MODE": ParameterData(
+            "XYZZY_FAKE_PARAM": ParameterData(
                 TYPE=ParameterType.ENUM,
                 MIN=0,
                 MAX=2,
@@ -335,7 +335,7 @@ class TestFormSchemaGenerator:
         }
         schema = permissive_generator_en.generate(
             descriptions=descriptions,
-            current_values={"CHANNEL_OPERATION_MODE": "XYZZY_OPTION"},
+            current_values={"XYZZY_FAKE_PARAM": "XYZZY_OPTION"},
         )
         param = schema.sections[0].parameters[0]
         assert param.option_labels is not None

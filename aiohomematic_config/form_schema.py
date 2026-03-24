@@ -241,13 +241,25 @@ class FormSchemaGenerator:
                 if "VALUE_LIST" in pd:
                     options = list(pd["VALUE_LIST"])
                     resolved_labels: dict[str, str] = {}
-                    for value in options:
+                    for i, value in enumerate(options):
                         translated = get_parameter_value_translation(
                             parameter=param_id,
                             value=value,
                             channel_type=channel_type or None,
                             locale=self._label_resolver.locale,
                         )
+                        # Fall back to index-based lookup (easymode TCL option values
+                        # are stored as parameter=N since VALUE_LIST strings are not
+                        # available at extraction time). Skip value-only fallback to
+                        # avoid generic matches for numeric indices like "0" or "1".
+                        if translated is None:
+                            translated = get_parameter_value_translation(
+                                parameter=param_id,
+                                value=str(i),
+                                channel_type=channel_type or None,
+                                locale=self._label_resolver.locale,
+                                use_fallback=False,
+                            )
                         resolved_labels[value] = translated or _humanize_value(value=value)
                     option_labels = resolved_labels
 
