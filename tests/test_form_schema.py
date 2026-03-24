@@ -1,8 +1,16 @@
 """Tests for form schema generator."""
 
 from typing import Any
+from unittest.mock import patch
 
 from aiohomematic.const import Flag, Operations, ParameterData, ParameterType
+from aiohomematic.easymode_data import (
+    ChannelMetadata,
+    OptionPresetDef,
+    OptionPresetEntry,
+    SenderTypeMetadata,
+    SubsetDef,
+)
 
 from aiohomematic_config import FormParameter, FormSchema, FormSchemaGenerator, FormSection, WidgetType
 
@@ -601,3 +609,163 @@ class TestIsHmipChannelTypeResolution:
             is_hmip=False,
         )
         assert schema.channel_type == "SHUTTER_CONTACT"
+
+
+def _make_writable_float(
+    *,
+    min_val: float = 0.0,
+    max_val: float = 1.0,
+    default: float = 0.0,
+) -> ParameterData:
+    return ParameterData(
+        TYPE=ParameterType.FLOAT,
+        MIN=min_val,
+        MAX=max_val,
+        DEFAULT=default,
+        OPERATIONS=Operations.READ | Operations.WRITE,
+        FLAGS=Flag.VISIBLE,
+    )
+
+
+class TestEasymodeEnrichment:
+    """Test easymode metadata enrichment (presets, subsets, visibility)."""
+
+    def test_option_presets_enriched(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
+        """Option presets should be attached to parameters when easymode metadata specifies them."""
+        descriptions: dict[str, ParameterData] = {
+            "LEVEL": _make_writable_float(),
+        }
+        preset_def = OptionPresetDef(
+            presets=(
+                OptionPresetEntry(value=0.0, label="Off"),
+                OptionPresetEntry(value=1.0, label="Full"),
+            ),
+            allow_custom=True,
+        )
+        st_meta = SenderTypeMetadata(option_presets={"LEVEL": "TEST_PRESET"})
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with (
+            patch("aiohomematic_config.form_schema.get_channel_metadata", return_value=ch_meta),
+            patch("aiohomematic_config.form_schema.get_option_preset", return_value=preset_def),
+        ):
+            schema = permissive_generator_en.generate(
+                descriptions=descriptions,
+                current_values={"LEVEL": 0.5},
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        param = schema.sections[0].parameters[0]
+        assert param.presets is not None
+        assert len(param.presets) == 2
+        assert param.presets[0]["value"] == 0.0
+        assert param.presets[0]["label"] == "Off"
+        assert param.allow_custom_value is True
+
+    def test_subset_groups_built(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
+        """Subset groups should be built from easymode metadata."""
+        descriptions: dict[str, ParameterData] = {
+            "PARAM_A": _make_writable_float(),
+            "PARAM_B": _make_writable_float(),
+        }
+        subset1 = SubsetDef(
+            id=1,
+            name_key="Option 1",
+            member_params=("PARAM_A", "PARAM_B"),
+            values={"PARAM_A": 0.0, "PARAM_B": 0.0},
+        )
+        subset2 = SubsetDef(
+            id=2,
+            name_key="Option 2",
+            member_params=("PARAM_A", "PARAM_B"),
+            values={"PARAM_A": 1.0, "PARAM_B": 1.0},
+        )
+        st_meta = SenderTypeMetadata(subsets=(subset1, subset2))
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with patch("aiohomematic_config.form_schema.get_channel_metadata", return_value=ch_meta):
+            schema = permissive_generator_en.generate(
+                descriptions=descriptions,
+                current_values={"PARAM_A": 1.0, "PARAM_B": 1.0},
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        assert schema.subset_groups is not None
+        assert len(schema.subset_groups) == 1
+        group = schema.subset_groups[0]
+        assert set(group.member_params) == {"PARAM_A", "PARAM_B"}
+        assert len(group.options) == 2
+        # Current values match subset2
+        assert group.current_option_id == 2
+
+    def test_subset_membership_on_param(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
+        """Parameters in a subset should have subset_group_id set."""
+        descriptions: dict[str, ParameterData] = {
+            "PARAM_A": _make_writable_float(),
+        }
+        subset = SubsetDef(
+            id=1,
+            name_key="Sub",
+            member_params=("PARAM_A",),
+            values={"PARAM_A": 0.0},
+        )
+        st_meta = SenderTypeMetadata(subsets=(subset,))
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with patch("aiohomematic_config.form_schema.get_channel_metadata", return_value=ch_meta):
+            schema = permissive_generator_en.generate(
+                descriptions=descriptions,
+                current_values={"PARAM_A": 0.5},
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        param = schema.sections[0].parameters[0]
+        assert param.subset_group_id is not None
+
+    def test_subset_no_current_match(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
+        """current_option_id should be None when no subset values match."""
+        descriptions: dict[str, ParameterData] = {
+            "PARAM_A": _make_writable_float(),
+        }
+        subset = SubsetDef(
+            id=1,
+            name_key="Sub",
+            member_params=("PARAM_A",),
+            values={"PARAM_A": 0.0},
+        )
+        st_meta = SenderTypeMetadata(subsets=(subset,))
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with patch("aiohomematic_config.form_schema.get_channel_metadata", return_value=ch_meta):
+            schema = permissive_generator_en.generate(
+                descriptions=descriptions,
+                current_values={"PARAM_A": 0.5},
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        assert schema.subset_groups is not None
+        assert schema.subset_groups[0].current_option_id is None
