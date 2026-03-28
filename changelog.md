@@ -1,3 +1,9 @@
+# Version 2026.3.5 (2026-03-28)
+
+- Add `CrossValidationConstraint` model and `cross_validation` field on `FormSchema` for exposing cross-parameter validation rules to the frontend
+- Add semantic parameter grouping from easymode `parameter_groups` metadata in `ParameterGrouper` with locale-aware labels and ungrouped fallback
+- Bump aiohomematic dependency to >=2026.3.19
+
 # Version 2026.3.4 (2026-03-24)
 
 - Add easymode metadata enrichment to `FormSchemaGenerator`: conditional visibility (`visible_when`), option presets (`presets`, `allow_custom_value`), and subset membership (`subset_group_id`)
