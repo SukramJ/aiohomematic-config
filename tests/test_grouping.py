@@ -1,6 +1,9 @@
 """Tests for parameter grouping."""
 
+from unittest.mock import patch
+
 from aiohomematic.const import Flag, Operations, ParameterData, ParameterType
+from aiohomematic.easymode_data import ChannelMetadata, ParameterGroupDef, SenderTypeMetadata
 
 from aiohomematic_config import ParameterGroup, ParameterGrouper
 
@@ -192,3 +195,170 @@ class TestParameterGrouper:
         descriptions = {"TEMPERATURE_OFFSET": _simple_param()}
         result = grouper.group(descriptions=descriptions)
         assert result[0].title == "Temperature Settings"
+
+
+class TestMetadataParameterGroups:
+    """Test semantic parameter grouping from easymode metadata."""
+
+    def test_fallback_to_single_group_without_parameter_groups(self) -> None:
+        """Without parameter_groups, metadata should still produce a single ordered group."""
+        grouper = ParameterGrouper(locale="en")
+        descriptions = {
+            "PARAM_B": _simple_param(),
+            "PARAM_A": _simple_param(),
+        }
+        st_meta = SenderTypeMetadata(
+            parameter_order=("PARAM_A", "PARAM_B"),
+        )
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with patch("aiohomematic_config.grouping.get_channel_metadata", return_value=ch_meta):
+            result = grouper.group(
+                descriptions=descriptions,
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        assert len(result) == 1
+        assert result[0].id == "all"
+        assert result[0].parameters == ("PARAM_A", "PARAM_B")
+
+    def test_groups_from_metadata(self) -> None:
+        """parameter_groups from metadata should produce semantic groups."""
+        grouper = ParameterGrouper(locale="en")
+        descriptions = {
+            "TEMP_MIN": _simple_param(),
+            "TEMP_MAX": _simple_param(),
+            "BRIGHTNESS": _simple_param(),
+        }
+        group_defs = (
+            ParameterGroupDef(
+                id="temp",
+                label={"en": "Temperature", "de": "Temperatur-Einstellungen"},
+                parameters=("TEMP_MIN", "TEMP_MAX"),
+            ),
+            ParameterGroupDef(
+                id="light",
+                label={"en": "Light", "de": "Licht"},
+                parameters=("BRIGHTNESS",),
+            ),
+        )
+        st_meta = SenderTypeMetadata(
+            parameter_order=("TEMP_MIN", "TEMP_MAX", "BRIGHTNESS"),
+            parameter_groups=group_defs,
+        )
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with patch("aiohomematic_config.grouping.get_channel_metadata", return_value=ch_meta):
+            result = grouper.group(
+                descriptions=descriptions,
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        assert len(result) == 2
+        assert result[0].id == "temp"
+        assert result[0].title == "Temperature"
+        assert result[0].parameters == ("TEMP_MIN", "TEMP_MAX")
+        assert result[1].id == "light"
+        assert result[1].title == "Light"
+        assert result[1].parameters == ("BRIGHTNESS",)
+
+    def test_groups_from_metadata_locale_de(self) -> None:
+        """German locale should pick up de labels from metadata groups."""
+        grouper = ParameterGrouper(locale="de")
+        descriptions = {
+            "PARAM_A": _simple_param(),
+        }
+        group_defs = (
+            ParameterGroupDef(
+                id="grp1",
+                label={"en": "Group One", "de": "Gruppe Eins"},
+                parameters=("PARAM_A",),
+            ),
+        )
+        st_meta = SenderTypeMetadata(
+            parameter_order=("PARAM_A",),
+            parameter_groups=group_defs,
+        )
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with patch("aiohomematic_config.grouping.get_channel_metadata", return_value=ch_meta):
+            result = grouper.group(
+                descriptions=descriptions,
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        assert result[0].title == "Gruppe Eins"
+
+    def test_metadata_group_skips_missing_params(self) -> None:
+        """Group definitions referencing missing parameters should skip them."""
+        grouper = ParameterGrouper(locale="en")
+        descriptions = {
+            "PARAM_A": _simple_param(),
+        }
+        group_defs = (
+            ParameterGroupDef(
+                id="grp1",
+                label={"en": "Group"},
+                parameters=("PARAM_A", "PARAM_B_MISSING"),
+            ),
+        )
+        st_meta = SenderTypeMetadata(
+            parameter_order=("PARAM_A",),
+            parameter_groups=group_defs,
+        )
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with patch("aiohomematic_config.grouping.get_channel_metadata", return_value=ch_meta):
+            result = grouper.group(
+                descriptions=descriptions,
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        assert len(result) == 1
+        assert result[0].parameters == ("PARAM_A",)
+
+    def test_ungrouped_params_in_fallback(self) -> None:
+        """Parameters not in any group should appear in 'other' fallback section."""
+        grouper = ParameterGrouper(locale="en")
+        descriptions = {
+            "GROUPED": _simple_param(),
+            "UNGROUPED": _simple_param(),
+        }
+        group_defs = (
+            ParameterGroupDef(
+                id="grp1",
+                label={"en": "Group"},
+                parameters=("GROUPED",),
+            ),
+        )
+        st_meta = SenderTypeMetadata(
+            parameter_order=("GROUPED", "UNGROUPED"),
+            parameter_groups=group_defs,
+        )
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with patch("aiohomematic_config.grouping.get_channel_metadata", return_value=ch_meta):
+            result = grouper.group(
+                descriptions=descriptions,
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        assert len(result) == 2
+        assert result[0].id == "grp1"
+        assert result[1].id == "other"
+        assert "UNGROUPED" in result[1].parameters
