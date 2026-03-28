@@ -179,17 +179,43 @@ class ParameterGrouper:
         if not st_meta or not st_meta.parameter_order:
             return None
 
-        # Use parameter_order for sorting within a single group
         available = set(descriptions.keys())
+
+        # Use semantic parameter groups from metadata when populated
+        if st_meta.parameter_groups:
+            groups: list[ParameterGroup] = []
+            assigned: set[str] = set()
+            for group_def in st_meta.parameter_groups:
+                if not (params := tuple(p for p in group_def.parameters if p in available)):
+                    continue
+                assigned.update(params)
+                label = group_def.label.get(self._locale) or group_def.label.get("en", group_def.id)
+                groups.append(
+                    ParameterGroup(
+                        id=group_def.id,
+                        title=label,
+                        parameters=params,
+                    )
+                )
+            # Add ungrouped parameters in a fallback section
+            if ungrouped := sorted(available - assigned):
+                groups.append(
+                    ParameterGroup(
+                        id="other",
+                        title=self._translate(group_id="other", fallback="Other Settings"),
+                        parameters=tuple(ungrouped),
+                    )
+                )
+            if groups:
+                return tuple(groups)
+
+        # Fallback: use parameter_order for sorting within a single group
         ordered_params = [p for p in st_meta.parameter_order if p in available]
         # Add remaining params not in the order list
         remaining = sorted(available - set(ordered_params))
         if not (all_params := ordered_params + remaining):
             return None
 
-        # For now, return all params in a single ordered section
-        # (semantic grouping from metadata will be added when
-        #  parameter_groups field is populated by the extraction script)
         return (
             ParameterGroup(
                 id="all",

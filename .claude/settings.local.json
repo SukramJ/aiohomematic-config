@@ -1,31 +1,21 @@
 {
   "permissions": {
     "allow": [
-      "Bash(chmod:*)",
-      "Bash(.venv/bin/pip install:*)",
-      "Bash(.venv/bin/python:*)",
-      "Bash(.venv/bin/pytest:*)",
-      "Bash(prek run:*)",
-      "Bash(python -m pytest:*)",
-      "WebSearch",
-      "Bash(gh api:*)",
-      "WebFetch(domain:raw.githubusercontent.com)",
-      "WebFetch(domain:github.com)",
-      "Bash(curl:*)",
-      "Bash(gh search code:*)",
-      "Bash(grep:*)",
-      "Bash(wc:*)",
-      "Bash(.venv/bin/mypy:*)",
-      "Bash(.venv/bin/ruff check:*)",
-      "Bash(.venv/bin/ruff format:*)",
-      "Bash(python3:*)",
-      "Bash(mypy:*)",
-      "Bash(pip install:*)",
-      "Bash(ruff check:*)",
-      "Bash(source:*)",
-      "Bash(ruff rule:*)",
-      "Bash(pytest:*)",
-      "Bash(script/setup)"
-    ]
+      "Bash(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "Agent(*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+      "NotebookEdit(*)",
+      "Skill(*)",
+      "TaskCreate(*)",
+      "TaskUpdate(*)",
+      "ToolSearch(*)"
+    ],
+    "deny": []
   }
 }

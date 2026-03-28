@@ -6,6 +6,7 @@ from unittest.mock import patch
 from aiohomematic.const import Flag, Operations, ParameterData, ParameterType
 from aiohomematic.easymode_data import (
     ChannelMetadata,
+    CrossValidationRule,
     OptionPresetDef,
     OptionPresetEntry,
     SenderTypeMetadata,
@@ -769,3 +770,142 @@ class TestEasymodeEnrichment:
 
         assert schema.subset_groups is not None
         assert schema.subset_groups[0].current_option_id is None
+
+
+class TestCrossValidationInSchema:
+    """Test cross-validation constraint exposure in FormSchema."""
+
+    def test_cross_validation_between_rule(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
+        """A 'between' rule should expose param, min_param, and max_param."""
+        descriptions: dict[str, ParameterData] = {
+            "SHORT_ON_LEVEL": _make_writable_float(max_val=1.0),
+            "DIM_MIN_LEVEL": _make_writable_float(max_val=1.0),
+            "DIM_MAX_LEVEL": _make_writable_float(max_val=1.0),
+        }
+        rule = CrossValidationRule(
+            id="short_on_in_range",
+            applies_to_params=("SHORT_ON_LEVEL", "DIM_MIN_LEVEL", "DIM_MAX_LEVEL"),
+            rule="between",
+            error_key="cross_validation.level_must_be_in_range",
+            param="SHORT_ON_LEVEL",
+            min_param="DIM_MIN_LEVEL",
+            max_param="DIM_MAX_LEVEL",
+        )
+        st_meta = SenderTypeMetadata(cross_validation_rule_ids=("short_on_in_range",))
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with (
+            patch("aiohomematic_config.form_schema.get_channel_metadata", return_value=ch_meta),
+            patch("aiohomematic_config.form_schema.get_cross_validation_rules", return_value=[rule]),
+        ):
+            schema = permissive_generator_en.generate(
+                descriptions=descriptions,
+                current_values={"SHORT_ON_LEVEL": 0.5, "DIM_MIN_LEVEL": 0.0, "DIM_MAX_LEVEL": 1.0},
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        assert schema.cross_validation is not None
+        assert len(schema.cross_validation) == 1
+        cv = schema.cross_validation[0]
+        assert cv.rule == "between"
+        assert cv.param == "SHORT_ON_LEVEL"
+        assert cv.min_param == "DIM_MIN_LEVEL"
+        assert cv.max_param == "DIM_MAX_LEVEL"
+
+    def test_cross_validation_none_without_rules(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
+        """cross_validation should be None when no rule IDs are referenced."""
+        descriptions: dict[str, ParameterData] = {
+            "LEVEL": _make_writable_float(),
+        }
+        st_meta = SenderTypeMetadata()
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with patch("aiohomematic_config.form_schema.get_channel_metadata", return_value=ch_meta):
+            schema = permissive_generator_en.generate(
+                descriptions=descriptions,
+                current_values={"LEVEL": 0.5},
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        assert schema.cross_validation is None
+
+    def test_cross_validation_rules_attached(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
+        """Cross-validation rules should be attached to the schema when metadata references them."""
+        descriptions: dict[str, ParameterData] = {
+            "DIM_MAX_LEVEL": _make_writable_float(max_val=1.0),
+            "DIM_MIN_LEVEL": _make_writable_float(max_val=1.0),
+        }
+        rule = CrossValidationRule(
+            id="dim_max_gte_min",
+            applies_to_params=("DIM_MAX_LEVEL", "DIM_MIN_LEVEL"),
+            rule="gte",
+            error_key="cross_validation.max_must_be_gte_min",
+            param_a="DIM_MAX_LEVEL",
+            param_b="DIM_MIN_LEVEL",
+        )
+        st_meta = SenderTypeMetadata(cross_validation_rule_ids=("dim_max_gte_min",))
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with (
+            patch("aiohomematic_config.form_schema.get_channel_metadata", return_value=ch_meta),
+            patch("aiohomematic_config.form_schema.get_cross_validation_rules", return_value=[rule]),
+        ):
+            schema = permissive_generator_en.generate(
+                descriptions=descriptions,
+                current_values={"DIM_MAX_LEVEL": 1.0, "DIM_MIN_LEVEL": 0.0},
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        assert schema.cross_validation is not None
+        assert len(schema.cross_validation) == 1
+        cv = schema.cross_validation[0]
+        assert cv.rule_id == "dim_max_gte_min"
+        assert cv.rule == "gte"
+        assert cv.param_a == "DIM_MAX_LEVEL"
+        assert cv.param_b == "DIM_MIN_LEVEL"
+        assert set(cv.applies_to_params) == {"DIM_MAX_LEVEL", "DIM_MIN_LEVEL"}
+        assert cv.error_key == "cross_validation.max_must_be_gte_min"
+
+    def test_cross_validation_skips_unknown_rule_ids(
+        self,
+        permissive_generator_en: FormSchemaGenerator,
+    ) -> None:
+        """Unknown rule IDs should be silently skipped."""
+        descriptions: dict[str, ParameterData] = {
+            "LEVEL": _make_writable_float(),
+        }
+        st_meta = SenderTypeMetadata(cross_validation_rule_ids=("nonexistent_rule",))
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with (
+            patch("aiohomematic_config.form_schema.get_channel_metadata", return_value=ch_meta),
+            patch("aiohomematic_config.form_schema.get_cross_validation_rules", return_value=[]),
+        ):
+            schema = permissive_generator_en.generate(
+                descriptions=descriptions,
+                current_values={"LEVEL": 0.5},
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        assert schema.cross_validation is None

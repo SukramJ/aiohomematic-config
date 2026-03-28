@@ -20,7 +20,12 @@ from aiohomematic.ccu_translations import (
     resolve_channel_type,
 )
 from aiohomematic.const import SCHEDULE_PATTERN, ParameterData, ParameterType
-from aiohomematic.easymode_data import SenderTypeMetadata, get_channel_metadata, get_option_preset
+from aiohomematic.easymode_data import (
+    SenderTypeMetadata,
+    get_channel_metadata,
+    get_cross_validation_rules,
+    get_option_preset,
+)
 from aiohomematic.parameter_tools import (
     get_parameter_step,
     is_parameter_internal,
@@ -83,6 +88,20 @@ class FormSection(BaseModel):
     parameters: list[FormParameter]
 
 
+class CrossValidationConstraint(BaseModel):
+    """A cross-parameter validation constraint for the form UI."""
+
+    rule_id: str
+    rule: str  # "gte", "lte", "between", "not_equal"
+    applies_to_params: list[str]
+    error_key: str
+    param_a: str | None = None
+    param_b: str | None = None
+    param: str | None = None
+    min_param: str | None = None
+    max_param: str | None = None
+
+
 class SubsetOption(BaseModel):
     """A single option in a subset group."""
 
@@ -114,6 +133,8 @@ class FormSchema(BaseModel):
     writable_parameters: int
     # Easymode metadata (UC6: subset groups):
     subset_groups: list[SubsetGroup] | None = None
+    # Easymode metadata (cross-parameter validation constraints):
+    cross_validation: list[CrossValidationConstraint] | None = None
 
 
 class FormSchemaGenerator:
@@ -363,6 +384,28 @@ class FormSchemaGenerator:
                 current_values=current_values,
             )
 
+        # Build cross-validation constraints from easymode metadata
+        cross_validation: list[CrossValidationConstraint] | None = None
+        if st_meta and st_meta.cross_validation_rule_ids:
+            all_rules = {r.id: r for r in get_cross_validation_rules()}
+            constraints = [
+                CrossValidationConstraint(
+                    rule_id=rule.id,
+                    rule=rule.rule,
+                    applies_to_params=list(rule.applies_to_params),
+                    error_key=rule.error_key,
+                    param_a=rule.param_a,
+                    param_b=rule.param_b,
+                    param=rule.param,
+                    min_param=rule.min_param,
+                    max_param=rule.max_param,
+                )
+                for rule_id in st_meta.cross_validation_rule_ids
+                if (rule := all_rules.get(rule_id))
+            ]
+            if constraints:
+                cross_validation = constraints
+
         return FormSchema(
             channel_address=channel_address,
             channel_type=channel_type,
@@ -373,6 +416,7 @@ class FormSchemaGenerator:
             total_parameters=total_params,
             writable_parameters=writable_params,
             subset_groups=subset_groups,
+            cross_validation=cross_validation,
         )
 
     def _build_subset_groups(
