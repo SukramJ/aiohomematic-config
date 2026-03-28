@@ -1,2 +1,2 @@
-aiohomematic>=2026.3.14
+aiohomematic>=2026.3.18
 pydantic>=2.12.5
