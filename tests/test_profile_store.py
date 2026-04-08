@@ -242,3 +242,46 @@ class TestMatchActiveProfile:
             current_values={"FOO": 1},
         )
         assert result == 0
+
+
+class TestReceiverTypeAliases:
+    """Tests for receiver channel type alias mapping."""
+
+    async def test_alias_match_active_profile(self, store: ProfileStore) -> None:
+        """Test that match_active_profile works through alias."""
+        values = {
+            "SHORT_PROFILE_ACTION_TYPE": 0.0,
+            "LONG_PROFILE_ACTION_TYPE": 0.0,
+        }
+        result = await store.match_active_profile(
+            receiver_channel_type="OPTICAL_SIGNAL_RECEIVER",
+            sender_channel_type="KEY_TRANSCEIVER",
+            current_values=values,
+        )
+        # Should match the "inactive" profile
+        assert result > 0
+
+    async def test_optical_signal_receiver_uses_dimmer_profiles(self, store: ProfileStore) -> None:
+        """Test that OPTICAL_SIGNAL_RECEIVER resolves to DIMMER_VIRTUAL_RECEIVER profiles."""
+        profiles = await store.get_profiles(
+            receiver_channel_type="OPTICAL_SIGNAL_RECEIVER",
+            sender_channel_type="KEY_TRANSCEIVER",
+        )
+        assert profiles is not None
+        assert len(profiles) > 0
+        # Should have the same profiles as DIMMER_VIRTUAL_RECEIVER
+        dimmer_profiles = await store.get_profiles(
+            receiver_channel_type="DIMMER_VIRTUAL_RECEIVER",
+            sender_channel_type="KEY_TRANSCEIVER",
+        )
+        assert dimmer_profiles is not None
+        assert len(profiles) == len(dimmer_profiles)
+
+    async def test_switch_transceiver_uses_switch_virtual_profiles(self, store: ProfileStore) -> None:
+        """Test that SWITCH_TRANSCEIVER resolves to SWITCH_VIRTUAL_RECEIVER profiles."""
+        profiles = await store.get_profiles(
+            receiver_channel_type="SWITCH_TRANSCEIVER",
+            sender_channel_type="KEY_TRANSCEIVER",
+        )
+        assert profiles is not None
+        assert len(profiles) > 0
