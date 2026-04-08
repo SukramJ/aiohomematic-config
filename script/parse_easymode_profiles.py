@@ -48,6 +48,9 @@ _RANGE_RE = re.compile(r"\{([\d.]+)\s+range\s+([\d.]+)\s+-\s+([\d.]+)\}")
 _LIST_RE = re.compile(r"^\{([\d.\s]+)\}$")
 _LOC_RE = re.compile(r'"(\w+)"\s*:\s*"((?:[^"\\]|\\.)*)"')
 _SOURCE_PROFILE_RE = re.compile(r"source\s+\[file join .+?easymodes/(\w+(?:\([^)]*\))?)/(\w+)\.tcl\]")
+_LINK_ALIAS_RE = re.compile(
+    r'set\s+(?:ACTOR|dev_descr_receiver\(TYPE\))\s+(?:\$ACTOR|"?(\w+)"?)',
+)
 # Internal TCL keys to skip
 _SKIP_KEYS = frozenset(
     {
@@ -652,6 +655,112 @@ def _parse_receiver_remote(
 
 
 # ---------------------------------------------------------------------------
+# Receiver type alias extraction
+# ---------------------------------------------------------------------------
+
+_LINK_FILE_RE = re.compile(r"linkHmIP_(\w+)\.tcl$")
+
+
+_IF_RE = re.compile(r"^\s*if\s+\{")
+_CLOSE_BRACE_RE = re.compile(r"^\s*\}")
+
+
+def _extract_alias_from_link_tcl(tcl_content: str, original_type: str) -> str | None:
+    """
+    Extract unconditional receiver type aliases from a linkHmIP_*.tcl file.
+
+    Only extracts aliases that are set unconditionally (not inside if blocks).
+    Example (unconditional — extracted):
+        if {$ACTOR == "OPTICAL_SIGNAL_RECEIVER"} {
+            set ACTOR DIMMER_VIRTUAL_RECEIVER
+        }
+    This pattern checks the ACTOR equals the original type and remaps it,
+    so it is effectively unconditional for that receiver type.
+
+    Example (conditional — skipped):
+        if {[string equal $chnMode "shutter"] == 1} {
+            set dev_descr_receiver(TYPE) "SHUTTER_VIRTUAL_RECEIVER"
+        }
+    This depends on runtime state and cannot be statically resolved.
+
+    Returns the alias type if different from original_type, else None.
+    """
+    lines = tcl_content.splitlines()
+    if_depth = 0
+
+    for line in lines:
+        stripped = line.strip()
+
+        # Skip comments
+        if stripped.startswith("#"):
+            continue
+
+        # Track if/brace nesting (simplified)
+        if _IF_RE.match(stripped):
+            # Check if this is the simple self-check pattern:
+            # if {$ACTOR == "ORIGINAL_TYPE"} { set ACTOR NEW_TYPE }
+            if f'$ACTOR == "{original_type}"' in stripped:
+                # This is an unconditional remap for this specific type
+                pass  # Don't increment depth — treat as unconditional
+            else:
+                if_depth += 1
+        if stripped.startswith("}") and if_depth > 0:
+            if_depth -= 1
+            continue
+
+        # Only match unconditional set statements (depth 0)
+        if if_depth > 0:
+            continue
+
+        # Match: set ACTOR SOME_TYPE  or  set dev_descr_receiver(TYPE) SOME_TYPE
+        if "set ACTOR" in stripped or "set dev_descr_receiver(TYPE)" in stripped:
+            # Skip the initial assignment: set ACTOR $dev_descr_receiver(TYPE)
+            if "$dev_descr_receiver(TYPE)" in stripped and "set ACTOR" in stripped:
+                continue
+            m = _LINK_ALIAS_RE.match(stripped)
+            if m and m.group(1) and m.group(1) != original_type:
+                return m.group(1)
+
+    return None
+
+
+def _extract_aliases_local(occu_path: Path) -> dict[str, str]:
+    """Extract receiver type aliases from local OCCU linkHmIP_*.tcl files."""
+    aliases: dict[str, str] = {}
+    base = occu_path / "WebUI" / "www" / _EASYMODE_BASE
+
+    for tcl_file in sorted(base.glob("linkHmIP_*.tcl")):
+        m = _LINK_FILE_RE.search(tcl_file.name)
+        if not m:
+            continue
+        original_type = m.group(1)
+        tcl_content = tcl_file.read_text(encoding="utf-8", errors="replace")
+        alias = _extract_alias_from_link_tcl(tcl_content, original_type)
+        if alias:
+            aliases[original_type] = alias
+
+    return aliases
+
+
+def _extract_aliases_remote(ccu_url: str) -> dict[str, str]:
+    """Extract receiver type aliases from remote CCU linkHmIP_*.tcl files."""
+    aliases: dict[str, str] = {}
+
+    # Probe known receiver types that might have link files
+    all_types = list(_KNOWN_RECEIVER_TYPES)
+    for receiver_type in all_types:
+        try:
+            tcl_content = _fetch_remote_file(ccu_url, f"{_EASYMODE_BASE}/linkHmIP_{receiver_type}.tcl")
+        except Exception:
+            continue
+        alias = _extract_alias_from_link_tcl(tcl_content, receiver_type)
+        if alias:
+            aliases[receiver_type] = alias
+
+    return aliases
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -726,6 +835,30 @@ def main() -> int:
             total_written += 1
         else:
             print(f"  No profiles found for {receiver_type}")
+
+    # Extract receiver type aliases from linkHmIP_*.tcl files
+    print("\nExtracting receiver type aliases...")
+    if use_remote:
+        aliases = _extract_aliases_remote(ccu_url=ccu_url)
+        if not aliases and occu_path:
+            aliases = _extract_aliases_local(occu_path=Path(occu_path))
+    elif occu_path:
+        aliases = _extract_aliases_local(occu_path=Path(occu_path))
+    else:
+        aliases = {}
+
+    if aliases:
+        aliases_file = output_dir / "_receiver_type_aliases.json"
+        aliases_file.write_text(
+            json.dumps(aliases, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+        print(f"  Found {len(aliases)} alias(es):")
+        for orig, target in sorted(aliases.items()):
+            print(f"    {orig} -> {target}")
+        print(f"  -> Written to {aliases_file}")
+    else:
+        print("  No aliases found.")
 
     print(f"\nDone. {total_written} profile file(s) written to {output_dir}/")
     return 0

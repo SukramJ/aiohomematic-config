@@ -1,3 +1,13 @@
+# Version 2026.4.0 (2026-04-08)
+
+- Add receiver type alias resolution for channel types that share profiles (e.g. `OPTICAL_SIGNAL_RECEIVER` → `DIMMER_VIRTUAL_RECEIVER`, `SWITCH_TRANSCEIVER` → `SWITCH_VIRTUAL_RECEIVER`)
+- Add `_receiver_type_aliases.json` extracted from CCU `linkHmIP_*.tcl` files
+- Apply receiver type aliases in `ProfileStore` and `ParameterGrouper` for consistent profile and metadata lookup
+- Add alias extraction to `parse_easymode_profiles.py` script
+- Bump aiohomematic dependency to >=2026.4.3
+- Update dev dependencies (mypy 1.20.0, pytest 9.0.3, ruff 0.15.9, pylint-per-file-ignores 3.2.1)
+- Regenerate DIMMER_VIRTUAL_RECEIVER profile JSON
+
 # Version 2026.3.5 (2026-03-28)
 
 - Add `CrossValidationConstraint` model and `cross_validation` field on `FormSchema` for exposing cross-parameter validation rules to the frontend
