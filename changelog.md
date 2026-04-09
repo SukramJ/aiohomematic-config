@@ -1,3 +1,7 @@
+# Version 2026.4.1 (2026-04-09)
+
+- Add `operations` field to `FormParameter` exposing the raw OPERATIONS bitfield from the paramset description
+
 # Version 2026.4.0 (2026-04-08)
 
 - Add receiver type alias resolution for channel types that share profiles (e.g. `OPTICAL_SIGNAL_RECEIVER` → `DIMMER_VIRTUAL_RECEIVER`, `SWITCH_TRANSCEIVER` → `SWITCH_VIRTUAL_RECEIVER`)
