@@ -53,6 +53,7 @@ class DeviceScheduleData:
     max_entries: int
     available_target_channels: dict[str, Any]
     schedule_domain: str | None
+    schedule_enabled: bool | None = None
 
 
 def list_schedule_devices(
@@ -162,6 +163,7 @@ async def get_device_schedule(
         max_entries=wp_dp.max_entries,
         available_target_channels={k: dataclasses.asdict(v) for k, v in wp_dp.available_target_channels.items()},
         schedule_domain=wp_dp.schedule_domain,
+        schedule_enabled=wp_dp.schedule_enabled,
     )
 
 
@@ -176,6 +178,23 @@ async def set_device_schedule(
         raise ValueError(msg)
 
     await wp_dp.set_schedule(schedule_data=schedule_data)
+
+
+async def set_schedule_enabled(
+    *,
+    device: DeviceProtocol,
+    enabled: bool,
+) -> None:
+    """Enable or disable the weekly program on a device."""
+    if (wp_dp := device.week_profile_data_point) is None:
+        msg = f"Device {device.name} does not support schedules"
+        raise ValueError(msg)
+
+    if wp_dp.schedule_enabled is None:
+        msg = f"Device {device.name} does not support schedule enable/disable"
+        raise ValueError(msg)
+
+    await wp_dp.set_schedule_enabled(enabled=enabled)
 
 
 __all__ = tuple(
