@@ -9,6 +9,7 @@ integration's websocket_api.py as a thin wrapper.
 Public API of this module is defined by __all__.
 """
 
+from collections.abc import Mapping
 import dataclasses
 import inspect
 from typing import Any
@@ -53,7 +54,7 @@ class DeviceScheduleData:
     max_entries: int
     available_target_channels: dict[str, Any]
     schedule_domain: str | None
-    schedule_enabled: bool | None = None
+    schedule_enabled: Mapping[str, bool] | None = None
 
 
 def list_schedule_devices(
@@ -184,6 +185,7 @@ async def set_schedule_enabled(
     *,
     device: DeviceProtocol,
     enabled: bool,
+    channel_key: str | None = None,
 ) -> None:
     """Enable or disable the weekly program on a device."""
     if (wp_dp := device.week_profile_data_point) is None:
@@ -194,7 +196,7 @@ async def set_schedule_enabled(
         msg = f"Device {device.name} does not support schedule enable/disable"
         raise ValueError(msg)
 
-    await wp_dp.set_schedule_enabled(enabled=enabled)
+    await wp_dp.set_schedule_enabled(enabled=enabled, channel_key=channel_key)
 
 
 __all__ = tuple(
