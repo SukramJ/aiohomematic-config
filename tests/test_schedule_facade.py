@@ -1,12 +1,14 @@
 """Tests for the schedule_facade module."""
 
 from collections.abc import Mapping
-from typing import Any
-from unittest.mock import AsyncMock, Mock, PropertyMock, create_autospec
+from typing import TYPE_CHECKING, Any
+from unittest.mock import AsyncMock, Mock, PropertyMock
+
+if TYPE_CHECKING:
+    from aiohomematic.interfaces.model import DeviceProtocol, WeekProfileDataPointProtocol
 
 from aiohomematic.const import ScheduleProfile, ScheduleType
 from aiohomematic.interfaces import ClimateWeekProfileDataPointProtocol
-from aiohomematic.interfaces.model import DeviceProtocol, WeekProfileDataPointProtocol
 import pytest
 
 from aiohomematic_config import (
@@ -36,7 +38,7 @@ def _make_device(
     wp_dp: WeekProfileDataPointProtocol | None = None,
 ) -> DeviceProtocol:
     """Create a mock DeviceProtocol."""
-    device = create_autospec(DeviceProtocol, instance=True)
+    device = Mock(spec_set=["address", "name", "model", "interface_id", "week_profile_data_point"])
     type(device).address = PropertyMock(return_value=address)
     type(device).name = PropertyMock(return_value=name)
     type(device).model = PropertyMock(return_value=model)
@@ -56,7 +58,7 @@ def _make_wp_dp(
     schedule_data: dict[str, Any] | None = None,
 ) -> WeekProfileDataPointProtocol:
     """Create a mock WeekProfileDataPointProtocol."""
-    wp_dp = create_autospec(WeekProfileDataPointProtocol, instance=True)
+    wp_dp = Mock()
     type(wp_dp).schedule_channel_address = PropertyMock(return_value=schedule_channel_address)
     type(wp_dp).schedule_type = PropertyMock(return_value=schedule_type)
     type(wp_dp).schedule_domain = PropertyMock(return_value=schedule_domain)
@@ -84,8 +86,15 @@ def _make_climate_wp_dp(
     schedule_profile_data: dict[str, Any] | None = None,
     schedule_enabled: Mapping[str, bool] | None = None,
 ) -> ClimateWeekProfileDataPointProtocol:
-    """Create a mock ClimateWeekProfileDataPointProtocol."""
-    wp_dp = create_autospec(ClimateWeekProfileDataPointProtocol, instance=True)
+    """
+    Create a mock that passes isinstance checks for ClimateWeekProfileDataPointProtocol.
+
+    We cannot use create_autospec or Mock(spec=...) because the protocol classes
+    reference types (e.g. UnsubscribeCallback) that may not be resolvable in all
+    environments. Instead we patch __class__ so isinstance() succeeds.
+    """
+    wp_dp = Mock()
+    wp_dp.__class__ = ClimateWeekProfileDataPointProtocol
     type(wp_dp).schedule_channel_address = PropertyMock(return_value=schedule_channel_address)
     type(wp_dp).schedule_type = PropertyMock(return_value=schedule_type)
     type(wp_dp).schedule_domain = PropertyMock(return_value=schedule_domain)
