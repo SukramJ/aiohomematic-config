@@ -11,6 +11,9 @@ on:
     tags-ignore:
       - "**"
 
+permissions:
+  contents: read
+
 jobs:
   pre-commit:
     runs-on: ubuntu-latest

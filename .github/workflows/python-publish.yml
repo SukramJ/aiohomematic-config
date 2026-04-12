@@ -4,6 +4,9 @@ on:
   repository_dispatch:
     types: [publish]
 
+permissions:
+  contents: read
+
 jobs:
   release-build:
     runs-on: ubuntu-latest
