@@ -1,3 +1,9 @@
+# Version 2026.4.2 (2026-04-11)
+
+- Add `schedule_enabled` field to `DeviceScheduleData` for exposing the weekly program enable/disable state
+- Add `set_schedule_enabled()` facade function to enable or disable the weekly program on a device
+- Export `set_schedule_enabled` in public API
+
 # Version 2026.4.1 (2026-04-09)
 
 - Add `operations` field to `FormParameter` exposing the raw OPERATIONS bitfield from the paramset description
