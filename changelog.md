@@ -1,3 +1,9 @@
+# Version 2026.4.3 (2026-04-16)
+
+- Fall back to `_MASTER` sender type metadata when no explicit `sender_type` is provided in `FormSchemaGenerator` and `ParameterGrouper`
+- Use `get_ui_label_translation()` from aiohomematic for preset labels and group labels via `label_key`
+- Bump aiohomematic dependency to >=2026.4.14
+
 # Version 2026.4.2 (2026-04-11)
 
 - Add `schedule_enabled` field to `DeviceScheduleData` for exposing the weekly program enable/disable state
