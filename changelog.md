@@ -1,3 +1,8 @@
+# Version 2026.4.4 (2026-04-18)
+
+- Add `supported_schedule_fields` to `DeviceScheduleData` exposing the `ScheduleField`s the device advertises in its MASTER paramset description (sorted list of field names). Frontends can use this to hide non-functional inputs for devices like HmIP-DLD.
+- Bump aiohomematic dependency to >=2026.4.16
+
 # Version 2026.4.3 (2026-04-16)
 
 - Fall back to `_MASTER` sender type metadata when no explicit `sender_type` is provided in `FormSchemaGenerator` and `ParameterGrouper`

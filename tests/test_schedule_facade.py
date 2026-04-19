@@ -7,7 +7,7 @@ from unittest.mock import AsyncMock, Mock, PropertyMock
 if TYPE_CHECKING:
     from aiohomematic.interfaces.model import DeviceProtocol, WeekProfileDataPointProtocol
 
-from aiohomematic.const import ScheduleProfile, ScheduleType
+from aiohomematic.const import ScheduleField, ScheduleProfile, ScheduleType
 from aiohomematic.interfaces import ClimateWeekProfileDataPointProtocol
 import pytest
 
@@ -56,6 +56,7 @@ def _make_wp_dp(
     max_entries: int = 5,
     available_target_channels: dict[str, Any] | None = None,
     schedule_data: dict[str, Any] | None = None,
+    supported_schedule_fields: frozenset | None = None,
 ) -> WeekProfileDataPointProtocol:
     """Create a mock WeekProfileDataPointProtocol."""
     wp_dp = Mock()
@@ -66,6 +67,9 @@ def _make_wp_dp(
     type(wp_dp).max_entries = PropertyMock(return_value=max_entries)
     type(wp_dp).available_target_channels = PropertyMock(
         return_value=available_target_channels if available_target_channels is not None else {}
+    )
+    type(wp_dp).supported_schedule_fields = PropertyMock(
+        return_value=supported_schedule_fields if supported_schedule_fields is not None else frozenset()
     )
     wp_dp.get_schedule = AsyncMock(return_value=schedule_data or {"MONDAY": []})
     wp_dp.set_schedule = AsyncMock()
@@ -372,6 +376,20 @@ class TestGetDeviceSchedule:
         assert result.max_entries == 8
         assert result.schedule_domain == "light"
         assert result.schedule_enabled is None
+        assert result.supported_schedule_fields == []
+
+    @pytest.mark.asyncio
+    async def test_returns_supported_schedule_fields(self) -> None:
+        """supported_schedule_fields are serialised as a sorted string list."""
+        wp_dp = _make_wp_dp(
+            supported_schedule_fields=frozenset({ScheduleField.WEEKDAY, ScheduleField.FIXED_HOUR, ScheduleField.LEVEL}),
+        )
+        device = _make_device(wp_dp=wp_dp)
+
+        result = await get_device_schedule(device=device)
+
+        # sorted alphabetically → ["FIXED_HOUR", "LEVEL", "WEEKDAY"]
+        assert result.supported_schedule_fields == ["FIXED_HOUR", "LEVEL", "WEEKDAY"]
 
 
 # ---------------------------------------------------------------------------
