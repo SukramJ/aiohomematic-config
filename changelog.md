@@ -1,3 +1,7 @@
+# Version 2026.4.5 (2026-04-21)
+
+- Fall back to the locale-aware "Other Settings" label for metadata parameter groups that have neither a `label_key` nor a populated `label` mapping, preventing raw group ids (e.g. `group_5`) from leaking to the UI
+
 # Version 2026.4.4 (2026-04-18)
 
 - Add `supported_schedule_fields` to `DeviceScheduleData` exposing the `ScheduleField`s the device advertises in its MASTER paramset description (sorted list of field names). Frontends can use this to hide non-functional inputs for devices like HmIP-DLD.

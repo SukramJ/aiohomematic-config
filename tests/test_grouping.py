@@ -225,6 +225,67 @@ class TestMetadataParameterGroups:
         assert result[0].id == "all"
         assert result[0].parameters == ("PARAM_A", "PARAM_B")
 
+    def test_group_without_label_key_or_label_falls_back_to_other_de(self) -> None:
+        """Fallback label must respect the configured locale."""
+        grouper = ParameterGrouper(locale="de")
+        descriptions = {"PARAM_A": _simple_param()}
+        group_defs = (
+            ParameterGroupDef(
+                id="group_5",
+                label={},
+                parameters=("PARAM_A",),
+                label_key="",
+            ),
+        )
+        st_meta = SenderTypeMetadata(
+            parameter_order=("PARAM_A",),
+            parameter_groups=group_defs,
+        )
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with patch("aiohomematic_config.grouping.get_channel_metadata", return_value=ch_meta):
+            result = grouper.group(
+                descriptions=descriptions,
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        assert result[0].title == "Sonstige Einstellungen"
+
+    def test_group_without_label_key_or_label_falls_back_to_other_en(self) -> None:
+        """Raw group id must never leak to UI when both label_key and label are empty."""
+        grouper = ParameterGrouper(locale="en")
+        descriptions = {"PARAM_A": _simple_param()}
+        group_defs = (
+            ParameterGroupDef(
+                id="group_5",
+                label={},
+                parameters=("PARAM_A",),
+                label_key="",
+            ),
+        )
+        st_meta = SenderTypeMetadata(
+            parameter_order=("PARAM_A",),
+            parameter_groups=group_defs,
+        )
+        ch_meta = ChannelMetadata(
+            channel_type="TEST_CH",
+            sender_types={"SENDER": st_meta},
+        )
+        with patch("aiohomematic_config.grouping.get_channel_metadata", return_value=ch_meta):
+            result = grouper.group(
+                descriptions=descriptions,
+                channel_type="TEST_CH",
+                sender_type="SENDER",
+            )
+
+        assert len(result) == 1
+        assert result[0].id == "group_5"
+        assert result[0].title == "Other Settings"
+        assert result[0].title != "group_5"
+
     def test_groups_from_metadata(self) -> None:
         """parameter_groups from metadata should produce semantic groups."""
         grouper = ParameterGrouper(locale="en")
