@@ -27,7 +27,7 @@ repos:
         files: ^aiohomematic_config/.+/__init__\.py$
         pass_filenames: false
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.15.10
+    rev: v0.15.11
     hooks:
       - id: ruff
         args:
@@ -44,7 +44,7 @@ repos:
           - --quiet-level=2
         exclude_types: [csv, json]
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.9.2
+    rev: 1.9.4
     hooks:
       - id: bandit
         args:

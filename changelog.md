@@ -1,3 +1,13 @@
+# Version 2026.4.6 (2026-04-22)
+
+- Tighten code quality tooling by aligning ruff, mypy, pylint, bandit, and pytest configuration with the upstream `aiohomematic` and `home-assistant/core` projects
+- Ruff: pin `required-version`, enable full `S`/`BLE`/`PTH`/`SLF`/`TID` suites, additional `B*`/`RUF*` rules, ban `async_timeout`/`pytz`/`tests` imports, lower McCabe complexity from 25 to 20
+- MyPy: enable `strict_bytes`, additional error codes (`deprecated`, `possibly-undefined`, `unused-awaitable`), enforce `no_implicit_reexport` for the package, configure `pydantic-mypy` plugin
+- Pylint: fail on informational messages, include `BaseException` in overgeneral exceptions, add ruff-covered disables to prevent double reporting
+- Pytest: enable `asyncio_debug`, parallel execution via `-n auto`, and treat project-internal `DeprecationWarning`s as errors
+- Bandit: switch `tests/bandit.yaml` from skip-list to explicit test whitelist
+- Pre-commit: bump bandit to 1.9.4 and ruff-pre-commit to v0.15.11
+
 # Version 2026.4.5 (2026-04-21)
 
 - Fall back to the locale-aware "Other Settings" label for metadata parameter groups that have neither a `label_key` nor a populated `label` mapping, preventing raw group ids (e.g. `group_5`) from leaking to the UI
