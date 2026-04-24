@@ -1,3 +1,21 @@
+# Version 2026.4.7 (2026-04-24)
+
+- Adopt the new [openccu-data](https://github.com/sukramj/openccu-data) package
+  (`>=2026.4.1`) as the source-of-truth for easymode link-profile data.
+  `profile_store.py` now resolves both `_receiver_type_aliases.json` and per-receiver
+  `<RECEIVER>.json.gz` files via `importlib.resources` from
+  `openccu_data.data.profiles`, replacing the previous `aiohomematic_config.profiles`
+  resource lookups.
+- Drop the vendored `aiohomematic_config/profiles/` directory (~65 per-receiver
+  link-profile files plus the alias map) — these are now distributed by `openccu-data`.
+- Drop the `profiles/*` entries from `package-data` in `pyproject.toml`
+  (only `py.typed` remains).
+- Add `openccu-data>=2026.4.1` to `requirements.txt` and `pyproject.toml`.
+  Public API is unchanged; consumers do not need to adapt. To regenerate the
+  underlying CCU artifacts, work in the
+  [openccu-data](https://github.com/sukramj/openccu-data) repository and publish
+  a new release.
+
 # Version 2026.4.6 (2026-04-22)
 
 - Tighten code quality tooling by aligning ruff, mypy, pylint, bandit, and pytest configuration with the upstream `aiohomematic` and `home-assistant/core` projects

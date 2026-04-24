@@ -1,2 +1,3 @@
 aiohomematic>=2026.4.16
+openccu-data>=2026.4.1
 pydantic>=2.12.5
