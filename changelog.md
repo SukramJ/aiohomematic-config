@@ -1,3 +1,9 @@
+# Version 2026.5.0 (2026-05-29)
+
+- Bump `aiohomematic` to `>=2026.5.10` and `openccu-data` to `>=2026.5.0` in
+  `pyproject.toml` and `requirements.txt`
+- Bump `ruff` to `0.15.15` in `requirements_test.txt`
+
 # Version 2026.4.7 (2026-04-24)
 
 - Adopt the new [openccu-data](https://github.com/sukramj/openccu-data) package
