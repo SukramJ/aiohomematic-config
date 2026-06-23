@@ -132,9 +132,8 @@ __init__.py       <- all modules
 
 ## Git Workflow
 
-- Main development branch: `devel`
-- Release branch: `master`
-- No direct commits to `devel` or `master`
+- Main development branch: `main`
+- No direct commits to `main`
 - Feature branches for all changes
 - Pre-commit hooks enforced via `prek`
 

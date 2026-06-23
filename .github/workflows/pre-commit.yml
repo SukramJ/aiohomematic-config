@@ -3,11 +3,10 @@ name: Pre-commit
 on:
   pull_request:
     branches:
-      - devel
+      - main
   push:
     branches-ignore:
-      - master
-      - devel
+      - main
     tags-ignore:
       - "**"
 

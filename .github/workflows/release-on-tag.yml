@@ -33,13 +33,13 @@ jobs:
             echo "NOTES_EOF"
           } >> "$GITHUB_OUTPUT"
       - name: Create release
-        uses: softprops/action-gh-release@v3
+        uses: softprops/action-gh-release@718ea10b132b3b2eba29c1007bb80653f286566b
         with:
           tag_name: ${{ steps.version.outputs.version }}
           name: ${{ steps.version.outputs.version }}
           body: ${{ steps.notes.outputs.notes }}
       - name: Trigger publish
-        uses: peter-evans/repository-dispatch@v4
+        uses: peter-evans/repository-dispatch@28959ce8df70de7be546dd1250a005dd32156697
         with:
           event-type: publish
           client-payload: '{"tag": "${{ steps.version.outputs.version }}"}'

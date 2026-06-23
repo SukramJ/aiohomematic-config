@@ -1,7 +1,7 @@
 # aiohomematic-config
 
 [![CI](https://github.com/sukramj/aiohomematic-config/actions/workflows/test-run.yaml/badge.svg)](https://github.com/sukramj/aiohomematic-config/actions/workflows/test-run.yaml)
-[![codecov](https://codecov.io/gh/sukramj/aiohomematic-config/branch/devel/graph/badge.svg)](https://codecov.io/gh/sukramj/aiohomematic-config)
+[![codecov](https://codecov.io/gh/sukramj/aiohomematic-config/branch/main/graph/badge.svg)](https://codecov.io/gh/sukramj/aiohomematic-config)
 [![PyPI](https://img.shields.io/pypi/v/aiohomematic-config.svg)](https://pypi.org/project/aiohomematic-config/)
 
 Presentation-layer library for Homematic device configuration UI.
