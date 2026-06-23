@@ -39,7 +39,7 @@ dependencies = [
 "Homepage" = "https://github.com/sukramj/aiohomematic-config"
 "Source Code" = "https://github.com/sukramj/aiohomematic-config"
 "Bug Reports" = "https://github.com/sukramj/aiohomematic-config/issues"
-"Changelog" = "https://github.com/sukramj/aiohomematic-config/blob/devel/changelog.md"
+"Changelog" = "https://github.com/sukramj/aiohomematic-config/blob/main/changelog.md"
 
 [tool.setuptools]
 include-package-data = true
