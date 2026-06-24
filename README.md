@@ -43,3 +43,7 @@ print(schema.model_dump_json(indent=2))
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
+
+## Acknowledgments
+
+This library builds on the data structures of [aiohomematic](https://github.com/sukramj/aiohomematic) and the wider Homematic Python ecosystem. Special thanks to [Daniel Perna](https://github.com/danielperna84), whose original work on `pyhomematic` and `hahomematic` laid the foundation for this ecosystem.
