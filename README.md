@@ -44,6 +44,8 @@ print(schema.model_dump_json(indent=2))
 
 Parts of aiohomematic-config are developed with agentic AI assistance, primarily [Claude Code](https://www.anthropic.com/claude-code). Incoming issues are also triaged and analysed with agentic help. Every change is still reviewed by a human maintainer and must pass the project's test suite before it lands -- the AI speeds up the work, it does not replace the review gate.
 
+For the rules that apply to AI-assisted contributions, see the [AI Contribution Policy](AI_POLICY.md).
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
