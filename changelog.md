@@ -1,3 +1,8 @@
+# Version 2026.8.0 (2026-08-01)
+
+- Bump `aiohomematic` to `>=2026.8.0` and `openccu-data` to `>=2026.7.2` in
+  `pyproject.toml` and `requirements.txt`
+
 # Version 2026.5.0 (2026-05-29)
 
 - Bump `aiohomematic` to `>=2026.5.10` and `openccu-data` to `>=2026.5.0` in
