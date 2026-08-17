@@ -6,7 +6,7 @@ mypy==2.3.0
 pip==26.2
 prek==0.4.11
 pur==7.4.0
-pylint==4.0.6
+pylint==4.0.7
 pylint-per-file-ignores==3.2.1
 pylint-strict-informational==0.1
 pytest==9.1.1
