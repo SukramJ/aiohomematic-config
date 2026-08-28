@@ -1,3 +1,14 @@
+# Version 2026.8.1 (2026-08-28)
+
+- Bump `aiohomematic` to `>=2026.8.5` in `pyproject.toml` and `requirements.txt`
+- Mark the package as `Development Status :: 5 - Production/Stable` and add the
+  `Intended Audience :: End Users/Desktop` classifier in `pyproject.toml`
+- Bump `ruff` to `0.16.5`, `prek` to `0.5.0`, `mypy` to `2.3.1`, `pylint` to `4.0.7`,
+  `coverage` to `7.15.4`, `python-dotenv` to `1.2.3` and `pip` to `26.2.1` in
+  `requirements_test.txt`
+- Bump `ruff-pre-commit` to `v0.16.5` in `.pre-commit-config.yaml`
+- Bump `pypa/gh-action-pypi-publish` to `1.14.2` in the publish workflow
+
 # Version 2026.8.0 (2026-08-01)
 
 - Bump `aiohomematic` to `>=2026.8.0` and `openccu-data` to `>=2026.7.2` in
