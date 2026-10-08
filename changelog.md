@@ -1,3 +1,17 @@
+# Version 2026.10.1 (2026-10-08)
+
+- Bump `aiohomematic` to `>=2026.10.0` in `pyproject.toml` and `>=2026.10.4` in
+  `requirements.txt`
+- Bump `openccu-data` to `>=2026.9.0` in `pyproject.toml` and `>=2026.9.1` in
+  `requirements.txt`
+- Bump `pydantic` to `>=2.13.5` in `requirements.txt`
+- Bump `ruff` to `0.16.10`, `prek` to `0.5.5`, `mypy` to `2.4.0`, `pylint` to `4.1.2`,
+  `pylint-per-file-ignores` to `4.0.0`, `coverage` to `7.16.2` and `python-dotenv`
+  to `1.2.4` in `requirements_test.txt`
+- Bump `ruff` to `0.16.10` in `requirements_test_pre_commit.txt`
+- Bump `ruff-pre-commit` to `v0.16.10` in `.pre-commit-config.yaml`
+- Bump `softprops/action-gh-release` and `codecov/codecov-action` in the CI workflows
+
 # Version 2026.8.1 (2026-08-28)
 
 - Bump `aiohomematic` to `>=2026.8.5` in `pyproject.toml` and `requirements.txt`
