@@ -36,14 +36,27 @@ def _make_device(
     model: str = "HmIP-BSM",
     interface_id: str = "hmip-rf",
     wp_dp: WeekProfileDataPointProtocol | None = None,
+    climate_wp_dp: ClimateWeekProfileDataPointProtocol | None = None,
 ) -> DeviceProtocol:
-    """Create a mock DeviceProtocol."""
-    device = Mock(spec_set=["address", "name", "model", "interface_id", "week_profile_data_point"])
+    """Create a mock DeviceProtocol. A climate data point as wp_dp is also the climate schedule, as on a thermostat."""
+    if climate_wp_dp is None and isinstance(wp_dp, ClimateWeekProfileDataPointProtocol):
+        climate_wp_dp = wp_dp
+    device = Mock(
+        spec_set=[
+            "address",
+            "climate_week_profile_data_point",
+            "interface_id",
+            "model",
+            "name",
+            "week_profile_data_point",
+        ]
+    )
     type(device).address = PropertyMock(return_value=address)
     type(device).name = PropertyMock(return_value=name)
     type(device).model = PropertyMock(return_value=model)
     type(device).interface_id = PropertyMock(return_value=interface_id)
     type(device).week_profile_data_point = PropertyMock(return_value=wp_dp)
+    type(device).climate_week_profile_data_point = PropertyMock(return_value=climate_wp_dp)
     return device
 
 
@@ -118,6 +131,37 @@ def _make_climate_wp_dp(
 # ---------------------------------------------------------------------------
 # list_schedule_devices
 # ---------------------------------------------------------------------------
+
+
+class TestDeviceWithTwoSchedules:
+    """HmIP-WGT has a switch schedule and a climate schedule."""
+
+    @pytest.mark.asyncio
+    async def test_climate_functions_use_the_climate_schedule(self) -> None:
+        """The climate functions reach the climate schedule next to the switch schedule."""
+        climate_wp_dp = _make_climate_wp_dp()
+        device = _make_device(wp_dp=_make_wp_dp(), climate_wp_dp=climate_wp_dp)
+
+        result = await get_climate_schedule(device=device)
+        assert result.min_temp == 5.0
+        climate_wp_dp.get_schedule_profile.assert_awaited_once()
+
+        set_climate_active_profile(device=device, profile="P2")
+        climate_wp_dp.set_current_schedule_profile.assert_called_once_with(profile=ScheduleProfile.P2)
+
+        await set_climate_schedule_weekday(
+            device=device,
+            profile="P1",
+            weekday="MONDAY",
+            base_temperature=17.0,
+            simple_weekday_list=[],
+        )
+        climate_wp_dp.set_schedule_weekday.assert_awaited_once()
+
+    def test_list_keeps_one_entry_per_device(self) -> None:
+        """The panel finds a device by its address, so a second entry would be unreachable."""
+        device = _make_device(wp_dp=_make_wp_dp(), climate_wp_dp=_make_climate_wp_dp())
+        assert [info.schedule_type for info in list_schedule_devices(devices=(device,))] == ["default"]
 
 
 class TestListScheduleDevices:
