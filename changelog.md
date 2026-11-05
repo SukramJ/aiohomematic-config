@@ -1,3 +1,10 @@
+# Version 2026.11.1 (2026-11-05)
+
+- Bump `aiohomematic` to `>=2026.11.3` in `pyproject.toml` and `requirements.txt`
+- `get_climate_schedule`, `set_climate_schedule_weekday` and `set_climate_active_profile` use
+  `Device.climate_week_profile_data_point`, so they reach the heating schedule of HmIP-WGT and
+  HmIP-WGTC, which also have a switch schedule
+
 # Version 2026.10.1 (2026-10-08)
 
 - Bump `aiohomematic` to `>=2026.10.0` in `pyproject.toml` and `>=2026.10.4` in
